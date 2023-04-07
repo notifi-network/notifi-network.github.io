@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Notifi Docs',
-  tagline: 'Integrate into your project',
+  title: 'Notifi integration guide',
+  tagline: 'Get notifications for your project',
   favicon: 'img/favicon.svg',
 
   // Set the production url of your site here
