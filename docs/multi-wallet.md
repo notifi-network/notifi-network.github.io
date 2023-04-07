@@ -56,7 +56,7 @@ With this adding `multiWallet` is easy, once the list of wallet addresses of the
   <details> 
     <summary>Code example for Aptos</summary>
 
-    ```js
+    ```typescript
     const { signMessage, account } = useWallet();
 
     const signMessageForAccount = async (address: string) => {
@@ -74,7 +74,7 @@ With this adding `multiWallet` is easy, once the list of wallet addresses of the
   <details>
     <summary>Code example for Aptos</summary>
 
-    ```js
+    ```typescript
     // simplified code for demonstration purposes
     const { accounts } = useWallet();
 
@@ -93,7 +93,7 @@ With this adding `multiWallet` is easy, once the list of wallet addresses of the
     
     ----
 
-    ```js
+    ```typescript
     export const Notifi: React.FC = () => {
       ...
       return (
