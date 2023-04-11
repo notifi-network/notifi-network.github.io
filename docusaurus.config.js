@@ -90,12 +90,8 @@ const config = {
             ],
           },
           {
-            title: 'Community',
+            title: 'Community & Support',
             items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
               {
                 label: 'Discord',
                 href: 'https://discordapp.com/invite/docusaurus',
@@ -104,18 +100,18 @@ const config = {
                 label: 'Twitter',
                 href: 'https://twitter.com/docusaurus',
               },
+              {
+                label: 'Office Hours',
+                href: 'https://calendar.app.google/ksapc7UJKgc6RNgr5',
+              },
             ],
           },
           {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/notifi-network/',
               },
             ],
           },

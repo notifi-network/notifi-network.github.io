@@ -1,7 +1,7 @@
 
 # Supporting multiple addresses 
 
-Notifi seemlessly supports multiple addresses per user. This means users with multiple wallet addresses can: 
+Notifi seemless supports multiple addresses per user. This means users with multiple wallet addresses can: 
 
 - Sign up to alerts with all their wallet adresses at the same time 
 - Verify multiple wallet addresses and link them to their Notifi account
@@ -10,11 +10,38 @@ Notifi seemlessly supports multiple addresses per user. This means users with mu
 This can be very useful for scenarios, where users are naturally expected to handle multiple addresses, such as: 
 
 - Direct integrations of Notifi into browser extension wallets
-- dApps that support multiple user profiles, e.g. isolated user positions for a DeFi dApp
+- Multichain dApps where users can sign up with wallets from multiple chains 
+
+## Example user flow
+
+See an example user flow of a direct integration into a browser extension wallet in our [Figma](https://www.figma.com/file/ieF0Ynuc3WI608RCt7wKSf/Notifi-Template)
+
+<!---
+User clicks bell icon for the first time and has to opt in to destinations
+
+![Notifi Wallet](../static/img/multiwallet/1.png)
+
+User adds destinations, clicks next
+
+![Notifi Wallet](../static/img/multiwallet/2.png)
+
+User has to sign for hardware wallets (other wallets are already verified). Verification of wallets is needed to let users get wallet activity alerts.
+
+![Notifi Wallet](../static/img/multiwallet/3.png)
+
+If a user clicks ‘edit’ next to my wallets they are presented the screen on the left again, from which they can verify any hardware wallets. If they toggle on activity without having any verified wallets, that screen will also present.
+
+![Notifi Wallet](../static/img/multiwallet/4.png)
+
+Returning users are presented with the alert history. Settings icon opens Manage Notifications.
+
+![Notifi Wallet](../static/img/multiwallet/5.png)
+
+--->
 
 ## Integration introduction
 
-Currently multiple addresses are only supported through our **React Card**.  
+Currently multiple addresses are only supported through our [**React Card**](https://github.com/notifi-network/notifi-sdk-ts/tree/main/packages/notifi-react-card).  
 
 To enable support for multiple addresses use the `multiWallet: MultiWalletParams` property in `NotifiContext` when adding the React Card, which is of the following type: 
 
