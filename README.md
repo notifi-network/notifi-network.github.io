@@ -1,4 +1,4 @@
-# Website
+# [https://notifi-network.github.io/](https://notifi-network.github.io/)
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
@@ -24,10 +24,12 @@ This command generates static content into the `build` directory and can be serv
 
 ### Deployment
 
+The website will automatically be built any time changes are pushed to the `main` branch by GitHub Actions.
+
 Using SSH:
 
 ```
-$ npm run serve
+$ USE_SSH=true yarn deploy
 ```
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
