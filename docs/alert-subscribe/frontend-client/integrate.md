@@ -2,8 +2,6 @@
 
 ## in progress
 
-## Code example is outdated
-
 `@notifi/notifi-frontend-client`
 
 ## 🎬 Getting Started using Aptos

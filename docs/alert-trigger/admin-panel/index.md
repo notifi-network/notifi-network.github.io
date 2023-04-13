@@ -1,5 +1,8 @@
 # Admin Panel - Overview
 
+## In progress
+
+<!--
 What to cover: 
 
 - What is Admin Panel for
@@ -7,3 +10,4 @@ What to cover:
 - How to send test broadcast and directpush
 
 see https://admin.dev.notifi.network/guide
+-->

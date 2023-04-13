@@ -1,9 +1,12 @@
 ---
-sidebar_position: 4
+sidebar_position: 3
 ---
 
-# Examples & use cases
+# Getting started & examples
 
+## In progress
+
+<!--
 Rough decision making chart for what to use: 
 
 
@@ -48,3 +51,5 @@ Example use cases and how to integrate:
 
   This requires a custom UI to allow users to choose their threshhold when subscribing as well as a custom parser as source for the alert. Build the UI components and use the React Hooks or Frontend Client to create the alerts. 
   Contact us for a custom parser as source, or alternatively you can run a service that uses the Node Client to send out notifications. 
+
+  -->
