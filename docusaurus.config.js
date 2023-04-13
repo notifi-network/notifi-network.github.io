@@ -21,6 +21,7 @@ const config = {
   organizationName: 'notifi-network', // Usually your GitHub org/user name.
   projectName: 'notifi-network.github.io', // Usually your repo name.
   trailingSlash: false,
+  deploymentBranch: 'gh-pages',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
