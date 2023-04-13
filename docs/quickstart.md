@@ -47,7 +47,8 @@ update the following lines by placing the the DappID in the **dappAddress**
 field and the Config ID in the **cardId** field.
 
 ```
-dappAddress="" <NotifiSubscriptionCard darkMode cardId="" />
+dappAddress="" 
+<NotifiSubscriptionCard darkMode cardId="" />
 ```
 
 In the Admin console, add a new topic with Type **Broadcast**. The Broadcast Id
