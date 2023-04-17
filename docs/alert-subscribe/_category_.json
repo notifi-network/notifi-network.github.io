@@ -1,4 +1,8 @@
 {
   "label": "Subscribing to alerts",
   "position": 5,
+  "link": {
+    "type": "doc", 
+    "id": "alert-subscribe/react-card/index"
+  }
 }
