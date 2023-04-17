@@ -4,7 +4,7 @@ sidebar_position: 999999
 
 # Notifi for users 
 
-## In progress
+[**coming soon**]
 
 <!--
 

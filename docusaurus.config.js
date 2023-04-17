@@ -11,7 +11,7 @@ const config = {
   favicon: 'img/favicon.svg',
 
   // Set the production url of your site here
-  url: 'https://localhost:3000',
+  url: 'https://notifi-network.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -44,7 +44,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/notifi-network/docs',
+            'https://github.com/notifi-network/notifi-network.github.io',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

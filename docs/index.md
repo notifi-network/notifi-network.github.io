@@ -7,14 +7,13 @@ sidebar_position: 1
 Notifi is a cross-chain messaging layer for the web3 ecosystem that lets users
 understand in the moment what is happening in their decentralized applications
 (dapps). Users can subscribe to activities and notifications such as
-transaction alerts and DAO proposals over text, email, and Telegram. Developers
+transaction alerts and DAO proposals over text, email, Telegram, and more. Developers
 can customize users’ experiences easily via API and the
 [Notifi SDK](https://github.com/notifi-network/notifi-sdk-ts). In addition, the
 [Notifi Hub](https://www.notifi.network/hub) is a web3 inbox that aggregates all crypto
 activity in one place. It is also possible to message other users with
 wallet-to-wallet direct messages on different chains using
-[xMS](https://www.notifi.network/xms). Currently, the following chains are
-supported: Solana, Ethereum, Aptos, Polygon, Acala, and Arbitrum.
+[xMS](https://www.notifi.network/xms).
 
 There are two ways to get started with Notifi:
 

@@ -1,4 +1,4 @@
-# Admin Panel - Overview
+# Admin Panel
 
 ## In progress
 
