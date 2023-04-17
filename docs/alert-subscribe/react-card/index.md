@@ -6,7 +6,7 @@ https://github.com/notifi-network/notifi-sdk-ts/tree/main/packages/notifi-react-
 
 :::note
 
-You will need a `cardId` to use the **Notifi React Card**, which can be created in the [Admin Panel](https://admin.dev.notifi.network).
+You will need a `card config` to use the **Notifi React Card**, which can be created in the [Admin Panel](https://admin.dev.notifi.network).
 
 :::
 

@@ -1,4 +1,8 @@
-# Integration overview
+--- 
+sidebar_position: 1
+---
+
+# What to do
 
 There are two steps required to enable an end-to-end user experience in your dApp with Notifi. 
 Depending on the depth of integration and use case some of these are optional or can be vastly sped up by using existing packages provided by Notifi.

@@ -1,6 +1,6 @@
 # Node Client
 
-[**Coming soon**]
+[**Documentation in progress**]
 
 
 https://github.com/notifi-network/notifi-sdk-ts/blob/main/packages/notifi-node/lib/client/NotifiClient.ts

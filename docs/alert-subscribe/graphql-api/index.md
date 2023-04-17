@@ -1,6 +1,6 @@
 # GraphQL API
 
-[**Coming soon**] 
+[**Documentation in progress**]
 
 Please refer to the full GraphQL API here https://docs.notifi.network/
 

@@ -1,6 +1,8 @@
 # Admin Panel
 
-## In progress
+[**Documentation in progress**]
+
+Broadcast and Direct Push messages can be send directly from the [Admin Panel](https://admin.dev.notifi.network) web UI.
 
 <!--
 What to cover: 
