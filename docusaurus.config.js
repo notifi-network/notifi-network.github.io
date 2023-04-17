@@ -71,7 +71,11 @@ const config = {
             position: 'left',
             label: 'Docs',
           },
-          //{to: '/blog', label: 'Blog', position: 'left'},
+          {
+            href: 'https://notifi.network/blog', 
+            label: 'Blog', 
+            position: 'left'
+          },
           {
             href: 'https://github.com/notifi-network',
             label: 'GitHub',
@@ -86,8 +90,12 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Overview',
+                label: 'Documentation',
                 to: '/docs/',
+              },
+              {
+                label: 'Blog',
+                href: 'https://notifi.network/blog',
               },
             ],
           },
@@ -96,12 +104,12 @@ const config = {
             items: [
               {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                href: 'https://discord.com/invite/nAqR3mk3rv',
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
+                label: 'GitHub',
+                href: 'https://github.com/notifi-network/',
+              },          
               {
                 label: 'Office Hours',
                 href: 'https://calendar.app.google/ksapc7UJKgc6RNgr5',
@@ -112,9 +120,17 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'GitHub',
-                href: 'https://github.com/notifi-network/',
+                label: 'Twitter',
+                href: 'https://twitter.com/NotifiNetwork',
               },
+              {
+                label: 'LinkedIn', 
+                href: 'https://www.linkedin.com/company/notifinetwork'
+              },
+              {
+                label: 'Press Kit', 
+                href: 'https://notifi.network/presskit'
+              }
             ],
           },
         ],

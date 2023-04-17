@@ -1,5 +1,5 @@
 ---
-sidebar_position: 999999
+sidebar_position: 999
 ---
 
 # Notifi for users 
