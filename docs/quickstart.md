@@ -29,6 +29,9 @@ and build the SDK.
 
 ```bash
 npm install
+```
+
+```bash
 npx lerna run build
 ```
 
