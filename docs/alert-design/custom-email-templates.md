@@ -2,4 +2,4 @@
 
 [**Documentation in progress**]
 
-Please contact us to submit custom email templates to be used in your messages
+See https://docs.google.com/document/d/1-8K_nbJGaywL-jYFg7_YZiE9x_WPaHvuFfYgM7QmqMg/edit
