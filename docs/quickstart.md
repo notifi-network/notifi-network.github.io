@@ -11,18 +11,28 @@ If you don’t have Node.js installed, install it from
 [here](https://nodejs.org/en). Then download the SDK by cloning
 [this repository](https://github.com/notifi-network/notifi-sdk-ts).
 
-```
+```bash
 git clone https://github.com/notifi-network/notifi-sdk-ts
 ```
 
 You can also download a zip file of the code at
 [this link](https://github.com/notifi-network/notifi-sdk-ts/archive/refs/heads/main.zip).
 
+Change into the `notifi-sdk-ts` folder 
+
+```bash 
+cd notifi-sdk-ts/
+``` 
+
 Run the following commands in the folder to install the relevant dependencies
 and build the SDK.
 
+```bash
+npm install
 ```
-npm install npx lerna run build
+
+```bash
+npx lerna run build
 ```
 
 Now, run the `notifi-react-example` with the following command:
