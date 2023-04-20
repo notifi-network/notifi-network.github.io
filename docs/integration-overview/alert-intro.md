@@ -2,69 +2,68 @@
 sidebar_position: 3
 ---
 
-# Introduction to alerts {#alert-intro}
+# Alerts in Depth {#alert-depth}
 
-Notifi uses the concept of **alerts** to enable sending manual and automated notifications to users. 
-Users who like to receive notifications from Notifi need to subscribe to an **alert** and will be able to view and manage their **alerts** in the **Notifi Hub** using their automatically generated **Notifi Account**. 
+An **alert** is a tuple of a [Source](#source), [Filter](#filter), and [Target](#target), which are represented by `SourceGroup`, `Filter`, and `TargetGroup` objects respectively. Existing sources, filters, and targets can be reused.
 
-An **alert** is a tupel of a [Source](#source), [Filter](#filter), and [Target](#target), which are represented by `SourceGroup`, `Filter`, and `TargetGroup` objects respectively. 
-
-An Alert is created when an user has subscribed to an alert and as long as the alert exists, the user will receive notifications to their specified channels whenever they are triggered. 
+As long as the alert exists, the user will receive notifications to their specified channels whenever they are triggered.
 
 ## Sources {#source}
 
-A [Source](#source) is a trigger for a notification, which for example could be an on-chain event, or a message sent by the project team. 
-They are represented as `Source` objects and used in alerts as `SourceGroup` objects, which are a collection of `Source` objects. 
+A Source is a trigger for a notification, such as an on-chain event or a message sent by the project team.
+They are represented as `Source` objects and used in alerts as `SourceGroup` objects, which are a collection of `Source` objects.
 
-Typically a [Source](#source) has a specified [Source Type](#source-type) and a `id` which is used to distinguish sources of the same type. 
+Typically a Source has a specified [Source Type](#source-type) and a `id` which is used to distinguish sources of the same type.
 
 :::note
 The `id` can be an arbitrary string like `dappid__product_announcements`, but should start with `dappid__`
 :::
 
-### Examples of Source Types {#source-type}
+### Source Types {#source-type}
 
 - #### Broadcast {#broadcast}
 
-  Broadcast sources are used for any alerts that are supposed to go to multiple users at the same time, for example product announcements or notifications of certain events.
-  They can be triggered through the **Notifi Admin Panel** website or through an API in the **Notifi SDK**, which enables automated use cases for which Notifi is not providing a dedicated source. 
+  Broadcasts are used for any alerts that are supposed to go to multiple users at the same time, such as product announcements or events.
+  They can be triggered through the [Admin Panel](https://admin.dev.notifi.network), which allows members of the dApp admin team to manually compose and send out messages to subscribers. This is the recommended way for one-off or individual messages, such as announcements of new features or marketing campaigns.
+
+  Alternatively, they can also be triggered via API access using the **Node Client**. This enables very flexible and custom alert triggering logic where the dApp fully owns the decision of when to send out notifications. If Notifi does not provide a dedicated [Source](alert-intro#source), the Node Client is the best automated solution.
 
 - #### Direct Push {#direct-push}
 
-  Direct Push sources are used for alerts that are supposed to go to a single user only, for example notifications about changes in an users position, account, wallet, etc. 
-  Similar to Broadcast sources they can be triggered through the **Notifi Admin Panel** website or through an API in the **Notifi SDK**, which enables automated use cases for which Notifi is not providing a dedicated source. 
+  Direct Push is used for alerts that are supposed to go to a single user only, such as changes in an users position, account, or wallet.
+  Similar to Broadcast sources, they can be triggered through the [Admin Panel](https://admin.dev.notifi.network) or through an API in the **Notifi SDK**.
 
 - #### Wallets {#wallet-source}
 
-  Notifi supports wallets from several blockchains as source, which are typically used for changes of token balances in that wallet. In combination with a corresponding [Filter](#filter) notifications will be automatically sent out. 
+  Notifi supports wallets from several blockchains; a typical Source is changes of token balances in that wallet. In combination with a corresponding [Filter](#filter), notifications will be automatically sent out.
 
 - #### dApp specific (a.k.a. _"custom parser"_) {#custom-parser-source}
 
-  DApp specific sources are useful to enable customized user experiences tailored to specific use cases, like alerts for auctions, price changes, liquidations, loan health, and many more. Typically they monitor on-chain events and in combination with a corresponding filter, trigger notifications when certain transactions / events are observed on the chain. 
-  However, they require custom work, so please reach out to us to discuss the possibility of creating a custom parser. 
+  DApp specific sources are useful to enable customized user experiences tailored to specific use cases, such as alerts for auctions, price changes, liquidations, or loan health. Typically, they monitor on-chain events and in combination with a corresponding filter, trigger notifications when certain transactions or events are observed on the chain.
+  However, they require custom work, so please **reach out to us** to discuss the possibility of creating a custom parser.
 
 
 ## Filters {#filter}
 
-Filters are used in combination with [sources](#source) to enable a variety of alerts using the same source. 
-For example different filters could be used to allow different threshholds on loan health alerts, token balance changes, etc. 
-They are in particular relevant for custom parsers, as these usually emit all dApp related events, a filter can then be used to only alert on certain events that are relevant to the alert. 
+Filters are used in combination with [Sources](#source) to enable a variety of alerts using the same source.
+For example, different filters could be used to allow different threshholds on loan health alerts, token balance changes, etc.
+They are particularly relevant for custom parsers, as these usually emit all dApp related events. A filter can then be used to only alert on certain events that are relevant to the alert.
 
 :::info
 
-For use cases that use [Broadcast](#broadcast) or [Direct Push](#direct-push) sources there are usually no specific filter required, in that case the filter types `BroadcastMessages` and `DirectTenantMessage` can be used. 
+For use cases that use [Broadcast](#broadcast) or [Direct Push](#direct-push) sources, there are usually no specific filter(s) required. In that case, the filter types `BroadcastMessages` and `DirectTenantMessage` can be used.
 
 :::
 
 ## Targets {#target}
 
-A [Target](#target) is a destination for an alert, typically a communication channel like a specific email adress, Telegram account, phone number, etc. 
+A [Target](#target) is a destination for an alert, which is a communication channel: email adress, Telegram account, or phone number.
 
-They are represented as `Target` objects and used in alerts as `TargetGroup` objects, which are a collection of `Target` objects. 
+They are represented as `Target` objects and used in alerts as `TargetGroup` objects, which are a collection of `Target` objects.
 
-:::note 
+:::note
 
-Typically one `targetGroup` should only contain [targets](#target) owned by the same user. This ensures that one alert is clearly associated with one user only.
+Typically one `targetGroup` should only contain [targets](#target) owned by the same user. This ensures that one alert is clearly associated with only one user.
 
 :::
 
@@ -83,4 +82,4 @@ What to cover:
 - what are source, filter, targets, alerts
 - highlevel things that need to be done: UI for subscribe, creation of source/filters/targets, triggering alerts (manual vs. automatic)
 
---> 
+-->
