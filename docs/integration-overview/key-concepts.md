@@ -12,8 +12,15 @@ Depending on the depth of integration and use case, some of these are optional o
   The easiest and most common UI will be a form where users can enter their preferred targets (email, phone number, and/or Telegram), configure the alert, and subscribe to it.
   We provide design recommendations in our [Figma](https://www.figma.com/file/ieF0Ynuc3WI608RCt7wKSf/Notifi-Template?node-id=0%3A1&t=v8zeo6UovJAOb9vR-0), but there are no limitations on visual or interaction design.
 
-  We provide a ready-to-use [React Card](../alert-subscribe/react-card) component for easy integration that covers most basic use cases.
-  For additional customization and other frontend stacks, you can build your own UI component and connect it to the Notifi SDK with the [Frontend Client](../alert-subscribe/frontend-client).
+  We provide a ready-to-use [React Card](../alert-subscribe/react-card) component for easy integration that covers most basic use cases, including standard forms.
+  For additional customization and other frontend stacks, you can build your own UI component and connect it to the Notifi SDK with the [Frontend Client](../alert-subscribe/frontend-client). This includes custom elements like buttons or sliders to set thresholds, as long as the inputs can be passed in as parameters.
+
+:::note
+
+Feel free to **reach out** if your use case is not currently supported by the React Card. We are happy to consider expanding the React Card to support it!
+
+:::
+
 
 2. ### Users subscribe to relevant alerts and receive notifications
 

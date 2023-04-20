@@ -4,20 +4,8 @@ sidebar_position: 4
 
 # Where to start
 
-There are many ways to integrate Notifi into you dApp. Here are some pointers to help decide on the approach of integration. 
+There are many ways to integrate Notifi into your dApp. Here are some pointers to help decide how the integration will work best:
 
-#### What UI elements are required for the user to sign up to the alert?
-
-With the **Notifi Frontend Client** any JS based UI can be used to allow users to subscribe to alerts. 
-This includes custom UI elements like sliders or buttons to pick threshholds, as long as the source of the alert can take those inputs as parameter. 
-
-If only a standard form to collect the users targets is required, we recommend using the **Notifi React Card**. 
-
-:::note
-
-Feel free to reach out, if your use case is not supported by the React Card and we are happy to consider expanding the React Card to support it! 
-
-:::
 
 #### What is the desired trigger for your alert?
 
