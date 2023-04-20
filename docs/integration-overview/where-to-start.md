@@ -21,11 +21,11 @@ Feel free to reach out, if your use case is not supported by the React Card and 
 
 #### What is the desired trigger for your alert?
 
-- **Manual:** Let users sign up to [Broadcast](alert-intro#broadcast) or [Direct Push](alert-intro#direct-push) and use **Community Manager** in the **Admin Panel** Web UI to send out messages to users who have subscribed to those topics. 
+- **Manual:** Let users sign up to [Broadcast](alert-depth#broadcast) or [Direct Push](alert-depth#direct-push) and use **Community Manager** in the **Admin Panel** Web UI to send out messages to users who have subscribed to those topics. 
 
-- **Existing [sources](alert-intro#source):** Use the **Admin Panel** to configure a **React Card**. Alternatively you can use the **Notifi Frontend Client** by passing the corresponding `EventTypeItem` of the source in `NotifiFrontendClient.ensureAlert()`
+- **Existing [sources](alert-depth#source):** Use the **Admin Panel** to configure a **React Card**. Alternatively you can use the **Notifi Frontend Client** by passing the corresponding `EventTypeItem` of the source in `NotifiFrontendClient.ensureAlert()`
 
-- **DApp specific on-chain or off-chain events:** This requires a [custom parser source](alert-intro#custom-parser-source). Alternatively you can implement your own monitoring service that uses the **Notifi Node Client** to trigger alerts appropriately. 
+- **DApp specific on-chain or off-chain events:** This requires a [custom parser source](alert-depth#custom-parser-source). Alternatively you can implement your own monitoring service that uses the **Notifi Node Client** to trigger alerts appropriately. 
 
 ## Example integrations 
 
