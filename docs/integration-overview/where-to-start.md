@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# Where to start
+# Pointers and Samples
 
 There are many ways to integrate Notifi into your dApp. Here are some pointers to help decide how the integration will work best:
 
