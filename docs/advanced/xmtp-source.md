@@ -2,6 +2,8 @@
 
 This page will walk through an integration of XMTP as a [source](../integration-overview/alert-depth#source) using the **Notifi React Card** and **Admin Panel**. This will alert an user whenever they receive a new message to any XMTP conversation they have at the time of subscribing. 
 
+Check this [Youtube video](https://www.youtube.com/watch?v=WqnCd-kGqzg) for a walkthrough of the user setup and experience. 
+
 Make sure you are using a SDK version above the following ones: 
 
 ```
@@ -155,12 +157,21 @@ Pass the `string[]` array as field into the `NotifiSubscriptionCard` component.
         {!address ? (
           <>Loading...</>
         ) : (
-          <NotifiContextWrapper>
+          <NotifiContext
+            dappAddress="<YOUR DAPP ADDRESS HERE>"
+            env="Development"
+            signMessage={async (message: Uint8Array) => {
+              const result = await signMessageAsync({ message });
+              return arrayify(result);
+            }}
+            walletPublicKey={address ?? ""}
+            walletBlockchain="ETHEREUM"
+          >
             <NotifiSubscriptionCard
               inputs={{ XMTPTopics: topics }}
               cardId="<YOUR CARD ID HERE>"
             />
-          </NotifiContextWrapper>
+          </NotifiContext>
         )}
       </Modal>
     );
