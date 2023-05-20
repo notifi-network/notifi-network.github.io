@@ -1,12 +1,10 @@
-# Integrating Notifi React card 
+# Integrating Notifi React card
 
-`@notifi-network/notifi-react-card`
-
-https://github.com/notifi-network/notifi-sdk-ts/tree/main/packages/notifi-react-card
+To see the source code, look at the [Notifi SDK](https://github.com/notifi-network/notifi-sdk-ts/tree/main/packages/notifi-react-card).
 
 :::note
 
-You will need a `card config` to use the **Notifi React Card**, which can be created in the [Admin Panel](https://admin.dev.notifi.network). Follow the guide [here](create-card-id.md) to create a `card config`. 
+You will need a **card config** to use the Notifi React Card, which can be created in the [Admin Panel](https://admin.dev.notifi.network). Follow the guide [here](create-card-id.md) to create a **card config**.
 
 :::
 
@@ -34,8 +32,9 @@ import '@notifi-network/notifi-react-card/dist/index.css';
 
 ## Design Guidelines
 
-We have design recommendations on how to best present the UI to your dapp users. Check them out here: [Figma](https://www.figma.com/file/ieF0Ynuc3WI608RCt7wKSf/Notifi-Template?node-id=0%3A1&t=v8zeo6UovJAOb9vR-0).
+We have design recommendations on how to best present the UI to your dapp users. Check them out in our [Figma](https://www.figma.com/file/ieF0Ynuc3WI608RCt7wKSf/Notifi-Template?node-id=0%3A1&t=v8zeo6UovJAOb9vR-0).
 
+<!--
 ## Tutorial Video
 
 Here is a [link](https://www.youtube.com/watch?v=Nk2F_bd4ftw) covering how to setup the React Card config.
@@ -46,6 +45,7 @@ The video covers the following:
 - Adding Event Types
 - Installing the react package into your project
 - Updating the default values to match your dapp
+-->
 
 #### Example tips
 
