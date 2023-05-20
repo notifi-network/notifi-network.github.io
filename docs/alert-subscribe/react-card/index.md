@@ -37,13 +37,13 @@ We have design recommendations on how to best present the UI to your dapp users.
 #### Example tips
 
 - Embed the bell icon by the wallet login section.
-  ie. ![here](https://i.imgur.com/f2rnrpk.png)
+  ![here](https://i.imgur.com/f2rnrpk.png)
 
   &nbsp;
 
 - There should be a state for the bell icon when connected/not connected.
-  ie. ![example of not connected state](https://i.imgur.com/V9yEeCj.png)
-  ie. If not connected, the bell icon should be hidden.
+  ![example of not connected state](https://i.imgur.com/V9yEeCj.png)
+  If not connected, the bell icon should be hidden.
 
 - Make sure that there is enough contrast between color selections.
 
