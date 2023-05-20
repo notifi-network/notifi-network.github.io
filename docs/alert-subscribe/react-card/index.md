@@ -34,19 +34,6 @@ import '@notifi-network/notifi-react-card/dist/index.css';
 
 We have design recommendations on how to best present the UI to your dapp users. Check them out in our [Figma](https://www.figma.com/file/ieF0Ynuc3WI608RCt7wKSf/Notifi-Template?node-id=0%3A1&t=v8zeo6UovJAOb9vR-0).
 
-<!--
-## Tutorial Video
-
-Here is a [link](https://www.youtube.com/watch?v=Nk2F_bd4ftw) covering how to setup the React Card config.
-
-The video covers the following:
-
-- Configuring the card in our developer tool
-- Adding Event Types
-- Installing the react package into your project
-- Updating the default values to match your dapp
--->
-
 #### Example tips
 
 - Embed the bell icon by the wallet login section.

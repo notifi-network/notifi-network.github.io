@@ -2,8 +2,6 @@
 
 This page will walk through an integration of XMTP as a [source](../integration-overview/alert-depth#source) using the **Notifi React Card** and **Admin Panel**. This will alert an user whenever they receive a new message to any XMTP conversation they have at the time of subscribing. 
 
-Check this [Youtube video](https://www.youtube.com/watch?v=WqnCd-kGqzg) for a walkthrough of the user setup and experience. 
-
 Make sure you are using a SDK version above the following ones: 
 
 ```
