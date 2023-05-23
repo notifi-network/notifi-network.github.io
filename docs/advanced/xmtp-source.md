@@ -159,7 +159,8 @@ Pass the `string[]` array as field into the `NotifiSubscriptionCard` component.
         ) : (
           <NotifiContext
             dappAddress="<YOUR DAPP ADDRESS HERE>"
-            env="Development"
+            // keep this "Production" unless you have a special Development environment set up by Notifi
+            env="Production"
             signMessage={async (message: Uint8Array) => {
               const result = await signMessageAsync({ message });
               return arrayify(result);

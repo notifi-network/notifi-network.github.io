@@ -130,7 +130,8 @@ With this adding `multiWallet` is easy, once the list of wallet addresses of the
       return (
         <NotifiContext
           dappAddress="<YOUR OWN DAPP ADDRESS HERE>"
-          env="Development"
+          // keep this "Production" unless you have a special Development environment set up by Notifi
+          env="Production"
           walletBlockchain="APTOS"
           accountAddress={account.address.toString()}
           walletPublicKey={account.publicKey.toString()}

@@ -134,7 +134,8 @@ export const NotifiCard: React.FC = () => {
       <NotifiContext
         dappAddress="<YOUR OWN DAPP ADDRESS HERE>"
         walletBlockchain="SOLANA"
-        env="Development"
+        // keep this "Production" unless you have a special Development environment set up by Notifi
+        env="Production"
         walletPublicKey={publicKey}
         hardwareLoginPlugin={hwLoginPlugin}
         signMessage={signMessage}
@@ -216,7 +217,8 @@ export const Notifi: React.FC = () => {
   return (
     <NotifiContext
       dappAddress="<YOUR OWN DAPP ADDRESS HERE>"
-      env="Development"
+      // keep this "Production" unless you have a special Development environment set up by Notifi
+      env="Production"
       signMessage={async (message: Uint8Array) => {
         const result = await signer.signMessage(message);
         return arrayify(result);
@@ -292,7 +294,8 @@ export const Notifi: React.FC = () => {
   return (
     <NotifiContext
       dappAddress="<YOUR OWN DAPP ADDRESS HERE>"
-      env="Development"
+      // keep this "Production" unless you have a special Development environment set up by Notifi
+      env="Production"
       walletBlockchain="APTOS"
       accountAddress={account.address.toString()}
       walletPublicKey={account.publicKey.toString()}
@@ -436,7 +439,8 @@ export const Notifi: React.FC = () => {
   return (
     <NotifiContext
       dappAddress="<YOUR OWN DAPP ADDRESS HERE>"
-      env="Development"
+      // keep this "Production" unless you have a special Development environment set up by Notifi
+      env="Production"
       walletBlockchain="ACALA"
       accountAddress={acalaAddress}
       walletPublicKey={polkadotPublicKey}
@@ -562,7 +566,8 @@ export const Notifi: React.FC = () => {
   return (
     <NotifiContext
       dappAddress="<YOUR OWN DAPP ADDRESS HERE>"
-      env="Development"
+      // keep this "Production" unless you have a special Development environment set up by Notifi
+      env="Production"
       walletBlockchain="NEAR"
       accountAddress={account}
       walletPublicKey={walletPublicKey} // require wallet public key without ed25519: append
@@ -662,7 +667,8 @@ export const WalletConnectCard = () => {
   return (
     <NotifiContext
       dappAddress="<YOUR OWN DAPP ADDRESS HERE>"
-      env="Development" // or "Production"
+      // keep this "Production" unless you have a special Development environment set up by Notifi
+      env="Production"
       signMessage={async (message) => {
         const result = await signMessageAsync({ message });
         return arrayify(result);
@@ -778,7 +784,8 @@ export const SuiNotifiCard: React.FC = () => {
         <NotifiContext
           dappAddress="< YOUR OWN DAPP ADDRESS HERE >"
           walletBlockchain="SUI"
-          env="Development"
+          // keep this "Production" unless you have a special Development environment set up by Notifi
+          env="Production"
           accountAddress={wallet.address}
           walletPublicKey={wallet.address}
           signMessage={signMessage}
