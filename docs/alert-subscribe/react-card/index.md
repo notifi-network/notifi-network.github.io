@@ -44,19 +44,19 @@ The video covers the following:
 
 - Configuring the card in our developer tool
 - Adding Event Types
-- Installing the react package into your project
+- Installing the React package into your project
 - Updating the default values to match your dapp
 
-#### Example tips
+#### Tips
 
-- Embed the bell icon by the wallet login section.
-  ie. ![here](https://i.imgur.com/f2rnrpk.png)
+- Embed the bell icon by the wallet login section:
+  ![here](https://i.imgur.com/f2rnrpk.png)
 
   &nbsp;
 
-- There should be a state for the bell icon when connected/not connected.
-  ie. ![example of not connected state](https://i.imgur.com/V9yEeCj.png)
-  ie. If not connected, the bell icon should be hidden.
+- There should be a state for the bell icon when connected/not connected:
+  ![example of not connected state](https://i.imgur.com/V9yEeCj.png)
+  If not connected, the bell icon should be hidden.
 
 - Make sure that there is enough contrast between color selections.
 
@@ -692,7 +692,7 @@ export const WalletConnectCard = () => {
 <details>
 <summary>Integrate Card Component</summary>
 
-> [`ethos-connect`](https://www.npmjs.com/package/ethos-connect) are used as Sui wallet adaptor. Be sure it is installed as dependencies.
+> [`ethos-connect`](https://www.npmjs.com/package/ethos-connect) is used as the Sui wallet adaptor. Make sure it's installed as a dependency.
 
 ```bash
 npm install ethos-connect # For npm
