@@ -1,4 +1,4 @@
-# Integrating frontend client 
+# Integrating the Notifi Frontend Client 
 
 
 `@notifi/notifi-frontend-client`
@@ -6,13 +6,13 @@
 https://github.com/notifi-network/notifi-sdk-ts/tree/main/packages/notifi-frontend-client
 
 
-## 📥 Installation
+## Installation
 
 ```
 npm i @notifi-network/notifi-frontend-client
 ```
 
-## 🪝 Hook up the SDK
+## Hook up the SDK
 
 Load the Notifi Frontend Client SDK into your component.
 
@@ -38,7 +38,7 @@ const client = newAptosClient(config);
 
 ```
 
-## 🔏 Signature Authorization
+## Signature Authorization
 
 For a user to opt-in for notifications, they will need to provide their signature. This signature will then be used to authorize the user's connected wallet address with Notifi and create the account with Notifi.
 
@@ -67,11 +67,11 @@ const logIn = async () => {
 
 ```
 
-## 🪢 Create the Alert
+## Create the Alert
 
 Once your user enters their contact information and options for their first alert, use the `ensureTargetGroup()` to create a [target group](../integration-overview/alert-depth#target) of their contact information and a [source group](../integration-overview/alert-depth#source) of their desired alert options.
 
-In order to create a target group, `ensureTargetGroup()` must pass in least one email address, phone number, telegramId, or webhook url. DApp admins can update pass in a webhook url to receive all of the notifications instead of a user email address, phone number, or telegramId.
+In order to create a target group, `ensureTargetGroup()` must pass in least one email address, phone number, Telegram Id, or Webhook URL. DApp admins can update pass in a Webhook URL to receive all of the notifications instead of a user email address, phone number, or Telegram Id.
 
 In order to create a source group, `ensureSourceGroup()` must pass in metadata of the alert options returned in the Rendering Alert Options section.
 
@@ -121,7 +121,7 @@ const targetGroup = await client.ensureTargetGroup({
 }
 ```
 
-## 🔃 Updating the Alert
+## Updating the Alert
 
 If a user wants to update their alert by changing the email address notifications are sent to, or to add a phone number for SMS notifications, you can still use `ensureAlert()` to update.
 
@@ -150,9 +150,9 @@ const handleUpdateAlert = async () => {
 
 ```
 
-## 🗑 Deleting the Alert
+## Deleting the Alert
 
-To delete an alert, use `deleteAlert()`, which simply [takes the `id` of the alert] to be deleted. In our use case where the user only has 1 alert in their account:
+To delete an alert, use `deleteAlert()`, which simply takes the `id` of the alert to be deleted. Here is what that looks like in our use case where the user only has one alert in their account:
 
 ```js
 
