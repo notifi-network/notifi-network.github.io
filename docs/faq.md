@@ -52,7 +52,7 @@ Any DAO governance member can sign up for proposal notifications. The DAO
 client page uses the Notifi SDK to provide Notifi with the DAO address, along
 with the user's wallet address. Notifi will ensure the wallet address is a
 governance member, and sign up for the relevant notification channels
-(email/SMS/Telegram)
+(email/SMS/Telegram).
 
 #### How does Notifi ensure wallets are part of a DAO?
 
