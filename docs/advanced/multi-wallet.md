@@ -5,20 +5,20 @@ sidebar_position: 1
 
 # Supporting multiple addresses 
 
-Notifi seemless supports multiple addresses per user. This means users with multiple wallet addresses can: 
+Notifi seemlessly supports multiple addresses per user. This means users with multiple wallet addresses can: 
 
 - Sign up to alerts with all their wallet adresses at the same time 
 - Verify multiple wallet addresses and link them to their Notifi account
 - View alert histories of their wallet addresses in one place 
 
-This can be very useful for scenarios, where users are naturally expected to handle multiple addresses, such as: 
+This can be very useful for scenarios where users are naturally expected to handle multiple addresses, such as: 
 
 - Direct integrations of Notifi into browser extension wallets
 - Multichain dApps where users can sign up with wallets from multiple chains 
 
 ## Example user flow
 
-See an example user flow of a direct integration into a browser extension wallet in our [Figma](https://www.figma.com/file/ieF0Ynuc3WI608RCt7wKSf/Notifi-Template)
+See an example user flow of a direct integration into a browser extension wallet in our [Figma](https://www.figma.com/file/ieF0Ynuc3WI608RCt7wKSf/Notifi-Template).
 
 <!---
 User clicks bell icon for the first time and has to opt in to destinations
@@ -45,7 +45,7 @@ Returning users are presented with the alert history. Settings icon opens Manage
 
 ## Integration introduction
 
-Currently multiple addresses are only supported through our [**React Card**](https://github.com/notifi-network/notifi-sdk-ts/tree/main/packages/notifi-react-card).  
+Currently, multiple addresses are only supported through our [**React Card**](https://github.com/notifi-network/notifi-sdk-ts/tree/main/packages/notifi-react-card).  
 
 To enable support for multiple addresses use the `multiWallet: MultiWalletParams` property in `NotifiContext` when adding the React Card, which is of the following type: 
 
@@ -69,20 +69,20 @@ type WalletWithSignParams = Readonly<{
 }>
 ```
 
-> **Note:** See the full definition of the type `WalletWithSignParams` [here](https://github.com/notifi-network/notifi-sdk-ts/blob/main/packages/notifi-core/lib/NotifiClient.ts)
+> **Note:** See the full definition of the type `WalletWithSignParams` [here](https://github.com/notifi-network/notifi-sdk-ts/blob/main/packages/notifi-core/lib/NotifiClient.ts).
 
-With this adding `multiWallet` is easy, once the list of wallet addresses of the user has been obtained. 
+With this, adding `multiWallet` is easy once the list of wallet addresses of the user has been obtained. 
 
 
 ## How to integrate
 
-1. Obtain the list of wallet addresses 
+1. Obtain the list of wallet addresses. 
 
-  This will depend on the blockchain and wallet, but often a `useWallet()` hook can be used to fetch an array of all wallet addresses incl. their public keys
+  This will depend on the blockchain and wallet, but often a `useWallet()` hook can be used to fetch an array of all wallet addresses including their public keys.
 
-2. Construct `signMessage` functions for every address
+2. Construct `signMessage` functions for every address.
 
-  This will again depend on the blockchain you are developing for. Generally a function that takes a hashed message, signs it, and returns the signature is required. 
+  This will again depend on the blockchain you are developing for. Generally, a function that takes a hashed message, signs it, and returns the signature is required. 
 
   <details> 
     <summary>Code example for Aptos</summary>
@@ -100,7 +100,7 @@ With this adding `multiWallet` is easy, once the list of wallet addresses of the
     ```
   </details>
 
-3. Construct a `WalletWithSignParams` array with the public keys and `signMessage` functions and pass it in the `multiWallet` property of `NotifiContext`
+3. Construct a `WalletWithSignParams` array with the public keys and `signMessage` functions and pass it in the `multiWallet` property of `NotifiContext`.
 
   <details>
     <summary>Code example for Aptos</summary>
