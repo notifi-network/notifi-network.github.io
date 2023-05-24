@@ -9,7 +9,7 @@ The card config serves as configuration of the React Card and enables multiple f
 
 #### Step 1 
 
-Log in to the [Admin Panel](https://admin.dev.notifi.network) (create an account if not already) and head to the _Card Management_ page. 
+Log in to the [Admin Panel](https://admin.dev.notifi.network) (create an account if you haven't done so already) and head to the _Card Management_ page. 
 Click on "+Create Config" 
 
 #### Step 2 
@@ -38,7 +38,7 @@ Click on the **+** button next to `Topic Type` to specify a `Broadcast Id`. The 
 
 :::caution
 
-For Broadcast the `id` is required to start with `dappid__` (two underscores)
+A Broadcast Id is required to start with `dappid__` (two underscores).
 :::
 
 #### Step 5
