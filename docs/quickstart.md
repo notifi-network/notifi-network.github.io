@@ -18,7 +18,7 @@ git clone https://github.com/notifi-network/notifi-sdk-ts
 You can also download a zip file of the code at
 [this link](https://github.com/notifi-network/notifi-sdk-ts/archive/refs/heads/main.zip).
 
-Change into the `notifi-sdk-ts` folder 
+Change into the `notifi-sdk-ts` folder. 
 
 ```bash 
 cd notifi-sdk-ts/
@@ -44,7 +44,7 @@ npx lerna --scope=@notifi-network/notifi-react-example run start
 Once this finishes, you should be able to see sample cards in your browser if
 you navigate to [http://localhost:3000/](http://localhost:3000/). Clicking
 **Edit** on the card will let you update your email, phone number, and Telegram
-id. After updating the fields, you will need to verify that your contact
+ID. After updating the fields, you will need to verify that your contact
 information is correct by clicking the link sent to you.
 
 <img
@@ -63,7 +63,7 @@ Settings** [page](https://admin.dev.notifi.network/settings).
 ![3](/img/quickstart/3.png)
 
 In the file `packages/notifi-react-example/src/NotifiCard/DemoPreviewCard.tsx`,
-update the following lines by placing the the DappID in the **dappAddress**
+update the following lines by placing the DappID in the **dappAddress**
 field and the Config ID in the **cardId** field.
 
 ```
