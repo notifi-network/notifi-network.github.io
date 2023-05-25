@@ -1,4 +1,4 @@
-# Sending an Alert through the Admin Portal
+# Sending an alert through the Admin Portal
 
 <!--
 What to cover: 

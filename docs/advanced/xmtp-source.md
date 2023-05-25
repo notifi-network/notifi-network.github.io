@@ -2,9 +2,9 @@
 
 This page will walk through an integration of XMTP as a [source](../integration-overview/alert-depth#source) using the **Notifi React Card** and **Admin Panel**. This will alert an user whenever they receive a new message to any XMTP conversation they have at the time of subscribing. 
 
-Check this [Youtube video](https://www.youtube.com/watch?v=WqnCd-kGqzg) for a walkthrough of the user setup and experience. 
+Check this [YouTube video](https://www.youtube.com/watch?v=WqnCd-kGqzg) for a walkthrough of the user setup and experience. 
 
-Make sure you are using a SDK version above the following ones: 
+Make sure you are using a SDK version higher than the following: 
 
 ```
 "@notifi-network/notifi-core": "^0.59.2-alpha.3+7347f24",
@@ -19,11 +19,11 @@ Log in to the [Admin Panel](https://admin.dev.notifi.network) and edit the Card 
 
 ![Toggle on Advanced Mode](/img/xmtp-source/1.png)
 
-A new section **Inputs** will appear
+A new section, **Inputs**, will appear.
 
 #### Step 2 
 
-Add a new **input** of type `XMTP Input` and click on **+**. 
+Add a new **input** of type `XMTP Input` and click **+**. 
 
 :::note
 The input can be named arbitrarily, however it will be referenced in the code later. We are using `XMTPTopics` in this example (these topics are XMTP topics, not Notifi topics).
@@ -43,7 +43,7 @@ Click on **+** and select the input created in [step 2](#step-2) as input refere
 
 ## Setting up React Card 
 
-To set up the **React Card** we need to pass in the XMTP topics the user wants to subscribe to as `input` field in the `NotifiSubscriptionCard` component. We can use the **input reference** that we defined above for this. 
+To set up the **React Card** we need to pass in the XMTP topics the user wants to subscribe to as the `input` field in the `NotifiSubscriptionCard` component. We can use the **input reference** that we defined above for this. 
 
 #### Step 1 
 

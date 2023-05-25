@@ -16,7 +16,7 @@ They are represented as `Source` objects and used in alerts as `SourceGroup` obj
 Typically a Source has a specified [Source Type](#source-type) and a `id` which is used to distinguish sources of the same type.
 
 :::note
-The `id` can be an arbitrary string like `dappid__product_announcements`, but should start with `dappid__`
+The `id` can be an arbitrary string like `dappid__product_announcements`, but should start with `dappid__`.
 :::
 
 ### Source Types {#source-type}
@@ -30,7 +30,7 @@ The `id` can be an arbitrary string like `dappid__product_announcements`, but sh
 
 - #### Direct Push {#direct-push}
 
-  Direct Push is used for alerts that are supposed to go to a single user only, such as changes in an users position, account, or wallet.
+  Direct Push is used for alerts that are supposed to go to a single user only, such as changes in a user's position, account, or wallet.
   Similar to Broadcast sources, they can be triggered through the [Admin Panel](https://admin.dev.notifi.network) or through an API in the **Notifi SDK**.
 
 - #### Wallets {#wallet-source}
