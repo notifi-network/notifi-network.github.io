@@ -5,7 +5,7 @@ sidebar_position: 1
 
 # Supporting multiple addresses 
 
-Notifi seemlessly supports multiple addresses per user. This means users with multiple wallet addresses can: 
+Notifi seamlessly supports multiple addresses per user. This means users with multiple wallet addresses can:
 
 - Sign up to alerts with all their wallet adresses at the same time 
 - Verify multiple wallet addresses and link them to their Notifi account
