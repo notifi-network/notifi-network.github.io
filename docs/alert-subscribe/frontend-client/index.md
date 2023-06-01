@@ -73,7 +73,7 @@ Once your user enters their contact information and options for their first aler
 
 In order to create a target group, `ensureTargetGroup()` must pass in least one email address, phone number, Telegram Id, or Webhook URL. Dapp admins can update pass in a Webhook URL to receive all of the notifications instead of a user email address, phone number, or Telegram Id.
 
-In order to create a source group, `ensureSourceGroup()` must pass in metadata of the alert options returned in the Rendering Alert Options section.
+In order to create a source group, `ensureSourceGroup()` must pass in metadata of the alert options returned in the [Rendering Alert Options](https://github.com/notifi-network/notifi-sdk-ts/tree/main/packages/notifi-react-hooks) section.
 
 After creating a target group and source group, use the `ensureAlert()` to create the first alert.
 
