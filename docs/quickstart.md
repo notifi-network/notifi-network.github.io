@@ -105,3 +105,16 @@ click **Send Message**. You should see now see “Message sent successfully!”
   width="60%" height="30%"
 />
 
+<!--
+## Tutorial Video
+
+Here is a [link](https://www.youtube.com/watch?v=Nk2F_bd4ftw) covering how to setup the React Card config.
+
+The video covers the following:
+
+- Configuring the card in our developer tool
+- Adding Event Types
+- Installing the react package into your project
+- Updating the default values to match your dapp
+-->
+
