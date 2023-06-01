@@ -31,13 +31,13 @@ There are many ways to integrate Notifi into your dapp. Here are some pointers t
 
 - **Send out an alert when a new DAO proposal has been created**
 
-  This requires a custom parser that can act as source for the alert. If Notifi provides this source, the [React Card](../alert-subscribe/react-card) can be used for creating alerts or the [Frontend Client](../alert-subscribe/frontend-client). Alerts will be triggered automatically in this case.
+  This requires a [custom parser source](alerts-in-depth#custom-parser-source) that can act as source for the alert. If Notifi provides this source, the [React Card](../alert-subscribe/react-card) can be used for creating alerts or the [Frontend Client](../alert-subscribe/frontend-client). Alerts will be triggered automatically in this case.
 
   If the parser is not hosted by Notifi, use a Broadcast source and the [Node Client](../alert-trigger/node-client) to trigger alerts on that topic.
 
 - **Send out an alert to an user when their position reaches a certain LTV (loan-to-value) threshold that the user can choose**
 
-  This requires a custom UI to allow users to choose their threshold when subscribing as well as a custom parser as source for the alert.
+  This requires a custom UI to allow users to choose their threshold when subscribing as well as a [custom parser source](alerts-in-depth#custom-parser-source) for the alert.
   The same integration path as the example above can be applied; however, the [React Card](../alert-subscribe/react-card) does not support custom UI elements to let users pick their threshold. Therefore, the [Frontend Client](../alert-subscribe/frontend-client) needs to be used to create alerts.
 
   If the parser is not hosted by Notifi, a Direct Push source should be used since the alerts are supposed to go to one user at the time.
