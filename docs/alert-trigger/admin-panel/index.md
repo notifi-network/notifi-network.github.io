@@ -43,3 +43,5 @@ In the Admin console, add a new topic with Type Broadcast. The Broadcast Id must
 
 <!-- pic -->
 
+Add a subject, and a body, then click **Send Message**. You should see now see “Message sent successfully!”
+
