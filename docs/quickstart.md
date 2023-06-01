@@ -64,7 +64,7 @@ topics to subscribe to.
 Once you've verified your information, log into the [Admin
 console](https://admin.dev.notifi.network/cards). Under the
 **Card Management** section, create a Config and note the Config ID, which will
-be needed later.  Also, note the DappID which can be found in the **App
+be needed later.  Also, note the dappID which can be found in the **App
 Settings** [page](https://admin.dev.notifi.network/settings).
 
 ![2](/img/quickstart/2.png)
@@ -72,7 +72,7 @@ Settings** [page](https://admin.dev.notifi.network/settings).
 ![3](/img/quickstart/3.png)
 
 In the file `packages/notifi-react-example/src/NotifiCard/DemoPreviewCard.tsx`,
-update the following lines by placing the DappID in the **dappAddress**
+update the following lines by placing the dappID in the **dappAddress**
 field and the Config ID in the **cardId** field.
 
 ```
@@ -81,7 +81,7 @@ dappAddress=""
 ```
 
 In the Admin console, add a new topic with Type **Broadcast**. The Broadcast Id
-must start with the DappID then two underscores. Since the DappID used is
+must start with the dappID then two underscores. Since the dappID used is
 “sampledapp”, the Broadcast Id must start with “sampledapp__”.
 
 <img

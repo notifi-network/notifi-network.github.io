@@ -39,7 +39,7 @@ Log in to the [Notifi Admin Portal](https://admin.dev.notifi.network/) using an 
 
 Click on Send Test Messages in the left hand navigation bar.
 
-In the Admin console, add a new topic with Type Broadcast. The Broadcast Id must start with the DappID then two underscores. Since the DappID used is “sampledapp”, the Broadcast Id must start with “sampledapp__”.
+In the Admin console, add a new topic with Type Broadcast. The Broadcast Id must start with the dappID then two underscores. Since the dappID used is “sampledapp”, the Broadcast Id must start with “sampledapp__”.
 
 <!-- pic -->
 

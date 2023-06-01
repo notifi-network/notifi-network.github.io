@@ -12,7 +12,7 @@ There are many ways to integrate Notifi into your dapp. Here are some pointers t
 
 - **Existing [sources](alert-depth#source):** Use the **Admin Panel** to configure a **React Card**. Alternatively you can use the **Notifi Frontend Client** by passing the corresponding `EventTypeItem` of the source in `NotifiFrontendClient.ensureAlert()`
 
-- **DApp specific on-chain or off-chain events:** This requires a [custom parser source](alert-depth#custom-parser-source). Alternatively, you can implement your own monitoring service that uses the **Notifi Node Client** to trigger alerts appropriately.
+- **Dapp specific on-chain or off-chain events:** This requires a [custom parser source](alert-depth#custom-parser-source). Alternatively, you can implement your own monitoring service that uses the **Notifi Node Client** to trigger alerts appropriately.
 
 ## Example integrations
 

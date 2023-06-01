@@ -39,7 +39,7 @@ The `id` can be an arbitrary string like `dappid__product_announcements`, but sh
 
 - #### dapp specific (a.k.a. _"custom parser"_) {#custom-parser-source}
 
-  DApp specific sources are useful to enable customized user experiences tailored to specific use cases, such as alerts for auctions, price changes, liquidations, or loan health. Typically, they monitor on-chain events and in combination with a corresponding filter, trigger notifications when certain transactions or events are observed on the chain.
+  Dapp specific sources are useful to enable customized user experiences tailored to specific use cases, such as alerts for auctions, price changes, liquidations, or loan health. Typically, they monitor on-chain events and in combination with a corresponding filter, trigger notifications when certain transactions or events are observed on the chain.
   However, they require custom work, so please **reach out to us** to discuss the possibility of creating a custom parser.
 
 
