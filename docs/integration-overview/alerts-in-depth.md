@@ -26,12 +26,12 @@ The `id` can be an arbitrary string like `dappid__product_announcements`, but sh
   Broadcasts are used for any alerts that are supposed to go to multiple users at the same time, such as product announcements or events.
   They can be triggered through the [Admin Panel](https://admin.dev.notifi.network), which allows members of the dapp admin team to manually compose and send out messages to subscribers. This is the recommended way for one-off or individual messages, such as announcements of new features or marketing campaigns.
 
-  Alternatively, they can also be triggered via API access using the **Node Client**. This enables very flexible and custom alert triggering logic where the dapp fully owns the decision of when to send out notifications. If Notifi does not provide a dedicated [Source](alerts-in-depth#source), the Node Client is the best automated solution.
+  Alternatively, they can also be triggered via API access using the [Node Client](../alert-trigger/node-client). This enables very flexible and custom alert triggering logic where the dapp fully owns the decision of when to send out notifications.
 
 - #### Direct Push {#direct-push}
 
   Direct Push is used for alerts that are supposed to go to a single user only, such as changes in a user's position, account, or wallet.
-  Similar to Broadcast sources, they can be triggered through the [Admin Panel](https://admin.dev.notifi.network) or through an API in the **Notifi SDK**.
+  Similar to Broadcast sources, they can be triggered through the [Admin Panel](https://admin.dev.notifi.network) or through an API in the [Notifi SDK](https://github.com/notifi-network/notifi-sdk-ts).
 
 - #### Wallets {#wallet-source}
 
@@ -47,7 +47,7 @@ The `id` can be an arbitrary string like `dappid__product_announcements`, but sh
 
 Filters are used in combination with [Sources](#source) to enable a variety of alerts using the same source.
 For example, different filters could be used to allow different threshholds on loan health alerts, token balance changes, etc.
-They are particularly relevant for custom parsers, as these usually emit all dapp related events. A filter can then be used to only alert on certain events that are relevant to the alert.
+They are particularly relevant for custom parsers, as these usually emit all dapp related events.
 
 :::info
 
