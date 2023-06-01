@@ -8,37 +8,37 @@ There are many ways to integrate Notifi into your dapp. Here are some pointers t
 
 #### What is the desired trigger for your alert?
 
-- **Manual:** Let users sign up to [Broadcast](alerts-in-depth#broadcast) or [Direct Push](alerts-in-depth#direct-push) and use **Community Manager** in the **Admin Panel** Web UI to send out messages to users who have subscribed to those topics.
+- **Manual:** Let users sign up to [Broadcast](alerts-in-depth#broadcast) or [Direct Push](alerts-in-depth#direct-push) and use [Community Manager](../alert-design/community-manager) in the [Admin Panel](../alert-trigger/admin-panel) Web UI to send out messages to users who have subscribed to those topics.
 
-- **Existing [sources](alerts-in-depth#source):** Use the **Admin Panel** to configure a **React Card**. Alternatively you can use the **Notifi Frontend Client** by passing the corresponding `EventTypeItem` of the source in `NotifiFrontendClient.ensureAlert()`
+- **Existing [sources](alerts-in-depth#source):** Use the [Admin Panel](../alert-trigger/admin-panel) to configure a [React Card](../alert-subscribe/react-card). Alternatively you can use the [Frontend Client](../alert-subscribe/frontend-client) by passing the corresponding `EventTypeItem` of the source in `NotifiFrontendClient.ensureAlert()`
 
-- **Dapp specific on-chain or off-chain events:** This requires a [custom parser source](alerts-in-depth#custom-parser-source). Alternatively, you can implement your own monitoring service that uses the **Notifi Node Client** to trigger alerts appropriately.
+- **Dapp specific on-chain or off-chain events:** This requires a [custom parser source](alerts-in-depth#custom-parser-source). Alternatively, you can implement your own monitoring service that uses the [Node Client](../alert-trigger/node-client) to trigger alerts appropriately.
 
 ## Example integrations
 
 - **Allow users to opt-in to announcements and product updates**
 
-  If you use React, configure a card in the **Admin Panel** and add the **Notifi React Card** to the dapp frontend. This will automatically set up relevant sources and filters.
+  If you use React, configure a card in the [Admin Panel](../alert-trigger/admin-panel) and add the [React Card](../alert-subscribe/react-card) to the dapp frontend. This will automatically set up relevant sources and filters.
 
-  If you don't use React, use the **Notifi Frontend Client** to create alerts by using the Broadcast or Direct Push `EventType` with the correct `id`.
-  To send out announcements, use the **Community Manager** in the Admin Panel.
+  If you don't use React, use the [Frontend Client](../alert-subscribe/frontend-client) to create alerts by using the Broadcast or Direct Push `EventType` with the correct `id`.
+  To send out announcements, use the [Community Manager](../alert-design/community-manager) in the Admin Panel.
 
 - **Send out an alert when price of an asset on Coingecko changed**
 
-  This is very similar to the announcement integration above, except you would use the price change source type. Make sure to configure parameters such as the asset to watch or price thresholds when configuring the card in the **Admin Panel** (when using React Card) or in the `EventTypeItem` passed to the **Notifi Frontend Client** respectively.
+  This is very similar to the announcement integration above, except you would use the price change source type. Make sure to configure parameters such as the asset to watch or price thresholds when configuring the card in the [Admin Panel](../alert-trigger/admin-panel) (when using React Card) or in the `EventTypeItem` passed to the [Frontend Client](../alert-subscribe/frontend-client) respectively.
 
   Note: For prices not listed on Coingecko, a more custom solution is required.
 
 - **Send out an alert when a new DAO proposal has been created**
 
-  This requires a custom parser that can act as source for the alert. If Notifi provides this source, the **React Card** can be used for creating alerts or the **Notifi Frontend Client**. Alerts will be triggered automatically in this case.
+  This requires a custom parser that can act as source for the alert. If Notifi provides this source, the [React Card](../alert-subscribe/react-card) can be used for creating alerts or the [Frontend Client](../alert-subscribe/frontend-client). Alerts will be triggered automatically in this case.
 
-  If the parser is not hosted by Notifi, use a Broadcast source and the **Notifi Node Client** to trigger alerts on that topic.
+  If the parser is not hosted by Notifi, use a Broadcast source and the [Node Client](../alert-trigger/node-client) to trigger alerts on that topic.
 
 - **Send out an alert to an user when their position reaches a certain LTV (loan-to-value) threshold that the user can choose**
 
   This requires a custom UI to allow users to choose their threshold when subscribing as well as a custom parser as source for the alert.
-  The same integration path as the example above can be applied; however, the **React Card** does not support custom UI elements to let users pick their threshold. Therefore, the **Notifi Frontend Client** needs to be used to create alerts.
+  The same integration path as the example above can be applied; however, the [React Card](../alert-subscribe/react-card) does not support custom UI elements to let users pick their threshold. Therefore, the [Frontend Client](../alert-subscribe/frontend-client) needs to be used to create alerts.
 
   If the parser is not hosted by Notifi, a Direct Push source should be used since the alerts are supposed to go to one user at the time.
 
