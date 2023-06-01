@@ -17,7 +17,7 @@ Depending on the depth of integration and use case, some of these are optional o
 
 :::note
 
-Feel free to **reach out** if your use case is not currently supported by the React Card. We are happy to consider expanding the React Card to support it!
+Feel free to reach out to integrations@notifi.network if your use case is not currently supported by the React Card. We are happy to consider expanding the React Card to support it!
 
 :::
 
