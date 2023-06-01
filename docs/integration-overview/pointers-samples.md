@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # Pointers and Samples
 
-There are many ways to integrate Notifi into your dApp. Here are some pointers to help decide how the integration will work best:
+There are many ways to integrate Notifi into your dapp. Here are some pointers to help decide how the integration will work best:
 
 #### What is the desired trigger for your alert?
 

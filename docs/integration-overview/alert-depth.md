@@ -24,9 +24,9 @@ The `id` can be an arbitrary string like `dappid__product_announcements`, but sh
 - #### Broadcast {#broadcast}
 
   Broadcasts are used for any alerts that are supposed to go to multiple users at the same time, such as product announcements or events.
-  They can be triggered through the [Admin Panel](https://admin.dev.notifi.network), which allows members of the dApp admin team to manually compose and send out messages to subscribers. This is the recommended way for one-off or individual messages, such as announcements of new features or marketing campaigns.
+  They can be triggered through the [Admin Panel](https://admin.dev.notifi.network), which allows members of the dapp admin team to manually compose and send out messages to subscribers. This is the recommended way for one-off or individual messages, such as announcements of new features or marketing campaigns.
 
-  Alternatively, they can also be triggered via API access using the **Node Client**. This enables very flexible and custom alert triggering logic where the dApp fully owns the decision of when to send out notifications. If Notifi does not provide a dedicated [Source](alert-depth#source), the Node Client is the best automated solution.
+  Alternatively, they can also be triggered via API access using the **Node Client**. This enables very flexible and custom alert triggering logic where the dapp fully owns the decision of when to send out notifications. If Notifi does not provide a dedicated [Source](alert-depth#source), the Node Client is the best automated solution.
 
 - #### Direct Push {#direct-push}
 
@@ -37,7 +37,7 @@ The `id` can be an arbitrary string like `dappid__product_announcements`, but sh
 
   Notifi supports wallets from several blockchains; a typical Source is changes of token balances in that wallet. In combination with a corresponding [Filter](#filter), notifications will be automatically sent out.
 
-- #### dApp specific (a.k.a. _"custom parser"_) {#custom-parser-source}
+- #### dapp specific (a.k.a. _"custom parser"_) {#custom-parser-source}
 
   DApp specific sources are useful to enable customized user experiences tailored to specific use cases, such as alerts for auctions, price changes, liquidations, or loan health. Typically, they monitor on-chain events and in combination with a corresponding filter, trigger notifications when certain transactions or events are observed on the chain.
   However, they require custom work, so please **reach out to us** to discuss the possibility of creating a custom parser.
@@ -47,7 +47,7 @@ The `id` can be an arbitrary string like `dappid__product_announcements`, but sh
 
 Filters are used in combination with [Sources](#source) to enable a variety of alerts using the same source.
 For example, different filters could be used to allow different threshholds on loan health alerts, token balance changes, etc.
-They are particularly relevant for custom parsers, as these usually emit all dApp related events. A filter can then be used to only alert on certain events that are relevant to the alert.
+They are particularly relevant for custom parsers, as these usually emit all dapp related events. A filter can then be used to only alert on certain events that are relevant to the alert.
 
 :::info
 

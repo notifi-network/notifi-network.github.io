@@ -14,7 +14,7 @@ Notifi seamlessly supports multiple addresses per user. This means users with mu
 This can be very useful for scenarios where users are naturally expected to handle multiple addresses, such as: 
 
 - Direct integrations of Notifi into browser extension wallets
-- Multichain dApps where users can sign up with wallets from multiple chains 
+- Multichain dapps where users can sign up with wallets from multiple chains 
 
 ## Example user flow
 

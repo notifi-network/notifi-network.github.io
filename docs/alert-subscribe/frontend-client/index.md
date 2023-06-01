@@ -21,7 +21,7 @@ Load the Notifi Frontend Client SDK into your component.
 const { newAptosClient, newAptosConfig } = require('@notifi-network/notifi-frontend-client');
 ```
 
-Instantiate and configure the Notifi Client for your dApp and environment. If your user has not connected their wallet, they will need to do so in order to instantiate the client.
+Instantiate and configure the Notifi Client for your dapp and environment. If your user has not connected their wallet, they will need to do so in order to instantiate the client.
 
 ```js
 const accountAddress = <The wallet's public account address>;

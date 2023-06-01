@@ -4,10 +4,10 @@ sidebar_position: 1
 
 # Key concepts
 
-There are two steps required to enable an end-to-end user experience in your dApp with Notifi.
+There are two steps required to enable an end-to-end user experience in your dapp with Notifi.
 Depending on the depth of integration and use case, some of these are optional or can be vastly sped up by using existing packages provided by Notifi.
 
-1. ### Integrate UI components in your dApp for users to configure and subscribe to alerts
+1. ### Integrate UI components in your dapp for users to configure and subscribe to alerts
 
   The easiest and most common UI will be a form where users can enter their preferred targets (email, phone number, and/or Telegram), configure the alert, and subscribe to it.
   We provide design recommendations in our [Figma](https://www.figma.com/file/ieF0Ynuc3WI608RCt7wKSf/Notifi-Template?node-id=0%3A1&t=v8zeo6UovJAOb9vR-0), but there are no limitations on visual or interaction design.

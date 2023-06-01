@@ -52,9 +52,9 @@ In order to enable Telegram, follow these steps:
 
 <details> 
   <summary> How to enable Telegram messages </summary>
-  In order to receive Telegram support from Notifi, we simply need a Telegram Bot to send notifications to users on your behalf. We do this so that each individual dApp has the ability to maintain control over their bot’s profile picture, description and any other bot customizations available. 
+  In order to receive Telegram support from Notifi, we simply need a Telegram Bot to send notifications to users on your behalf. We do this so that each individual dapp has the ability to maintain control over their bot’s profile picture, description and any other bot customizations available. 
 
-  1. Open your Telegram app. Ideally, there's already a designated Telegram account that's the “official” dApp account. If not, an owner or admin/operator of the dApp should use their Telegram account.
+  1. Open your Telegram app. Ideally, there's already a designated Telegram account that's the “official” dapp account. If not, an owner or admin/operator of the dapp should use their Telegram account.
   2. Search for the user “BotFather”
   3. Send a message to the BotFather: “/newbot”
   4. Enter the name of your bot. This is going to be the name that's displayed in the title of the window.
