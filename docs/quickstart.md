@@ -4,7 +4,11 @@ sidebar_position: 2
 
 # Quickstart
 
-The easiest way to get started with Notifi is to use the React card. This is a
+In this quickstart guide, you will set up a basic user interface and verify
+your contact information. Then, you will set up the backend configuration on
+the Admin console and Notifi will send a Broadcast message to all relevant channels.
+
+The easiest way to get started is to use the React card. This is a
 drop-in component that makes it easy to send notifications.
 
 If you don’t have Node.js installed, install it from
@@ -18,11 +22,11 @@ git clone https://github.com/notifi-network/notifi-sdk-ts
 You can also download a zip file of the code at
 [this link](https://github.com/notifi-network/notifi-sdk-ts/archive/refs/heads/main.zip).
 
-Change into the `notifi-sdk-ts` folder. 
+Change into the `notifi-sdk-ts` folder.
 
-```bash 
+```bash
 cd notifi-sdk-ts/
-``` 
+```
 
 Run the following commands in the folder to install the relevant dependencies
 and build the SDK.
@@ -45,7 +49,7 @@ Once this finishes, you should be able to see sample cards in your browser if
 you navigate to [http://localhost:3000/](http://localhost:3000/). Clicking
 **Edit** on the card will let you update your email, phone number, and Telegram
 ID. After updating the fields, you will need to verify that your contact
-information is correct by clicking the link sent to you.
+information is correct by clicking the link sent to you via email or SMS.
 
 <img
   src={require('/img/quickstart/1.png').default}
@@ -53,7 +57,12 @@ information is correct by clicking the link sent to you.
   width="30%" height="15%"
 />
 
-Log into the [Admin console](https://admin.dev.notifi.network/cards). Under the
+This is an example of a sample card's configuration screen. At the top, you can
+input the relevant contact information. At the bottom, you can select which
+topics to subscribe to.
+
+Once you've verified your information, log into the [Admin
+console](https://admin.dev.notifi.network/cards). Under the
 **Card Management** section, create a Config and note the Config ID, which will
 be needed later.  Also, note the DappID which can be found in the **App
 Settings** [page](https://admin.dev.notifi.network/settings).
@@ -67,7 +76,7 @@ update the following lines by placing the DappID in the **dappAddress**
 field and the Config ID in the **cardId** field.
 
 ```
-dappAddress="" 
+dappAddress=""
 <NotifiSubscriptionCard darkMode cardId="" />
 ```
 
@@ -104,6 +113,15 @@ click **Send Message**. You should see now see “Message sent successfully!”
   alt="Example Message"
   width="60%" height="30%"
 />
+
+You should immediately receive the message via email and SMS.
+
+Now, you can add this React card directly to your app. Users will be able to
+configure their contact information directly and you will be able to send
+messages to all of them at once.
+
+For more detail on how to set up the React card in specific, see
+[this guide](./alert-subscribe/react-card).
 
 <!--
 ## Tutorial Video
