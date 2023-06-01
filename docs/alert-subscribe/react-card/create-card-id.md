@@ -19,7 +19,7 @@ Click on "Create config" to reach the card configuration screen.
 
 #### Step 3
 
-Set up the `topics` for the card. A `Topic` usually corresponds to a [source](../../integration-overview/alert-depth#source), e.g. in order to set up a Broadcast alert, select "Broadcast" as `Topic type` and enter a descriptive name for the topic.
+Set up the `topics` for the card. A `Topic` usually corresponds to a [source](../../integration-overview/alerts-in-depth#source), e.g. in order to set up a Broadcast alert, select "Broadcast" as `Topic type` and enter a descriptive name for the topic.
 
 ![Topic section of card config](/img/create-card-id/1.png)
 
@@ -43,7 +43,7 @@ A Broadcast Id is required to start with `dappid__` (two underscores).
 
 #### Step 5
 
-Configure the Channels a user is able to select for the alert. This corresponds to the [target](../../integration-overview/alert-depth#target) of the alert. 
+Configure the Channels a user is able to select for the alert. This corresponds to the [target](../../integration-overview/alerts-in-depth#target) of the alert. 
 ![configure the target channels](/img/create-card-id/4.png)
 
 :::info 

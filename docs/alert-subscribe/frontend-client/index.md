@@ -69,7 +69,7 @@ const logIn = async () => {
 
 ## Create the Alert
 
-Once your user enters their contact information and options for their first alert, use the `ensureTargetGroup()` to create a [target group](../integration-overview/alert-depth#target) of their contact information and a [source group](../integration-overview/alert-depth#source) of their desired alert options.
+Once your user enters their contact information and options for their first alert, use the `ensureTargetGroup()` to create a [target group](../integration-overview/alerts-in-depth#target) of their contact information and a [source group](../integration-overview/alerts-in-depth#source) of their desired alert options.
 
 In order to create a target group, `ensureTargetGroup()` must pass in least one email address, phone number, Telegram Id, or Webhook URL. Dapp admins can update pass in a Webhook URL to receive all of the notifications instead of a user email address, phone number, or Telegram Id.
 

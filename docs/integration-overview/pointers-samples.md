@@ -8,11 +8,11 @@ There are many ways to integrate Notifi into your dapp. Here are some pointers t
 
 #### What is the desired trigger for your alert?
 
-- **Manual:** Let users sign up to [Broadcast](alert-depth#broadcast) or [Direct Push](alert-depth#direct-push) and use **Community Manager** in the **Admin Panel** Web UI to send out messages to users who have subscribed to those topics.
+- **Manual:** Let users sign up to [Broadcast](alerts-in-depth#broadcast) or [Direct Push](alerts-in-depth#direct-push) and use **Community Manager** in the **Admin Panel** Web UI to send out messages to users who have subscribed to those topics.
 
-- **Existing [sources](alert-depth#source):** Use the **Admin Panel** to configure a **React Card**. Alternatively you can use the **Notifi Frontend Client** by passing the corresponding `EventTypeItem` of the source in `NotifiFrontendClient.ensureAlert()`
+- **Existing [sources](alerts-in-depth#source):** Use the **Admin Panel** to configure a **React Card**. Alternatively you can use the **Notifi Frontend Client** by passing the corresponding `EventTypeItem` of the source in `NotifiFrontendClient.ensureAlert()`
 
-- **Dapp specific on-chain or off-chain events:** This requires a [custom parser source](alert-depth#custom-parser-source). Alternatively, you can implement your own monitoring service that uses the **Notifi Node Client** to trigger alerts appropriately.
+- **Dapp specific on-chain or off-chain events:** This requires a [custom parser source](alerts-in-depth#custom-parser-source). Alternatively, you can implement your own monitoring service that uses the **Notifi Node Client** to trigger alerts appropriately.
 
 ## Example integrations
 
