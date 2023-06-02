@@ -21,10 +21,40 @@ In your push messages, you will be able to provide the template ID you’d like 
 
 <details>
 <summary> Example 1: Sending via node SDK a DIRECT_TENANT_MESSAGE.</summary>
+
 ```tsx
 // Sending a Direct Push Alert to a user
-import {}
+import {
+  NotifiClient
+} from '@notifi-network/notifi-node';
+
+const client: NotifiClient = getNotifiClient();
+
+
+// Log in to obtain a token
+const { token, expiry } = await client.logIn({ sid: MY_SID, secret: MY_SECRET });
+
+
+// Use the token to send a message to anyone subscribed to that wallet
+await client.sendDirectPush(token, {
+  key: randomUUID(), // Idempotency key, use the same value for each unique event
+  walletBlockchain: 'NEAR', // Or 'SOLANA'
+  walletPublicKey: 'juni-kim.near', // Or other address
+  message: 'Hello world', // This is used if no variables are provided, or if template expansion fails
+  type: 'MY_SPECIAL_TYPE', // OPTIONAL - Users can use this to further filter what notifications they'd like to receive
+  template: { // OPTIONAL - Specify which templates to use
+    emailTemplate: '<PROVIDED_TEMPLATE_ID>',
+    smsTemplate:  '<PROVIDED_TEMPLATE_ID>',
+    telegramTemplate: '<PROVIDED_TEMPLATE_ID>',
+    variables: { // These are the variables used in your mustache templates
+      'userName': 'Juni Kim',
+      'anotherVariable': 'foo',
+      'anotherVariable1': 'The degens'
+    }
+  }
+});
 ```
+
 </details>
 
 Assuming you provided an Email template of:
@@ -60,4 +90,67 @@ The degens
 
 NOTE: HTML in email can behave differently based on which email client you’re using. Please refer to this link for a quick overview on some basic pitfalls.
 https://www.smashingmagazine.com/2021/04/complete-guide-html-email-templates-tools/
+
+For SMS, because it’s space constrained, you can limit it to simply:
+Notification for {{anotherVariable}}
+
+
+
+For Telegram Templates, please refer to this guide on supported tags:
+https://core.telegram.org/api/entities
+
+<details>
+<summary> Example 2: Sending via client SDK a Broadcast Message.</summary>
+
+```tsx
+### Sending a Broadcast Message to users
+```ts
+const handleSubmit = useCallback(
+    async (t: UserTopic | undefined) => {
+      if (t === undefined) {
+        return;
+      }
+      try {
+        broadcastMessage(
+          {
+            topic: t,
+            subject: ‘some subject’,
+            message: ‘your message to users’,
+            isHolderOnly: false,
+          },
+          signer
+        );
+      } catch (e: unknown) {
+        console.log("Error during broadcastMessage", e);
+      }
+    },
+    [broadcastMessage, signer]
+  );
+```
+
+</details>
+
+Assuming you provided an Email template of:
+```
+<html>
+<body>
+{{subject}}
+
+{{message}}
+</body>
+</html>
+```
+
+
+
+This will render as:
+```
+<html>
+<body>
+some subject
+
+your message to users
+</body>
+</html>
+```
 
