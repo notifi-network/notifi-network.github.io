@@ -2,10 +2,6 @@
 sidebar_position: 2
 ---
 
-<!---
-See https://admin.dev.notifi.network/guide/cards
---->
-
 # Creating a card config
 
 In order to use the **Notifi React Card** a card config needs to be created accordingly.
@@ -82,31 +78,37 @@ Hit _Save_ and use the `Id` of the card config in the **React Card**.
 
 
 ## Setting up Advanced Mode
-Advanced mode enables you to save pre-defined values for later set up of specific events in the configuration. For example, you can save a value of broadcast id to use when setting up a broadcast event. Advanced mode is completely optional and is most helpful to admins who have a set specific id values that they use and therefore, want to save.
+Advanced mode lets you save predefined values for use in future events. For example, you can save the broadcast id to use when setting up a broadcast event. Advanced mode is entirely optional and is most helpful for admininistrators.
 
-To turn on advanced mode for a configuration, at the bottom of the configuration, toggle advanced mode on.
+To turn on advanced mode for a configuration, toggle the switch at the bottom of the configuration.
 
+Once advanced mode is enabled, you will see an input section where you can save pre-defined values and their associated types. Add a value, select the type, and click on the plus value to save.
 
-Once advanced mode is on, you will see an input section where you can save pre-defined values and their associated types. Add a value, select the type, and click on the plus value to save.
+![advanced-input](/img/create-card-id/6.png)
 
+Upon creating an associated event, click on the **Use input reference** tab to select the saved value. Save your event.
 
-Upon creating an associated event, click on the Use input reference tab to select the saved value. Save your event.
-
+![advanced-use](/img/create-card-id/7.png)
 
 ## Configuring Destinations
-Use radio buttons to turn on or turn off the type of destinations for notifications. For example, if you turn on Email, users can subscribe using an email address. We support Email, Telegram and Sms(supported 17 country codes) for now.
+Use the radio buttons to turn on or off channels for notifications. For
+example, if you turn on email, users can subscribe using an email address. We
+support Email, Telegram, SMS (17 countries), and Discord.
 
-For telegram to work properly, you will need additional setup. Please reach out to us.
-
+![channels](/img/create-card-id/8.png)
 
 ## Configuring Webhook
-Webhooks can be enabled by turning on the radio button on top right, the dapp admin can opt to send all notifications to a webhook and then the dapp admin can decide on how to display and distribute the notifications to users. Same as adding a value to the topic type, you can change between Use value, to input your own value, or Use input reference to use the input reference that you have already added for Webhook Url and Webhook Headers.
+Webhooks can be enabled by turning on the radio button on the top right. The dapp admin can then opt to send all notifications to a webhook and decide on how to display and distribute the notifications to users. Similar to adding values to topics, you can input your own value with **Use value** or use an existing reference via **Use input reference**.  You must provide a key and value for each header. You can add multiple Webhook Headers.
 
-For Webhook Headers, you must provide a key and value for each header. You can add multiple Webhook Headers.
-
+<!-- pic -->
 
 ## Testing the Configuration
-After all the steps above, click on the SAVE button at the bottom to save all the changes. You can always create a new card config, delete or edit existing card config on the Card Management page.
+After finalizing your confguration, click on the **Save** button at the top
+right. You can always create a new card config, delete, or edit existing card
+configurations on the **Card Management** page.
 
-Once you have saved the card, paste the card ID into your frontend integration for `notifi-react-card`. This component will now reflect the selections you have made on the configuration.
+Once you have saved the card, paste the card ID into your frontend application
+using `notifi-react-card` from the SDK.
+The component will now reflect the changes you have made.
 
+<!--- See https://admin.dev.notifi.network/guide/cards --->
