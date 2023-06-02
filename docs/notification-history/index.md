@@ -4,18 +4,27 @@ sidebar_position: 7
 
 # Displaying Notification History
 
-Users generally have access to the history of all their notifications from Notifi (across all dapps) in the **Notifi Hub**. 
+Users can access all of their notifications from Notifi across all dapps in the
+[Notifi Hub](https://notifi.network/hub). A sample is shown in the image below:
 
-It is also possible to display the user's past notifications directly in the dapp. 
-The **Notifi React Card** contains the required UI elements and will show the user's notification history when a wallet is connected that already subscribed to the alert. 
+<img
+  src={require('/img/hub/1.png').default}
+  alt="Example hub notif"
+  width="60%" height="30%"
+/>
 
-For a more flexible UI to show the users notification history, the **Notifi Frontend Client** provides a `getNotificationHistory()` function. 
+It is also possible to display the user's past notifications directly in the dapp.
+The [React Card](../docs/alert-subscribe/react-card) contains the required UI
+elements and will show the user's notification history when a wallet is connected.
 
+For a more flexible UI to show the users notification history, the
+[Frontend Client](../docs/alert-subscribe/frontend-client) provides a
+`getNotificationHistory()` function.
 
 
 ## Get Notification History using **Notifi Frontend Client**
 
-To get notification history, use the getNotificationHistory()
+To retrieve notification history, use the `getNotificationHistory()` function:
 
 ```js
 const getNotificationHistory = async (first?: number, after?: string) => {
