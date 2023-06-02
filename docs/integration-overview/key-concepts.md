@@ -24,7 +24,7 @@ Feel free to reach out to integrations@notifi.network if your use case is not cu
 
 2. ### Users subscribe to relevant alerts and receive notifications
 
-  Notifi uses alerts to send manual and automated notifications to users. Users who subscribe to an alert will receive notifications from Notifi and will be able to view and manage their alerts in the [Notifi Hub](https://notifi.network/hub).
+  Notifi uses alerts to send manual and automated notifications to users. Users who subscribe to an alert will receive notifications from Notifi and will be able to view and manage their alerts in the [Notifi Hub](../for-users/index.md)
 
   Alerts can either be created automatically by the [React Card](../alert-subscribe/react-card) when configured in the [Admin Portal](../alert-trigger/admin-panel) web UI or by using the [Frontend Client](../alert-subscribe/frontend-client).
 

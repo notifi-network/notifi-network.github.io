@@ -5,7 +5,7 @@ sidebar_position: 7
 # Displaying Notification History
 
 Users can access all of their notifications from Notifi across all dapps in the
-[Notifi Hub](https://notifi.network/hub). A sample is shown in the image below:
+[Notifi Hub](../for-users/index.md). A sample is shown in the image below:
 
 <img
   src={require('/img/hub/1.png').default}
