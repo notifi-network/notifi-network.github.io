@@ -2,20 +2,24 @@
 sidebar_position: 2
 ---
 
+<!---
+See https://admin.dev.notifi.network/guide/cards
+--->
+
 # Creating a card config
 
-In order to use the **Notifi React Card** a card config needs to be created accordingly. 
+In order to use the **Notifi React Card** a card config needs to be created accordingly.
 The card config serves as configuration of the React Card and enables multiple flexible uses of the React Card.
 
-#### Step 1 
+#### Step 1
 
-Log in to the [Admin Panel](https://admin.dev.notifi.network) (create an account if you haven't done so already) and head to the _Card Management_ page. 
-Click on "+Create Config" 
+Log in to the [Admin Panel](https://admin.dev.notifi.network) (create an account if you haven't done so already) and head to the _Card Management_ page.
+Click on "+Create Config"
 
-#### Step 2 
+#### Step 2
 
-Name your card config. We recommend using a descriptive name like "New Product Announcements" to easily distinguish different card configs from each other in the future. 
-Click on "Create config" to reach the card configuration screen. 
+Name your card config. We recommend using a descriptive name like "New Product Announcements" to easily distinguish different card configs from each other in the future.
+Click on "Create config" to reach the card configuration screen.
 
 #### Step 3
 
@@ -25,14 +29,14 @@ Set up the `topics` for the card. A `Topic` usually corresponds to a [source](..
 
 :::note
 
-The `Topic name` specified here is the name that will be shown to the users in the React Card. 
+The `Topic name` specified here is the name that will be shown to the users in the React Card.
 ![Topic name is shown to users](/img/create-card-id/2.png)
 
 :::
 
 #### Step 4
 
-Click on the **+** button next to `Topic Type` to specify a `Broadcast Id`. The Broadcast Id is required to send messages to all subscribers of the Broadcast. 
+Click on the **+** button next to `Topic Type` to specify a `Broadcast Id`. The Broadcast Id is required to send messages to all subscribers of the Broadcast.
 
 ![Give topic a broadcast id](/img/create-card-id/3.png)
 
@@ -43,16 +47,16 @@ A Broadcast Id is required to start with `dappid__` (two underscores).
 
 #### Step 5
 
-Configure the Channels a user is able to select for the alert. This corresponds to the [target](../../integration-overview/alerts-in-depth#target) of the alert. 
+Configure the Channels a user is able to select for the alert. This corresponds to the [target](../../integration-overview/alerts-in-depth#target) of the alert.
 ![configure the target channels](/img/create-card-id/4.png)
 
-:::info 
+:::info
 
-In order to enable Telegram, follow these steps: 
+In order to enable Telegram, follow these steps:
 
-<details> 
+<details>
   <summary> How to enable Telegram messages </summary>
-  In order to receive Telegram support from Notifi, we simply need a Telegram Bot to send notifications to users on your behalf. We do this so that each individual dapp has the ability to maintain control over their bot’s profile picture, description and any other bot customizations available. 
+  In order to receive Telegram support from Notifi, we simply need a Telegram Bot to send notifications to users on your behalf. We do this so that each individual dapp has the ability to maintain control over their bot’s profile picture, description and any other bot customizations available.
 
   1. Open your Telegram app. Ideally, there's already a designated Telegram account that's the “official” dapp account. If not, an owner or admin/operator of the dapp should use their Telegram account.
   2. Search for the user “BotFather”
@@ -72,13 +76,37 @@ In order to enable Telegram, follow these steps:
 
 #### Step 6
 
-Hit _Save_ and use the `Id` of the card config in the **React Card**. 
+Hit _Save_ and use the `Id` of the card config in the **React Card**.
 
 ![card config Id](/img/create-card-id/5.png)
 
 
+## Setting up Advanced Mode
+Advanced mode enables you to save pre-defined values for later set up of specific events in the configuration. For example, you can save a value of broadcast id to use when setting up a broadcast event. Advanced mode is completely optional and is most helpful to admins who have a set specific id values that they use and therefore, want to save.
+
+To turn on advanced mode for a configuration, at the bottom of the configuration, toggle advanced mode on.
 
 
-<!--- 
-See https://admin.dev.notifi.network/guide/cards
---->
+Once advanced mode is on, you will see an input section where you can save pre-defined values and their associated types. Add a value, select the type, and click on the plus value to save.
+
+
+Upon creating an associated event, click on the Use input reference tab to select the saved value. Save your event.
+
+
+## Configuring Destinations
+Use radio buttons to turn on or turn off the type of destinations for notifications. For example, if you turn on Email, users can subscribe using an email address. We support Email, Telegram and Sms(supported 17 country codes) for now.
+
+For telegram to work properly, you will need additional setup. Please reach out to us.
+
+
+## Configuring Webhook
+Webhooks can be enabled by turning on the radio button on top right, the dapp admin can opt to send all notifications to a webhook and then the dapp admin can decide on how to display and distribute the notifications to users. Same as adding a value to the topic type, you can change between Use value, to input your own value, or Use input reference to use the input reference that you have already added for Webhook Url and Webhook Headers.
+
+For Webhook Headers, you must provide a key and value for each header. You can add multiple Webhook Headers.
+
+
+## Testing the Configuration
+After all the steps above, click on the SAVE button at the bottom to save all the changes. You can always create a new card config, delete or edit existing card config on the Card Management page.
+
+Once you have saved the card, paste the card ID into your frontend integration for `notifi-react-card`. This component will now reflect the selections you have made on the configuration.
+
