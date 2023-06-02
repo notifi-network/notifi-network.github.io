@@ -1,6 +1,6 @@
 # Using Community Manager
 
-Once you’ve logged in to the [Notifi Admin Portal](https://admin.dev.notifi.network/) in the Production instance, select the **Community Manager** tab on the left hand navigation bar.
+Once you’ve logged in to the [Notifi Admin Portal](https://admin.dev.notifi.network/), select the **Community Manager** tab on the left hand navigation bar.
 
 <!-- pic -->
 
