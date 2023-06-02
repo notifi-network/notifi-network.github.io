@@ -2,38 +2,36 @@
 
 <!-- https://docs.google.com/document/d/1-8K_nbJGaywL-jYFg7_YZiE9x_WPaHvuFfYgM7QmqMg/edit -->
 
-Notifi uses templates to render the same notification, but in different forms for email/telegram/sms/etc. We use mustache templates that take known variables. To learn more about mustache templates, here is a simple spec: https://mustache.github.io/mustache.5.html. You can also try it out in a demo app here: https://mustache.github.io/#demo
+Notifi uses templates to render the same notification in different forms for different channels such as email, Telegram, and SMS. We use [Mustache templates](https://mustache.github.io/mustache.5.html), and you can try out a demo here: https://mustache.github.io/#demo
 
-When developing your template, keep in mind the following:
-1. The variables you’re providing in the event if it’s direct push or broadcast.
-2. System variables that cannot be overridden, but are provided to be used in the template. (To be provided)
-3. Max templates sizes after expansion
+When developing your template, keep the following in mind:
+1. The variables you’re providing and if you are using direct push or broadcast.
+2. System variables cannot be overridden, but can be used in the template.
+3. The maximum template size after expansion is:
 
   a. Email - 16kb
 
-  b. SMS - 160 unicode, or 320 ascii
+  b. SMS - 160 unicode or 320 ASCII characters
 
-  c. Telegram - 4kb (4096 ascii characters)
+  c. Telegram - 4kb (4096 ASCII characters)
 
-Please contact us to set the templates for you. In the future, you will be able to update this through a portal we provide. Upon setting the templates, we will provide you with an ID for the template set (all email/telegram/sms templates are versioned together on each update).
+Please contact us at integrations@notifi.network to help set up templates. In the future, you will be able to update these yourself through a portal. Upon creating the templates, we will provide you with its relevant ID. All email, telegram, and SMS templates are linked to one ID.
 
-In your push messages, you will be able to provide the template ID you’d like to use for each destination.
+When you send a push message, you will provide the template ID you’d like to use for each destination.
 
 <details>
-<summary> Example 1: Sending via node SDK a DIRECT_TENANT_MESSAGE.</summary>
+<summary> Example 1: Sending a Direct Push Alert via the Node SDK.</summary>
 
 ```tsx
-// Sending a Direct Push Alert to a user
+// Sending a DIRECT_TENANT_MESSAGE to the user
 import {
   NotifiClient
 } from '@notifi-network/notifi-node';
 
 const client: NotifiClient = getNotifiClient();
 
-
 // Log in to obtain a token
 const { token, expiry } = await client.logIn({ sid: MY_SID, secret: MY_SECRET });
-
 
 // Use the token to send a message to anyone subscribed to that wallet
 await client.sendDirectPush(token, {
@@ -57,7 +55,7 @@ await client.sendDirectPush(token, {
 
 </details>
 
-Assuming you provided an Email template of:
+If you create an email template which looks like this:
 ```
 <html>
 <body>
@@ -70,9 +68,7 @@ Sincerely,
 </html>
 ```
 
-
-
-This will render as:
+It will render as the following:
 ```
 <html>
 <body>
@@ -85,16 +81,11 @@ The degens
 </html>
 ```
 
+**Note**: Based on the email client that your recipeint is using, HTML may render differently. Please refer to [this link](https://www.smashingmagazine.com/2021/04/complete-guide-html-email-templates-tools/) for a quick overview on some basic pitfalls.
 
+For SMS, since the message has a short maximum length, you can simply tell the user:
 
-
-NOTE: HTML in email can behave differently based on which email client you’re using. Please refer to this link for a quick overview on some basic pitfalls.
-https://www.smashingmagazine.com/2021/04/complete-guide-html-email-templates-tools/
-
-For SMS, because it’s space constrained, you can limit it to simply:
-Notification for {{anotherVariable}}
-
-
+`Notification for {{anotherVariable}}`
 
 For Telegram Templates, please refer to this guide on supported tags:
 https://core.telegram.org/api/entities
@@ -103,8 +94,6 @@ https://core.telegram.org/api/entities
 <summary> Example 2: Sending via client SDK a Broadcast Message.</summary>
 
 ```tsx
-### Sending a Broadcast Message to users
-```ts
 const handleSubmit = useCallback(
     async (t: UserTopic | undefined) => {
       if (t === undefined) {
@@ -130,7 +119,7 @@ const handleSubmit = useCallback(
 
 </details>
 
-Assuming you provided an Email template of:
+If you create an email template which looks like this:
 ```
 <html>
 <body>
@@ -141,9 +130,7 @@ Assuming you provided an Email template of:
 </html>
 ```
 
-
-
-This will render as:
+It will render as the following:
 ```
 <html>
 <body>
