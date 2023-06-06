@@ -7,7 +7,7 @@ sidebar_position: 1
 Notifi is a cross-chain messaging layer for the web3 ecosystem that lets users
 understand in the moment what is happening in their decentralized applications
 (dapps). Users can subscribe to activities and notifications such as
-transaction alerts and DAO proposals over text, email, Telegram, and more. Developers
+transaction alerts and DAO proposals over text, email, Telegram, Discord, and more. Developers
 can customize users’ experiences easily via API and the
 [Notifi SDK](https://github.com/notifi-network/notifi-sdk-ts). In addition, the
 [Notifi Hub](./for-users/index.md) is a web3 inbox that aggregates all crypto

@@ -47,7 +47,7 @@ npx lerna --scope=@notifi-network/notifi-react-example run start
 
 Once this finishes, you should be able to see sample cards in your browser if
 you navigate to [http://localhost:3000/](http://localhost:3000/). Clicking
-**Edit** on the card will let you update your email, phone number, and Telegram
+**Edit** on the card will let you update your email, phone number, Telegram ID, and Discord
 ID. After updating the fields, you will need to verify that your contact
 information is correct by clicking the link sent to you via email or SMS.
 

@@ -57,7 +57,7 @@ For use cases that use [Broadcast](#broadcast) or [Direct Push](#direct-push) so
 
 ## Targets {#target}
 
-A [Target](#target) is a destination for an alert, which is a communication channel: email adress, Telegram account, or phone number.
+A [Target](#target) is a destination for an alert, which is a communication channel: email adress, Telegram account, Discord account, or phone number.
 
 They are represented as `Target` objects and used in alerts as `TargetGroup` objects, which are a collection of `Target` objects.
 

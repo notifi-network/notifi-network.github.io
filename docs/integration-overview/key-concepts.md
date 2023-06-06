@@ -9,7 +9,7 @@ Depending on the depth of integration and use case, some of these are optional o
 
 1. ### Integrate UI components in your dapp for users to configure and subscribe to alerts
 
-  The easiest and most common UI will be a form where users can enter their preferred targets (email, phone number, and/or Telegram), configure the alert, and subscribe to it.
+  The easiest and most common UI will be a form where users can enter their preferred targets (email, phone number, Telegram, and/or Discord), configure the alert, and subscribe to it.
   We provide design recommendations in our [Figma](https://www.figma.com/file/ieF0Ynuc3WI608RCt7wKSf/Notifi-Template?node-id=0%3A1&t=v8zeo6UovJAOb9vR-0), but there are no limitations on visual or interaction design.
 
   We provide a ready-to-use [React Card](../alert-subscribe/react-card) component for easy integration that covers most basic use cases, including standard forms.

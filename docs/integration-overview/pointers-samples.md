@@ -55,7 +55,7 @@ Do you require special UI elements for users to sign up to your alert (e.g. slid
 - Yes -> build UI components and use Notifi React Hooks (if on React) or Frontend Client to create alerts
 - No -> Use Notifi React Card (if on React) or follow simple example of Frontend Client
 
-  Note: The React card has components for users to enter the target (Email, SMS, Telegram) and basic opt-in check boxes
+  Note: The React card has components for users to enter the target (Email, SMS, Telegram, Discord) and basic opt-in check boxes
 
 What is the desired trigger for your alert?
 

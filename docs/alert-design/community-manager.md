@@ -6,7 +6,7 @@ Once you’ve logged in to the [Notifi Admin Portal](https://admin.dev.notifi.ne
 
 Select the Topic (i.e. list of subscribers) you want to message. Note: You may already have a Test Topic enabled by the Notifi team so you can send test messages internally.
 
-Now select any combination of destinations you want to reach your customers at. You can send a single email or batch the notification across Email, SMS, and Telegram at once. You can also write custom copy for each notification destination. Note: the end user must be subscribed to those destinations to receive the notification.
+Now select any combination of destinations you want to reach your customers at. You can send a single email or batch the notification across Email, SMS, Telegram, and Discord at once. You can also write custom copy for each notification destination. Note: the end user must be subscribed to those destinations to receive the notification.
 
 For email, select the content format:
 * Basic Notifi Template lets you write your own message.

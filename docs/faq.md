@@ -10,7 +10,7 @@ Your account is automatically created when you log in with your wallet and
 signed message. This account is created within the space of the dapp you are
 calling from.
 
-#### How is my Personally Identifiable Information (PII), such as email, Telegram ID, and phone number, kept safe?
+#### How is my Personally Identifiable Information (PII), such as email, Telegram ID, Discord ID, and phone number, kept safe?
 
 Notifi requires users to sign a message that proves they own the wallet address
 they are connecting with. Once verification is complete, communication is done
@@ -22,7 +22,7 @@ no information sharing.
 #### What PII and data does Notifi track?
 
 Notifi stores user provided wallet addresses, destinations (i.e., email, SMS,
-Telegram), and notification preferences. Notifi does not track IP addresses.
+Telegram, Discord), and notification preferences. Notifi does not track IP addresses.
 Subscription preferences and contact details for one dapp will be used
 exclusively for notifications for that dapp. Preferences and contact details
 will never be shared with any other dapp or 3rd party, unless explicitly
@@ -32,7 +32,7 @@ stated.
 
 You can unsubscribe to notifications by accessing the notification preferences
 screen on the dapp you're subscribed to. Additionally, you can unsubscribe
-directly via the email, SMS (reply with STOP), Telegram bot, or any other
+directly via the email, SMS (reply with STOP), Telegram bot, Discord bot, or any other
 destination where you're receiving messages.
 
 #### How can I remove my user data from Notifi in accordance with GDPR?
@@ -52,7 +52,7 @@ Any DAO governance member can sign up for proposal notifications. The DAO
 client page uses the Notifi SDK to provide Notifi with the DAO address, along
 with the user's wallet address. Notifi will ensure the wallet address is a
 governance member, and sign up for the relevant notification channels
-(email/SMS/Telegram).
+(email/SMS/Telegram/Discord).
 
 #### How does Notifi ensure wallets are part of a DAO?
 
