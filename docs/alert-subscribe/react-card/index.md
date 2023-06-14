@@ -1,12 +1,10 @@
-# Integrating Notifi React card 
+# Integrating Notifi React card
 
-`@notifi-network/notifi-react-card`
-
-https://github.com/notifi-network/notifi-sdk-ts/tree/main/packages/notifi-react-card
+To see the source code, look at the [Notifi SDK](https://github.com/notifi-network/notifi-sdk-ts/tree/main/packages/notifi-react-card).
 
 :::note
 
-You will need a `card config` to use the **Notifi React Card**, which can be created in the [Admin Panel](https://admin.dev.notifi.network). Follow the guide [here](create-card-id.md) to create a `card config`. 
+You will need a **card config** to use the Notifi React Card, which can be created in the [Admin Panel](https://admin.dev.notifi.network). Follow the guide [here](create-card-id.md) to create a **card config**.
 
 :::
 
@@ -36,27 +34,16 @@ import '@notifi-network/notifi-react-card/dist/index.css';
 
 We have design recommendations on how to best present the UI to your dapp users. Check them out here: [Figma](https://www.figma.com/file/ieF0Ynuc3WI608RCt7wKSf/Notifi-Template?node-id=0%3A1&t=v8zeo6UovJAOb9vR-0).
 
-## Tutorial Video
+#### Tips
 
-Here is a [link](https://www.youtube.com/watch?v=Nk2F_bd4ftw) covering how to setup the React Card config.
-
-The video covers the following:
-
-- Configuring the card in our developer tool
-- Adding Event Types
-- Installing the react package into your project
-- Updating the default values to match your dapp
-
-#### Example tips
-
-- Embed the bell icon by the wallet login section.
-  ie. ![here](https://i.imgur.com/f2rnrpk.png)
+- Embed the bell icon by the wallet login section:
+  ![here](https://i.imgur.com/f2rnrpk.png)
 
   &nbsp;
 
-- There should be a state for the bell icon when connected/not connected.
-  ie. ![example of not connected state](https://i.imgur.com/V9yEeCj.png)
-  ie. If not connected, the bell icon should be hidden.
+- There should be a state for the bell icon when connected/not connected:
+  ![example of not connected state](https://i.imgur.com/V9yEeCj.png)
+  If not connected, the bell icon should be hidden.
 
 - Make sure that there is enough contrast between color selections.
 
@@ -692,7 +679,7 @@ export const WalletConnectCard = () => {
 <details>
 <summary>Integrate Card Component</summary>
 
-> [`ethos-connect`](https://www.npmjs.com/package/ethos-connect) are used as Sui wallet adaptor. Be sure it is installed as dependencies.
+> [`ethos-connect`](https://www.npmjs.com/package/ethos-connect) is used as the Sui wallet adaptor. Make sure it's installed as a dependency.
 
 ```bash
 npm install ethos-connect # For npm

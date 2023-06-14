@@ -1,17 +1,39 @@
+<<<<<<< HEAD
 # `@notifi/notifi-frontend-client`
+=======
+# Integrating the Notifi Frontend Client 
 
 
-## 📥 Installation
+`@notifi/notifi-frontend-client`
+
+https://github.com/notifi-network/notifi-sdk-ts/tree/main/packages/notifi-frontend-client
+>>>>>>> e6c0c474f7d4e58a23cb6dc476c1d186c0a284be
+
+
+## Installation
 
 ```
 npm i @notifi-network/notifi-frontend-client
 ```
 
+<<<<<<< HEAD
 ## 🪝 Hook up the SDK and initialize the Client
 
 Load the Notifi Frontend Client SDK into your component.
 
 Instantiate and configure the Notifi Client for your dApp and environment. If your user has not connected their wallet, they will need to do so in order to instantiate the client.
+=======
+## Hook up the SDK
+
+Load the Notifi Frontend Client SDK into your component.
+
+```js
+// use the Client and Config of your chain
+const { newAptosClient, newAptosConfig } = require('@notifi-network/notifi-frontend-client');
+```
+
+Instantiate and configure the Notifi Client for your dapp and environment. If your user has not connected their wallet, they will need to do so in order to instantiate the client.
+>>>>>>> e6c0c474f7d4e58a23cb6dc476c1d186c0a284be
 
 ```ts
 const accountAddress = '<The-wallet-public-account-address>';
@@ -33,7 +55,7 @@ const client = newFrontendClient({
 const newUserState = await client.initialize();
 ```
 
-## 🔏 Signature Authorization
+## Signature Authorization
 
 For a user to opt-in for notifications, they will need to provide their signature. This signature will then be used to authorize the user's connected wallet address with Notifi and create the account with Notifi.
 
@@ -72,13 +94,21 @@ const logIn = async () => {
 };
 ```
 
-## 🪢 Create the Alert
+## Create the Alert
 
+<<<<<<< HEAD
 Once your user enters their contact information and options for their first alert, use the `ensureTargetGroup()` to create a "target group" of their contact information and a "source group" of their desired alert options.
 
 In order to create a target group, `ensureTargetGroup()` must pass in least one email address, phone number, telegramId, or webhook url. Dapp admins can update pass in a webhook url to receive all of the notifications instead of a user email address, phone number, or telegramId.
 
 The following example shows how to create a target group with an email address (user sign up with email).
+=======
+Once your user enters their contact information and options for their first alert, use the `ensureTargetGroup()` to create a [target group](../integration-overview/alerts-in-depth#target) of their contact information and a [source group](../integration-overview/alerts-in-depth#source) of their desired alert options.
+
+In order to create a target group, `ensureTargetGroup()` must pass in least one email address, phone number, Telegram Id, or Webhook URL. Dapp admins can update pass in a Webhook URL to receive all of the notifications instead of a user email address, phone number, or Telegram Id.
+
+In order to create a source group, `ensureSourceGroup()` must pass in metadata of the alert options returned in the [Rendering Alert Options](https://github.com/notifi-network/notifi-sdk-ts/tree/main/packages/notifi-react-hooks) section.
+>>>>>>> e6c0c474f7d4e58a23cb6dc476c1d186c0a284be
 
 ```ts
 const targetGroup = client.ensureTargetGroup({
@@ -107,13 +137,13 @@ const subscribeAlert = () => {
 
 ```
 
-## 🔃 Updating the Alert
+## Updating the Alert
 
 If a user wants to update their alert by changing the email address notifications are sent to, or to add a phone number for SMS notifications, you can repeat the process above by calling `ensureTargetGroup()` and `ensureAlert()` again.
 
-## 🗑 Deleting the Alert
+## Deleting the Alert
 
-To delete an alert, use `deleteAlert()`, which simply [takes the `id` of the alert] to be deleted. In our use case where the user only has 1 alert in their account:
+To delete an alert, use `deleteAlert()`, which simply takes the `id` of the alert to be deleted. Here is what that looks like in our use case where the user only has one alert in their account:
 
 ```ts
 const handleDeleteAlert = async () => {
