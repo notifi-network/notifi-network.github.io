@@ -45,12 +45,15 @@ document, the token will be saved as a variable `$LOGIN_TOKEN`.
 
 ## sendSimpleHealthThreshold
 
-Here is a sample test script:
+The variable `healthValue` varies by dapp, and it’s used in conjunction with
+`VALUE_THRESHOLD` filters. The user subscribes to a `DIRECT_PUSH` source with
+the `VALUE_THRESHOLD` filter, specifying a threshold in the alert filter
+options. Then, the service sends a notification to that user's address using a
+`healthValue`, which will be evaluated against the threshold that the user
+used. Here is a sample test script:
 
 ```
 #!/bin/bash
-
-# Test the gateway to see if it's working
 
 curl --location --request POST 'http://localhost:8080/sendSimpleHealthThreshold' \
 --header 'Content-Type: application/json' \
@@ -64,16 +67,89 @@ curl --location --request POST 'http://localhost:8080/sendSimpleHealthThreshold'
 }'
 ```
 
-The variable `healthValue` varies by dapp, and it’s used in conjunction with
-`VALUE_THRESHOLD` filters. The user subscribes to a `DIRECT_PUSH` source with
-the `VALUE_THRESHOLD` filter, specifying a threshold in the alert filter
-options. Then, the service sends a notification to that user's address using a
-`healthValue`, which will be evaluated against the threshold that the user
-used.
-
 If this is successful, the server will respond with:
 
 ```
 {"message":"success"}
 ```
+
+# createTenantUser
+
+This creates a tenant user for the platform. Here is a sample script:
+The walletPublicKey has to be an id that doesn't exist already.
+
+```
+#!/bin/bash
+
+curl --location --request POST 'http://localhost:8080/createTenantUser' \
+--header 'Content-Type: application/json' \
+--header "Authorization: Bearer $LOGIN_TOKEN" \
+--data-raw '{
+    "sid": "9MJEUJ",
+    "secret": "XBLNWf",
+    "walletPublicKey": "woeijf",
+    "walletBlockchain": "SOLANA"
+}'
+```
+
+If this is successful, the server will respond with:
+
+```
+{"userId":"6f97780b"}
+```
+
+This is used in the following method.
+
+# createDirectPushAlert
+
+This creates a direct push alert for the relevant user.
+
+```
+#!/bin/bash
+
+curl --location --request POST 'http://localhost:8080/createDirectPushAlert' \
+--header 'Content-Type: application/json' \
+--header "Authorization: Bearer $LOGIN_TOKEN" \
+--data-raw '{
+    "sid": "9MJEUJ",
+    "secret": "XBLNWf",
+    "userId": "658514e6",
+    "email": "test@gmail.com"
+}'
+```
+
+If this is successful, the server will respond with:
+
+```
+{"alert":{"id":"9e6b14"}}
+```
+
+# deleteUserAlert
+
+You can use this to delete the direct push alert for a user. This is commonly
+used if the user looks at the alerts and toggles and wants to remove an alert.
+
+```
+#!/bin/bash
+
+curl --location --request POST 'http://localhost:8080/deleteUserAlert' \
+--header 'Content-Type: application/json' \
+--header "Authorization: Bearer $LOGIN_TOKEN" \
+--data-raw '{
+    "sid": "9MJEUJ",
+    "secret": "XBLNWf",
+    "alertId": "9e6b14"
+}'
+```
+
+If this is successful, it responds with the `alertId`:
+
+```
+{"alertId":"9e6b14"}
+```
+
+
+
+
+
 
