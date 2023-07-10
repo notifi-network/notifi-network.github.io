@@ -40,4 +40,40 @@ This will return a response like the following:
 ```
 
 You will need the token in the future so please save this. If the token
-expires, please run this again to issue a new token.
+expires, please run this again to issue a new token. In future examples in this
+document, the token will be saved as a variable `$LOGIN_TOKEN`.
+
+## sendSimpleHealthThreshold
+
+Here is a sample test script:
+
+```
+#!/bin/bash
+
+# Test the gateway to see if it's working
+
+curl --location --request POST 'http://localhost:8080/sendSimpleHealthThreshold' \
+--header 'Content-Type: application/json' \
+--header "Authorization: Bearer $LOGIN_TOKEN" \
+--data-raw '{
+    "sid": "9MJEUA",
+    "secret": "XBLNWf",
+    "walletPublicKey": "8CHibP",
+    "walletBlockchain": "SOLANA",
+    "healthValue": 0.42
+}'
+```
+
+The variable `healthValue` varies by dapp, and it’s used in conjunction with
+`VALUE_THRESHOLD` filters. The user subscribes to a `DIRECT_PUSH` source with
+the `VALUE_THRESHOLD` filter, specifying a threshold in the alert filter
+options. Then, the service sends a notification to that user's address using a
+`healthValue`, which will be evaluated against the threshold that the user
+used.
+
+If this is successful, the server will respond with:
+
+```
+{"message":"success"}
+```
+
