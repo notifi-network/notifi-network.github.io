@@ -124,6 +124,32 @@ If this is successful, the server will respond with:
 {"alert":{"id":"9e6b14"}}
 ```
 
+# sendDirectPush
+
+This can be used to send a direct push message.
+
+```
+#!/bin/bash
+
+curl --location --request POST 'http://localhost:8080/sendDirectPush' \
+--header 'Content-Type: application/json' \
+--header "Authorization: Bearer $LOGIN_TOKEN" \
+--data-raw '{
+    "sid": "9MJEUJ",
+    "secret": "XBLNWf",
+    "walletPublicKey": "8CHibP",
+    "walletBlockchain": "SOLANA",
+    "message": "Hello World"
+}'
+```
+
+If this is successful, the server will respond with:
+
+```
+{"message":"success"}
+```
+
+
 # deleteUserAlert
 
 You can use this to delete the direct push alert for a user. This is commonly
@@ -148,8 +174,61 @@ If this is successful, it responds with the `alertId`:
 {"alertId":"9e6b14"}
 ```
 
+# broadcastMessage
+
+To send a broadcast message, use this script:
+
+```
+#!/bin/bash
+
+curl --location --request POST 'http://localhost:8080/broadcastMessage' \
+--header 'Content-Type: application/json' \
+--header "Authorization: Bearer $LOGIN_TOKEN" \
+--data-raw '{
+    "sid": "9MJEUJ",
+    "secret": "XBLNWf",
+    "topicName": "topic.xyz__test",
+    "message": "Hello world",
+    "subject": "Test"
+}'
+```
+
+# addSourceToSourceGroup
+
+To add a source to a source group, use this script:
+
+```
+#!/bin/bash
+
+curl --location --request POST 'http://localhost:8080/addSourceToSourceGroup' \
+--header 'Content-Type: application/json' \
+--header "Authorization: Bearer $LOGIN_TOKEN" \
+--data-raw '{
+    "sid": "9MJEUJ",
+    "secret": "XBLNWf",
+    "sourceGroupId": "23498234",
+    "walletAddress": "8CHibP",
+    "sourceType": "SOLANA_WALLET"
+}'
+```
 
 
+# removeSourceFromSourceGroup
 
+To remove a source to a source group, use this script:
 
+```
+#!/bin/bash
+
+curl --location --request POST 'http://localhost:8080/removeSourceFromSourceGroup' \
+--header 'Content-Type: application/json' \
+--header "Authorization: Bearer $LOGIN_TOKEN" \
+--data-raw '{
+    "sid": "9MJEUJ",
+    "secret": "XBLNWf",
+    "sourceGroupId": "23498234",
+    "walletAddress": "8CHibP",
+    "sourceType": "SOLANA_WALLET"
+}'
+```
 
