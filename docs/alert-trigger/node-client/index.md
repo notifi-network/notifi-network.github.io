@@ -17,7 +17,7 @@ First, start the server with `npm run dev`.
 ## login
 
 The server will be running at `https://localhost:8080`. To login, you can use the following script below.
-Replace the `sid` and `secret` fields with your `sid` and `secret` that can be found on the
+Replace the `sid` and `secret` fields with your `sid` and `secret` that can be found in the
 [Admin Console](https://admin.dev.notifi.network/).
 
 ```
@@ -75,7 +75,7 @@ If this is successful, the server will respond with:
 
 # createTenantUser
 
-This creates a tenant user for the platform. Here is a sample script:
+This creates a tenant user for the platform. Below is a sample script.
 The walletPublicKey has to be an id that doesn't exist already.
 
 ```
