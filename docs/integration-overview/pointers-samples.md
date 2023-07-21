@@ -38,7 +38,7 @@ There are many ways to integrate Notifi into your dapp. Here are some pointers t
 - **Send out an alert to an user when their position reaches a certain LTV (loan-to-value) threshold that the user can choose**
 
   This requires a custom UI to allow users to choose their threshold when subscribing as well as a [custom parser source](alerts-in-depth#custom-parser-source) for the alert.
-  The same integration path as the example above can be applied; however, the [React Card](../alert-subscribe/react-card) does not support custom UI elements to let users pick their threshold. Therefore, the [Frontend Client](../alert-subscribe/frontend-client) needs to be used to create alerts.
+  The same integration path as the example above can be applied; however, the [React Card](../alert-subscribe/react-card) only supports custom UI elements to let users pick their threshold when connected with a Notifi hosted [custom parser source](alerts-in-depth#custom-parser-source). Therefore, the [Frontend Client](../alert-subscribe/frontend-client) needs to be used to create alerts, if you are using your own source.
 
   If the parser is not hosted by Notifi, a Direct Push source should be used since the alerts are supposed to go to one user at the time.
 
