@@ -73,7 +73,7 @@ If this is successful, the server will respond with:
 {"message":"success"}
 ```
 
-# createTenantUser
+## createTenantUser
 
 This creates a tenant user for the platform. Below is a sample script.
 The walletPublicKey has to be an id that doesn't exist already.
@@ -100,7 +100,7 @@ If this is successful, the server will respond with:
 
 This is used in the following method.
 
-# createDirectPushAlert
+## createDirectPushAlert
 
 This creates a direct push alert for the relevant user.
 
@@ -124,7 +124,7 @@ If this is successful, the server will respond with:
 {"alert":{"id":"9e6b14"}}
 ```
 
-# sendDirectPush
+## sendDirectPush
 
 This can be used to send a direct push message.
 
@@ -150,7 +150,7 @@ If this is successful, the server will respond with:
 ```
 
 
-# deleteUserAlert
+## deleteUserAlert
 
 You can use this to delete the direct push alert for a user. This is commonly
 used if the user looks at the alerts and toggles and wants to remove an alert.
@@ -174,7 +174,7 @@ If this is successful, it responds with the `alertId`:
 {"alertId":"9e6b14"}
 ```
 
-# broadcastMessage
+## broadcastMessage
 
 To send a broadcast message, use this script:
 
@@ -193,7 +193,7 @@ curl --location --request POST 'http://localhost:8080/broadcastMessage' \
 }'
 ```
 
-# addSourceToSourceGroup
+## addSourceToSourceGroup
 
 To add a source to a source group, use this script:
 
@@ -213,7 +213,7 @@ curl --location --request POST 'http://localhost:8080/addSourceToSourceGroup' \
 ```
 
 
-# removeSourceFromSourceGroup
+## removeSourceFromSourceGroup
 
 To remove a source to a source group, use this script:
 
