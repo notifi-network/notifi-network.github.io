@@ -22,7 +22,7 @@ Instantiate and configure the Notifi Client for your dApp and environment. If yo
 const accountAddress = '<The-wallet-public-account-address>';
 const walletPublicKey = "<The wallet's public key>";
 const tenantId = '<Tenant ID received through the Notifi Config Tool>';
-const blockchainEnv = 'Development';
+const blockchainEnv = 'Production';
 
 const client = newFrontendClient({
   account: {
