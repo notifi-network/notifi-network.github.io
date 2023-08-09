@@ -48,70 +48,9 @@ Configure the Channels a user is able to select for the alert. This corresponds 
 
 :::info
 
-In order to enable Telegram, follow these steps:
+See our FAQ for steps on how to enable [Telegram](../../faq#tg-bot-setup) and [Discord](../../faq#discord-bot-setup) 
 
-<details>
-  <summary> How to enable Telegram messages </summary>
-In order to send Telegram messages, we simply need a Telegram Bot set up. Each
-individual dapp then controls the bot’s profile picture, description and other
-customizations.
-
-  1. Open your Telegram app. Ideally, there's already a designated Telegram account that's the “official” dapp account. If not, an owner or admin/operator of the dapp should use their Telegram account.
-  2. Search for the user “BotFather”
-  3. Send a message to the BotFather: “/newbot”
-  4. Enter the name of your bot. This is going to be the name that's displayed in the title of the window.
-  5. Enter the username of the bot. Due to Telegram's restrictions, it MUST end in bot.
-  6. On success, you'll see a message such as “Done! Congratulations on your new bot….”. Look in this message and find the token after the line “Use this token to access the HTTP API:”. Make note of this token.
-  7. Privately send us the username you entered in (5) and the token you received in (6).
-  8. From here, you may customize your bot with /setuserpic or other commands. Note, once a bot is created, Telegram doesn't allow you to transfer bots to anyone else.
-
-  :::caution
-  This bot should only be used for Notifi to push notifications to your users. Using it for other messaging or overriding the webhooks for the bot will result in loss of messages or other unintended behavior.
-  :::
-
-</details>
 :::
-
-:::info
-
-In order to enable Discord, follow these steps. For more detail, please see [our blog post](https://medium.com/notifi/discord-bot-is-our-newest-notification-channel-8a2a72dd506e).
-
-<details>
-  <summary> How to enable Discord messages </summary>
-In order to send Discord messages, we simply need a Discord Bot set up. Each
-individual dapp then controls the bot’s profile picture, description and other
-customizations.
-
-  1. Set up your Discord server with the desired configuration.
-  2. Create a Discord application at https://discord.com/developers/applications.
-  3. [Create a bot](https://discord.com/developers/docs/getting-started#configuring-a-bot) in the Discord application
-  4. Send us the bot's token and the Discord serveer's permanent invite URL to integrations@notifi.network.
-
-After the setup is complete, the user interaction is simple:
-
-  1. On the Notifi React Card, click **Enable Bot**.
-
-![Enable bot](/img/create-card-id/9.png)
-
-  2. Accept the Discord OAuth flow prompt so Notifi is aware of your account.
-
-<img
-  src={require('/img/create-card-id/10.png').default}
-  alt="OAuth Flow"
-  width="60%" height="30%"
-/>
-
-  3. Join the Notifi Discord so you're up to date on upcoming features and releases.
-
-<img
-  src={require('/img/create-card-id/11.png').default}
-  alt="Notifi Discord"
-  width="60%" height="30%"
-/>
-
-</details>
-:::
-
 
 #### Step 6
 
