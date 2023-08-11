@@ -140,6 +140,11 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      algolia: {
+        appId: 'JIB7PCXE2V',
+        apiKey: '70fa5cb545f4c7021e9bb080fd5a5bb7',
+        indexName: 'notifi-networkio',
+      },
     }),
 };
 
