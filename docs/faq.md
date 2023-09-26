@@ -33,8 +33,10 @@ customizations.
   4. Enter the name of your bot. This is going to be the name that's displayed in the title of the window.
   5. Enter the username of the bot. Due to Telegram's restrictions, it MUST end in bot.
   6. On success, you'll see a message such as “Done! Congratulations on your new bot….”. Look in this message and find the token after the line “Use this token to access the HTTP API:”. Make note of this token.
-  7. Privately send us the username you entered in (5) and the token you received in (6).
-  8. From here, you may customize your bot with /setuserpic or other commands. Note, once a bot is created, Telegram doesn't allow you to transfer bots to anyone else.
+  7. From here, you may customize your bot with /setuserpic or other commands. Note, once a bot is created, Telegram doesn't allow you to transfer bots to anyone else.
+  8. Head to the [Notifi Admin Panel](https://admin.dev.notifi.network), click on **Account Settings** -> **Add Bot** and enter the *username* (ending in "bot") and *API token* from step (5) and (6) in the fields. 
+
+  ![telegram-bot](/img/telegram-bot/1.png)
 
 :::caution
 This bot should only be used for Notifi to push notifications to your users. Using it for other messaging or overriding the webhooks for the bot will result in loss of messages or other unintended behavior.
@@ -42,7 +44,9 @@ This bot should only be used for Notifi to push notifications to your users. Usi
 
 ### How do I set up a Discord bot to send messages on Discord? {#discord-bot-setup}
 
-In order to send Discord messages, we simply need a Discord Bot set up. Each
+Coming Soon
+
+<!-- In order to send Discord messages, we simply need a Discord Bot set up. Each
 individual dapp then controls the bot’s profile picture, description and other
 customizations.
 
@@ -76,7 +80,7 @@ After the setup is complete, the user interaction is simple:
   width="60%" height="30%"
 />
 
-</details>
+</details> -->
 
 ## Privacy
 
