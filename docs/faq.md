@@ -44,7 +44,7 @@ This bot should only be used for Notifi to push notifications to your users. Usi
 
 ### How do I set up a Discord bot to send messages on Discord? {#discord-bot-setup}
 
-Coming Soon
+This feature is coming soon
 
 <!-- In order to send Discord messages, we simply need a Discord Bot set up. Each
 individual dapp then controls the bot’s profile picture, description and other
