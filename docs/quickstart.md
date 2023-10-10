@@ -106,7 +106,7 @@ Ensure the Broadcast Id that you created is enabled in the card and turned on.
 
 Finally, go back to the Admin console under the **Send Test Messages** screen.
 Add the same Broadcast Id that you added earlier, a subject, and a body, then
-click **Send Message**. You should see now see “Message sent successfully!”
+click **Send Message**. You should now see “Message sent successfully!”
 
 <img
   src={require('/img/quickstart/6.png').default}
