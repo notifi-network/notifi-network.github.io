@@ -97,7 +97,7 @@ Then, use the `ensureAlert()` to create the first alert when your user tends to 
 This example shows how to create (user subscribe) a Broadcast message alert.
 
 ```ts
-// Given that you have one Broadcast Topic in Notifi Admin Panel.
+// Given that you have one Broadcast Topic in Notifi Admin Portal.
 
 const subscribeAlert = () => {
   const subscriptionCardConfig = await client.fetchSubscriptionCard();

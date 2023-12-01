@@ -8,9 +8,9 @@ There are many ways to integrate Notifi into your dapp. Here are some pointers t
 
 #### What is the desired trigger for your alert?
 
-- **Manual:** Let users sign up to [Broadcast](alerts-in-depth#broadcast) or [Direct Push](alerts-in-depth#direct-push) and use [Community Manager](../alert-design/community-manager) in the [Admin Panel](../alert-trigger/admin-panel) Web UI to send out messages to users who have subscribed to those topics.
+- **Manual:** Let users sign up to [Broadcast](alerts-in-depth#broadcast) or [Direct Push](alerts-in-depth#direct-push) and use [Community Manager](../alert-design/community-manager) in the [Admin Portal](../alert-trigger/admin-portal) Web UI to send out messages to users who have subscribed to those topics.
 
-- **Existing [sources](alerts-in-depth#source):** Use the [Admin Panel](../alert-trigger/admin-panel) to configure a [React Card](../alert-subscribe/react-card). Alternatively you can use the [Frontend Client](../alert-subscribe/frontend-client) by passing the corresponding `EventTypeItem` of the source in `NotifiFrontendClient.ensureAlert()`
+- **Existing [sources](alerts-in-depth#source):** Use the [Admin Portal](../alert-trigger/admin-portal) to configure a [React Card](../alert-subscribe/react-card). Alternatively you can use the [Frontend Client](../alert-subscribe/frontend-client) by passing the corresponding `EventTypeItem` of the source in `NotifiFrontendClient.ensureAlert()`
 
 - **Dapp specific on-chain or off-chain events:** This requires a [custom parser source](alerts-in-depth#custom-parser-source). Alternatively, you can implement your own monitoring service that uses the [Node Client](../alert-trigger/node-client) to trigger alerts appropriately.
 
@@ -18,14 +18,14 @@ There are many ways to integrate Notifi into your dapp. Here are some pointers t
 
 - **Allow users to opt-in to announcements and product updates**
 
-  If you use React, configure a card in the [Admin Panel](../alert-trigger/admin-panel) and add the [React Card](../alert-subscribe/react-card) to the dapp frontend. This will automatically set up relevant sources and filters.
+  If you use React, configure a card in the [Admin Portal](../alert-trigger/admin-portal) and add the [React Card](../alert-subscribe/react-card) to the dapp frontend. This will automatically set up relevant sources and filters.
 
   If you don't use React, use the [Frontend Client](../alert-subscribe/frontend-client) to create alerts by using the Broadcast or Direct Push `EventType` with the correct `id`.
-  To send out announcements, use the [Community Manager](../alert-design/community-manager) in the Admin Panel.
+  To send out announcements, use the [Community Manager](../alert-design/community-manager) in the Admin Portal.
 
 - **Send out an alert when price of an asset on Coingecko changed**
 
-  This is very similar to the announcement integration above, except you would use the price change source type. Make sure to configure parameters such as the asset to watch or price thresholds when configuring the card in the [Admin Panel](../alert-trigger/admin-panel) (when using React Card) or in the `EventTypeItem` passed to the [Frontend Client](../alert-subscribe/frontend-client) respectively.
+  This is very similar to the announcement integration above, except you would use the price change source type. Make sure to configure parameters such as the asset to watch or price thresholds when configuring the card in the [Admin Portal](../alert-trigger/admin-portal) (when using React Card) or in the `EventTypeItem` passed to the [Frontend Client](../alert-subscribe/frontend-client) respectively.
 
   Note: For prices not listed on Coingecko, a more custom solution is required.
 
@@ -59,8 +59,8 @@ Do you require special UI elements for users to sign up to your alert (e.g. slid
 
 What is the desired trigger for your alert?
 
-- Manual (e.g. announcement of new features) -> use Admin Panel - Send Test Messages or Community Manager to draft messages and send them
-- Existing topic type (Price change, Balance change, etc.) -> use Admin Panel card config for React Card or pass correct `EventTypeItem` in `NotifiFrontendClient.ensureAlert()`
+- Manual (e.g. announcement of new features) -> use Admin Portal - Send Test Messages or Community Manager to draft messages and send them
+- Existing topic type (Price change, Balance change, etc.) -> use Admin Portal card config for React Card or pass correct `EventTypeItem` in `NotifiFrontendClient.ensureAlert()`
 - Events on the blockchain (e.g. liquidation, certain transactions, etc.) -> this requires a custom parser, reach out to us. If you are able to run your own parser that monitors blockchain transactions, you can have it trigger notifications through the Node Client.
 - Off-chain events -> Reach out to us or run a service that calls Node Client to send out notifications.
 
@@ -69,9 +69,9 @@ Example use cases and how to integrate:
 
 - Allow users to opt-in to announcements and product updates
 
-  If on React configure a card in the Admin Panel and add the React Card to the dapp frontend. This will automatically set up relevant sources and filters.
+  If on React configure a card in the Admin Portal and add the React Card to the dapp frontend. This will automatically set up relevant sources and filters.
   If not on React use the Frontend Client to create alerts, make sure to use the correct topic id.
-  Send out announcements from the Community Manager in the Admin Panel.
+  Send out announcements from the Community Manager in the Admin Portal.
 
 - Send out alert when price of an asset on Coingecko changed
 

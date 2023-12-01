@@ -9,7 +9,7 @@ The card config serves as configuration of the React Card and enables multiple f
 
 #### Step 1
 
-Log in to the [Admin Panel](https://admin.dev.notifi.network) (create an account if you haven't done so already) and head to the _Card Management_ page.
+Log in to the [Admin Portal](https://admin.dev.notifi.network) (create an account if you haven't done so already) and head to the _Card Management_ page.
 Click on "+Create Config"
 
 #### Step 2

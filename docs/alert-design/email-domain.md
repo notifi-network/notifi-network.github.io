@@ -1,7 +1,7 @@
 # Custom Email domain
 
 First thing you want to do is decide on your custom domain. If you already send email and do business from example.com, where your email would look like the following format: info@example.com, we suggest you don't try to send from the same domain. Choose a subdomain, that can be anything you want. Having a domain such as mail.example.com would then have email sent from info@mail.example.com
-Once you have the domain chosen, navigate to your Account Settings in Notifi Admin Panel. 
+Once you have the domain chosen, navigate to your Account Settings in Notifi Admin Portal. 
 
 ## Click Account Settings
 

@@ -1,6 +1,6 @@
 # Alerts for new XMTP messages
 
-This page will walk through an integration of XMTP as a [source](../integration-overview/alerts-in-depth#source) using the **Notifi React Card** and **Admin Panel**. This will alert an user whenever they receive a new message to any XMTP conversation they have at the time of subscribing. 
+This page will walk through an integration of XMTP as a [source](../integration-overview/alerts-in-depth#source) using the **Notifi React Card** and **Admin Portal**. This will alert an user whenever they receive a new message to any XMTP conversation they have at the time of subscribing. 
 
 Make sure you are using a SDK version higher than the following: 
 
@@ -13,7 +13,7 @@ Make sure you are using a SDK version higher than the following:
 
 #### Step 1 
 
-Log in to the [Admin Panel](https://admin.dev.notifi.network) and edit the Card you want to use (or create a new one). Turn on _Advanced Mode_ in the bottom of the config. 
+Log in to the [Admin Portal](https://admin.dev.notifi.network) and edit the Card you want to use (or create a new one). Turn on _Advanced Mode_ in the bottom of the config. 
 
 ![Toggle on Advanced Mode](/img/xmtp-source/1.png)
 
@@ -96,7 +96,7 @@ Pass the `string[]` array as field into the `NotifiSubscriptionCard` component.
 
 ```typescript
 <NotifiSubscriptionCard
-  // Mind that "XMTPTopics" must match the name of the input reference defined in the Admin Panel
+  // Mind that "XMTPTopics" must match the name of the input reference defined in the Admin Portal
   inputs={{ XMTPTopics: topics }}
   cardId="<YOUR CARD ID HERE"
 />

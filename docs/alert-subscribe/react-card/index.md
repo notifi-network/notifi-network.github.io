@@ -4,7 +4,7 @@ To see the source code, look at the [Notifi SDK](https://github.com/notifi-netwo
 
 :::note
 
-You will need a **card config** to use the Notifi React Card, which can be created in the [Admin Panel](https://admin.dev.notifi.network). Follow the guide [here](create-card-id.md) to create a **card config**.
+You will need a **card config** to use the Notifi React Card, which can be created in the [Admin Portal](https://admin.dev.notifi.network). Follow the guide [here](create-card-id.md) to create a **card config**.
 
 :::
 

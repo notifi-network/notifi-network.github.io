@@ -3,14 +3,14 @@
 <!--
 What to cover: 
 
-- What is Admin Panel for
+- What is Admin Portal for
 - How to set up AP 
 - How to send test broadcast and directpush
 
 see https://admin.dev.notifi.network/guide
 -->
 
-You can send messages directly through our Admin Panel web interface via the Community Manager or Send Test Message feature. 
+You can send messages directly through our Admin Portal web interface via the Community Manager or Send Test Message feature. 
 
 For a detailed walkthrough, see [here](https://www.figma.com/proto/EDRHnzmXsLRrmM1VBc57Hw/Notifi-Slides?page-id=3859%3A1161&node-id=3859-1287&viewport=643%2C485%2C0.09&scaling=min-zoom&starting-point-node-id=3859%3A1287)
 

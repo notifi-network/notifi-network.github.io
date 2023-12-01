@@ -24,14 +24,14 @@ The `id` can be an arbitrary string like `dappid__product_announcements`, but sh
 - #### Broadcast {#broadcast}
 
   Broadcasts are used for any alerts that are supposed to go to multiple users at the same time, such as product announcements or events.
-  They can be triggered through the [Admin Panel](https://admin.dev.notifi.network), which allows members of the dapp admin team to manually compose and send out messages to subscribers. This is the recommended way for one-off or individual messages, such as announcements of new features or marketing campaigns.
+  They can be triggered through the [Admin Portal](https://admin.dev.notifi.network), which allows members of the dapp admin team to manually compose and send out messages to subscribers. This is the recommended way for one-off or individual messages, such as announcements of new features or marketing campaigns.
 
   Alternatively, they can also be triggered via API access using the [Node Client](../alert-trigger/node-client). This enables very flexible and custom alert triggering logic where the dapp fully owns the decision of when to send out notifications.
 
 - #### Direct Push {#direct-push}
 
   Direct Push is used for alerts that are supposed to go to a single user only, such as changes in a user's position, account, or wallet.
-  Similar to Broadcast sources, they can be triggered through the [Admin Panel](https://admin.dev.notifi.network) or through an API in the [Notifi SDK](https://github.com/notifi-network/notifi-sdk-ts).
+  Similar to Broadcast sources, they can be triggered through the [Admin Portal](https://admin.dev.notifi.network) or through an API in the [Notifi SDK](https://github.com/notifi-network/notifi-sdk-ts).
 
 - #### Wallets {#wallet-source}
 

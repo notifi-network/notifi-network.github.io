@@ -34,7 +34,7 @@ customizations.
   5. Enter the username of the bot. Due to Telegram's restrictions, it MUST end in bot.
   6. On success, you'll see a message such as “Done! Congratulations on your new bot….”. Look in this message and find the token after the line “Use this token to access the HTTP API:”. Make note of this token.
   7. From here, you may customize your bot with /setuserpic or other commands. Note, once a bot is created, Telegram doesn't allow you to transfer bots to anyone else.
-  8. Head to the [Notifi Admin Panel](https://admin.dev.notifi.network), click on **Account Settings** -> **Add Bot** and enter the *username* (ending in "bot") and *API token* from step (5) and (6) in the fields. 
+  8. Head to the [Notifi Admin Portal](https://admin.dev.notifi.network), click on **Account Settings** -> **Add Bot** and enter the *username* (ending in "bot") and *API token* from step (5) and (6) in the fields. 
 
   ![telegram-bot](/img/telegram-bot/1.png)
 
