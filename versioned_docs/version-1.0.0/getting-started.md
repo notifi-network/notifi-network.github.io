@@ -2,12 +2,12 @@
 sidebar_position: 2
 ---
 
-# Getting started 
+# Getting started
 
-#### Read the docs 
+#### Read the docs
 
-Start by familiarizing yourself with the steps required to integrate Notifi [here](integration-overview/integration-steps).
-<!-- - Identify the best approach for your integration with examples [here](integration-overview/pointers-samples.md) -->
+- Start by familiarizing yourself with the steps required to integrate Notifi [here](integration-overview/key-concepts.md)
+- Identify the best approach for your integration with examples [here](integration-overview/pointers-samples.md)
 
 #### Additional ressources
 

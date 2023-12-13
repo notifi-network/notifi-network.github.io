@@ -1,4 +1,4 @@
-# Custom Email Templates (outdated)
+# Custom Email Templates
 
 <!-- https://docs.google.com/document/d/1-8K_nbJGaywL-jYFg7_YZiE9x_WPaHvuFfYgM7QmqMg/edit -->
 

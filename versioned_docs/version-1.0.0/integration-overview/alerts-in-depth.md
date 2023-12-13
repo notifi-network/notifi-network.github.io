@@ -4,30 +4,11 @@ sidebar_position: 3
 
 # Alerts in Depth {#alerts-in-depth}
 
-An **alert** is a tuple of a [Topic](#topic) (sometimes referred to as "source" as well), [Filter](#filter), and [Target](#target), which are represented by `sourceGroup`, `Filter`, and `TargetGroup` objects respectively. Existing topics, filters, and targets can be reused.
+An **alert** is a tuple of a [Source](#source), [Filter](#filter), and [Target](#target), which are represented by `SourceGroup`, `Filter`, and `TargetGroup` objects respectively. Existing sources, filters, and targets can be reused.
 
 As long as the alert exists, the user will receive notifications to their specified channels whenever they are triggered.
 
-## Topics {#topic}
-
-The topic of an alert serves as a way for users to subscribe to specific categories of alerts and can be triggered manually through the [Admin Portal](../alert-trigger/admin-portal/) web UI, programmatically through an API, or through a Notifi hosted monitoring service. 
-
-### Topic types {#topic-type}
-
-- #### Announcements through Community Manager
-
-  Topics of these alerts are triggered manually through the [Community Manager](../alert-trigger/admin-portal/) feature of the Admin Portal. Common use cases for this type of topic include project announcements (e.g. for new launches, events, etc.), marketing campaigns, and others. 
-
-- #### Alerts triggered through API call 
-
-  Notifi provides a [Node Client](../alert-trigger/node-client/) which can be called to programmatically trigger notifications. This can be used to send out notifications based on events from an external service that also is required for things other than triggering notifications. 
-
-- #### Notifi hosted monitoring service
-
-  The most common type of topic involves creating a monitoring service hosted by Notifi that can pull on-chain and off-chain data and trigger notifications based on set conditions. This is often the simplest and fastest solution to start sending out automated notifications as Notifi has set up the required infrastructure already and provides a simple and fast toolkit to define the triggering conditions. 
-
-
-<!-- ## Sources {#source}
+## Sources {#source}
 
 A Source is a trigger for a notification, such as an on-chain event or a message sent by the project team.
 They are represented as `Source` objects and used in alerts as `SourceGroup` objects, which are a collection of `Source` objects.
@@ -59,17 +40,20 @@ The `id` can be an arbitrary string like `dappid__product_announcements`, but sh
 - #### dapp specific (a.k.a. _"custom parser"_) {#custom-parser-source}
 
   Dapp specific sources are useful to enable customized user experiences tailored to specific use cases, such as alerts for auctions, price changes, liquidations, or loan health. Typically, they monitor on-chain events and in combination with a corresponding filter, trigger notifications when certain transactions or events are observed on the chain.
-  However, they require custom work, so please reach out at integrations@notifi.network to discuss the possibility of creating a custom parser. -->
+  However, they require custom work, so please reach out at integrations@notifi.network to discuss the possibility of creating a custom parser.
 
 
 ## Filters {#filter}
 
-Filters are used in combination with [Topics](#topic) to enable a variety of alerts using the same source.
+Filters are used in combination with [Sources](#source) to enable a variety of alerts using the same source.
 For example, different filters could be used to allow different threshholds on loan health alerts, token balance changes, etc.
+They are particularly relevant for custom parsers, as these usually emit all dapp related events.
 
-<!-- :::info
+:::info
+
 For use cases that use [Broadcast](#broadcast) or [Direct Push](#direct-push) sources, there are usually no specific filter(s) required. In that case, the filter types `BroadcastMessages` and `DirectTenantMessage` can be used.
-::: -->
+
+:::
 
 ## Targets {#target}
 
@@ -82,3 +66,20 @@ They are represented as `Target` objects and used in alerts as `TargetGroup` obj
 Typically one `targetGroup` should only contain [targets](#target) owned by the same user. This ensures that one alert is clearly associated with only one user.
 
 :::
+
+
+
+
+
+
+
+
+
+<!--
+What to cover:
+
+- what are notifi accounts, how does wallet -> notifi account association work
+- what are source, filter, targets, alerts
+- highlevel things that need to be done: UI for subscribe, creation of source/filters/targets, triggering alerts (manual vs. automatic)
+
+-->

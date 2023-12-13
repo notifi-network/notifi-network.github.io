@@ -2,7 +2,7 @@
 sidebar_position: 20
 ---
 
-# Quickstart (outdated)
+# Quickstart
 
 In this quickstart guide, you will set up a basic user interface and verify
 your contact information. Then, you will set up the backend configuration on

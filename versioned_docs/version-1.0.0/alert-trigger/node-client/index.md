@@ -1,4 +1,4 @@
-# Node Client (outdated)
+# Node Client
 
 The Node Client is available on [Github](https://github.com/notifi-network/notifi-sdk-ts/tree/main/packages/notifi-node).
 

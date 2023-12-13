@@ -23,11 +23,28 @@ Please contact us at integrations@notifi.network.
 
 ### How do I set up a Telegram bot to send Telegram messages? {#tg-bot-setup}
 
-Follow the steps [here](alert-design/tg-bot).
+In order to send Telegram messages, we simply need a Telegram Bot set up. Each
+individual dapp then controls the bot’s profile picture, description and other
+customizations.
+
+  1. Open your Telegram app. Ideally, there's already a designated Telegram account that's the “official” dapp account. If not, an owner or admin/operator of the dapp should use their Telegram account.
+  2. Search for the user “BotFather”
+  3. Send a message to the BotFather: “/newbot”
+  4. Enter the name of your bot. This is going to be the name that's displayed in the title of the window.
+  5. Enter the username of the bot. Due to Telegram's restrictions, it MUST end in bot.
+  6. On success, you'll see a message such as “Done! Congratulations on your new bot….”. Look in this message and find the token after the line “Use this token to access the HTTP API:”. Make note of this token.
+  7. From here, you may customize your bot with /setuserpic or other commands. Note, once a bot is created, Telegram doesn't allow you to transfer bots to anyone else.
+  8. Head to the [Notifi Admin Portal](https://admin.dev.notifi.network), click on **Account Settings** -> **Add Bot** and enter the *username* (ending in "bot") and *API token* from step (5) and (6) in the fields. 
+
+  ![telegram-bot](/img/telegram-bot/1.png)
+
+:::caution
+This bot should only be used for Notifi to push notifications to your users. Using it for other messaging or overriding the webhooks for the bot will result in loss of messages or other unintended behavior.
+:::
 
 ### How do I set up a Discord bot to send messages on Discord? {#discord-bot-setup}
 
-Follow the steps [here](alert-design/discord-bot).
+This feature is coming soon
 
 <!-- In order to send Discord messages, we simply need a Discord Bot set up. Each
 individual dapp then controls the bot’s profile picture, description and other
