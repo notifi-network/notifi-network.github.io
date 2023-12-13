@@ -14,11 +14,11 @@ Users can access all of their notifications from Notifi across all dapps in the
 />
 
 It is also possible to display the user's past notifications directly in the dapp.
-The [React Card](../docs/alert-subscribe/react-card) contains the required UI
+The [React Card](../alert-subscribe/react-card/) contains the required UI
 elements and will show the user's notification history when a wallet is connected.
 
 For a more flexible UI to show the users notification history, the
-[Frontend Client](../docs/alert-subscribe/frontend-client) provides a
+[Frontend Client](../alert-subscribe/frontend-client) provides a
 `getNotificationHistory()` function.
 
 

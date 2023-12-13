@@ -44,7 +44,7 @@ Optional: Add tooltips to the topics that help users understand what alert they 
 Select which destinations you want to allow for this card config. Destinations are equivalent to [targets](../../integration-overview/alerts-in-depth.md#target). 
 
 :::note
-Check out [this](../../alert-design/) section to set up your custom email domain, TG bot, or Discord bot.
+Check out [this](../../category/styling-your-notifications) section to set up your custom email domain, TG bot, or Discord bot.
 :::
 
 ![configuring destinations](/img/create-card-id-2.0/5.png)
