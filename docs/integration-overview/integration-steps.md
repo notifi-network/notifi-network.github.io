@@ -27,7 +27,7 @@ Depending on the depth of integration and use case, some of these are optional o
 
   Notifi uses alerts to send manual and automated notifications to users. Users who subscribe to an alert will receive notifications from Notifi and will be able to view and manage their alerts in the [Notifi Hub](../for-users/index.md)
 
-  Alerts typically are created using a [topic](./alerts-in-depth.md#topic) and depending on the type of topic be triggered either manually through the [Community Manager](../alert-trigger/admin-portal/) web UI, programmatically through an API call using the [Node Client](../alert-trigger/node-client/), or completely automatic when using the Notifi monitored alerts.
+  Alerts are created using a [topic](./alerts-in-depth.md#topic) and depending on the type of topic be triggered either manually through the [Community Manager](../alert-trigger/admin-portal/) web UI, programmatically through an API call using the [Node Client](../alert-trigger/node-client/), or completely automatic when using the Notifi monitored alerts.
 
 <!-- 
 
