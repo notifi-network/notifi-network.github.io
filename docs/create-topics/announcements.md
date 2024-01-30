@@ -2,13 +2,13 @@
 sidebar_position: 1
 ---
 
-# Commnunity Manager Announcements
+# Community Manager Announcements
 
 Community Manager Announcements are the simplest form of notifications and are triggered by a team member manually drafting a message to the users in our Community Manager tool. Follow these steps to create a topic: 
 
 #### Step 1
 
-Log in to the [Admin Portal](https://admin.dev.notifi.network) (create an account if you haven't done so already) and head to the _Alert Manager_ page.
+Log in to the [Admin Portal](https://admin.notifi.network) (create an account if you haven't done so already) and head to the _Alert Manager_ page.
 Select the _Topics_ tab (default) and click on "+ Topic" in the top right, then select the "Send announcments from Community Manager". 
 
 ![create announcement](/img/create-topics/1.png)

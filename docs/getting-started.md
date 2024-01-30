@@ -17,6 +17,5 @@ Start by familiarizing yourself with the steps required to integrate Notifi [her
 
 #### Get Help
 
-- Join our Daily Dev **Office Hours** [here](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0eBri36tjXDQrW4yorjMM-bZXTibmRgwLKjTTzJzQ5umR2VoamBITomqeGU5Ge6C6Rc2Tw_gKW)
 - We use Jira as a ticketing platform to track issues, questions, and requests at Notifi. If you have anything that you need from us, please create a **support ticket** using the link [here](https://notifi.atlassian.net/servicedesk/customer/portals)
 - Reach out to the key [Notifi contacts](https://docs.google.com/document/d/1zVu-8iXdz1mOGievDutJX4Fs_7RXqe19LdyK4LqNmTA/edit)
