@@ -65,7 +65,7 @@ The `id` can be an arbitrary string like `dappid__product_announcements`, but sh
 ## Filters {#filter}
 
 Filters are used in combination with [Topics](#topic) to enable a variety of alerts using the same source.
-For example, different filters could be used to allow different threshholds on loan health alerts, token balance changes, etc.
+For example, different filters could be used to allow different threshholds on loan health alerts, token balance changes, etc. This allows a user to fully customize an alert to their preferences.
 
 <!-- :::info
 For use cases that use [Broadcast](#broadcast) or [Direct Push](#direct-push) sources, there are usually no specific filter(s) required. In that case, the filter types `BroadcastMessages` and `DirectTenantMessage` can be used.

@@ -24,11 +24,23 @@ Example comparisonValue: 1234
 <summary>Notifi Node publishFusionMessage API call</summary>
 
 ```tsx
-client.publishFusionMessage(
-  'abcd1234',
-  'foo',
-  'bar'
-)
+const fusionMessage = {
+    eventTypeId: 'abcd1234',
+    variables: {
+        Email: {
+            subject: 'demo test',
+            someData: 'foo bar',
+            moreData: 'bang',
+        },
+        Platform: {
+            subject: 'demo test',
+            someData: 'foo bar',
+            moreData: 'bang',
+        },
+
+    }
+};
+await client.publishFusionMessage(token, fusionMessage);
 ```
 
 </details>
@@ -43,7 +55,8 @@ client.publishFusionMessage(
   blockchain: 4,
   changeSignature: transactionhash",
   metadata: {
-    someRandomData: "foo bar",
+    subject: "demo test"
+    someData: "foo bar",
     moreData: "bang"
   }
 }

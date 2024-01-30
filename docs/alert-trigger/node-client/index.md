@@ -5,7 +5,7 @@ The Node Client is available on [Github](https://github.com/notifi-network/notif
 Using the Notifi Node SDK, developers are provided with a very flexible and custom alert triggering tool where the dapp
 fully owns the decision of when to send out notifications.
 
-For publishing to your *topic* the Node Client has 2 endpoints which are of importance.
+For publishing to your [topic](../integration-overview/alerts-in-depth.md#topic) the Node Client has 2 endpoints which are of importance.
 To follow along, please clone the sample of the Node Client on
 [Github](https://github.com/notifi-network/notifi-sdk-ts/tree/main/packages/notifi-node-sample).
 
@@ -42,6 +42,7 @@ document, the token will be saved as a variable `$LOGIN_TOKEN`.
 
 ## publishFusionMessage
 
+To [publish messages to your topic](https://github.com/notifi-network/notifi-sdk-ts/tree/main/packages/notifi-node-sample#send-a-fusion-broadcast-message-ap-v2-using-http-post), you can now use the LOGIN_TOKEN obtained above, along with the FusionEventId that identifies the topic.
 The variable `healthValue` varies by dapp, and it’s used in conjunction with
 `VALUE_THRESHOLD` filters. The user subscribes to a `DIRECT_PUSH` source with
 the `VALUE_THRESHOLD` filter, specifying a threshold in the alert filter
@@ -56,18 +57,36 @@ curl --location --request POST 'http://localhost:8080/publishFusionMessage' \
 --header 'Content-Type: application/json' \
 --header "Authorization: Bearer $LOGIN_TOKEN" \
 --data-raw '{
-    "sid": "9MJEUA",
-    "secret": "XBLNWf",
-    "walletPublicKey": "8CHibP",
-    "walletBlockchain": "SOLANA",
-    "healthValue": 0.42
+  "variables": [
+    {
+      "eventTypeId": "71cc71b9c5de4a838e8c8bf46d25fb2c",
+      "variablesJson": {
+        "Platform": {
+          "message__markdown": "[link text](https://bots.ondiscord.xyz)",
+          "message": "gets overriden by message__markdown",
+          "subject": "dpush test"
+        },
+        "Email": {
+          "message": "gets overriden by message__markdown",
+          "message__markdown": "[link text](https://bots.ondiscord.xyz)",
+          "subject": "dpush test"
+        }
+      }
+    }
+  ]
 }'
 ```
 
 If this is successful, the server will respond with:
 
 ```
-{"message":"success"}
+{
+  "result": {
+    "indexToResultIdMap": {
+      "0": "c1665c4b-5389-400e-b026-bd93471a0d00"
+    }
+  }
+}
 ```
 
 
