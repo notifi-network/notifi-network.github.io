@@ -5,7 +5,7 @@ The Node Client is available on [Github](https://github.com/notifi-network/notif
 Using the Notifi Node SDK, developers are provided with a very flexible and custom alert triggering tool where the dapp
 fully owns the decision of when to send out notifications.
 
-For publishing to your [topic](../integration-overview/alerts-in-depth.md#topic) the Node Client has 2 endpoints which are of importance.
+For publishing to your [topic](../../integration-overview/alerts-in-depth.md#topic) the Node Client has 2 endpoints which are of importance.
 To follow along, please clone the sample of the Node Client on
 [Github](https://github.com/notifi-network/notifi-sdk-ts/tree/main/packages/notifi-node-sample).
 
@@ -43,12 +43,10 @@ document, the token will be saved as a variable `$LOGIN_TOKEN`.
 ## publishFusionMessage
 
 To [publish messages to your topic](https://github.com/notifi-network/notifi-sdk-ts/tree/main/packages/notifi-node-sample#send-a-fusion-broadcast-message-ap-v2-using-http-post), you can now use the LOGIN_TOKEN obtained above, along with the FusionEventId that identifies the topic.
-The variable `healthValue` varies by dapp, and it’s used in conjunction with
-`VALUE_THRESHOLD` filters. The user subscribes to a `DIRECT_PUSH` source with
-the `VALUE_THRESHOLD` filter, specifying a threshold in the alert filter
-options. Then, the service sends a notification to that user's address using a
-`healthValue`, which will be evaluated against the threshold that the user
-used. Here is a sample test script:
+The `eventTypeId` can be obtained from here. The `variablesJson` member is required, but can take any shape you want. You can then create your message templates to reference the JSON path that you've specified. Here is a sample test script below.
+
+
+*NOTE: For any topic that was created for Community Manager, you can publish to it from this API, but we highly recommend you use our Community Manager in Admin Portal, as topics created for Community Manager adhere to a strict schema that can change without notice.*
 
 ```
 #!/bin/bash
