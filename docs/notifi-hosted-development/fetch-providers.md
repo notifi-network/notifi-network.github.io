@@ -1,8 +1,8 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 ---
 
-# Using Persistant and Ephemeral Storage API's
+# Using External API's
 
 Storage APIs will be injected upon startup of your Notifi Hosted routine. You will have access to both persistent and ephemeral storage. Storage namespace is shared across the dapp so that multiple parsers in your dapp can reference/share the same data. Versioning is supported on persistent storage to aid in optimistic locking/updates.
 
