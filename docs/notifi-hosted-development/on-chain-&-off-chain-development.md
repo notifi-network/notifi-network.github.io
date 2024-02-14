@@ -48,49 +48,81 @@ _Expected Result_
 
 #### Authentication Commands
 
-`fusion auth` (Creating Authentication for a user to run any [Parser Commands](http://localhost:3000/docs/next/notifi-hosted-development/on-chain-&-off-chain-development#parser-commands))
+###### Creating Authentication
+
+`$fusion auth` (Creating Authentication for a user to run any [Parser Commands](https://notifi-network.github.io/docs/next/notifi-hosted-development/on-chain-&-off-chain-development#parser-commands))
 
 #### Parser Commands
 
-`fusion parser --help`
+###### Finding what commands are available in the CLI
+
+`$fusion parser --help`
 
 > Run this command if you forget what commands are available.
 
 ![Alt text](image-4.png)
 
-`fusion parser init`
+---
 
-> Run this command if you forget what commands are available.
+###### Creating Parser Environment
 
-`fusion parser create`
+`$fusion parser init 'fusionSourceId'`
 
-> Run this command if you forget what commands are available.
+> Run this command if you need initialize a parser source development environment
 
-`fusion parser activate 'cursor' 'fusionSourceId'`
+_Note: This is automatically generated upon completion of the CLI Script._
 
-> Run this command if you forget what commands are available.
+---
 
-> **The Fusion Activate Command must be called at least once**
+###### Creating A New Parser Directory
 
-`fusion parser upload 'fusionSourceId'`
+`$fusion parser create`
 
-> Run this command if you forget what commands are available.
+> Run this command if you want to a new parser directory
 
-`fusion parser list`
+---
 
-> Run this command if you forget what commands are available.
+###### Activating A Fusion Source
 
-![Example of Fusion Parser List Command](image-5.png)
+`$fusion parser activate 'cursor' 'fusionSourceId'`
 
-`fusion parser deactivate 'fusionSourceId'`
+**The Fusion Activate Command must be called at least once. This command requires the fusion source to be uploaded**
 
-> Run this command if you forget what commands are available.
+> Run this command if you want to activate a parser
+
+---
+
+###### Uploading A Fusion Source
+
+`$fusion parser upload 'fusionSourceId'`
+
+> Run this command if you would like to upload the respective Fusion Source
+
+---
+
+###### Generating a list of your parsers
+
+`$fusion parser list`
+
+> Run this command if you would like to see the state of your parsers
+
+Example Response: ![Example of Fusion Parser List Command](image-5.png)
+
+---
+
+###### Deactivating A Fusion Source
+
+`$fusion parser deactivate 'fusionSourceId'`
+
+> Run this command if you would like to deactivate a Fusion Source
+
+---
 
 ### Parser Development States
 
 Templated parsers are available in the following directory:
 
-> /DIRECTORy/PATH
+> `**~/fusion-sources/{YOUR_PARSER_NAME}**`
 
 When developing a parser, expected states are to be seen in the following page:
 
@@ -121,7 +153,8 @@ Here, parsers can be activated and deactivated outside of the CLI.
 ### Recommended Steps
 
 1. Copy and Paste the Command into your terminal
-2. Run The Command
-3. Create / Modify Your Parser
-4. Upload Your Parser
-5. Activate Your Parser
+2. Run The CLI Command
+3. Run `npm i`
+4. Modify Your Parser Code
+5. [Upload Your Parser](https://notifi-network.github.io/docs/next/notifi-hosted-development/on-chain-&-off-chain-development#uploading-a-fusion-source)
+6. [Activate Your Parser](https://notifi-network.github.io/docs/next/notifi-hosted-development/on-chain-&-off-chain-development#activating-a-fusion-source)
