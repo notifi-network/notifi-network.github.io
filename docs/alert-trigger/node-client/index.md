@@ -13,10 +13,10 @@ The Notifi Node SDK is available on [Github](https://github.com/notifi-network/n
 In order to use the Node SDK to publish notifications, you first need to set up the following on the
 [Notifi Admin Portal](https://admin.notifi.network):
 
-- A Dapp account (an account created on this page, NOT the Notifi Hub)
-- A "Sent from my server" topic, created in Alert Manager
+- A Dapp account (an account created on Admin Portal, NOT the Notifi Hub)
+- A ["Sent from my server" topic](../../create-topics/api-triggered.md), created in Alert Manager
 - One or more subscriptions for users on that topic
-- A set of templates on that topic for each messaging platform you want to support
+- A [set of templates on that topic](../../category/styling-your-notifications) for each messaging platform you want to support
 
 When you have these things, you will be able to copy the SID and SECRET for your Dapp account
 under Account Settings, and the Event Type ID from your topic.
@@ -27,9 +27,11 @@ First, instantiate a client in your Node application:
 
 ```javascript
 import {
-    NotifiClient,
-    NotifiEnvironment,
-    createNotifiService, createDataplaneClient, createGraphQLClient,
+  NotifiClient,
+  NotifiEnvironment,
+  createNotifiService, 
+  createDataplaneClient, 
+  createGraphQLClient,
 } from '@notifi-network/notifi-node';
 
 const env: NotifiEnvironment = 'Production';
@@ -59,7 +61,33 @@ all other requests made by your Node application.
 ## publishFusionMessage
 
 Once you have a token, you can then use it to publish messages to your topic. This is done through the
-`NotifiClient.publishFusionMessage` API:
+`NotifiClient.publishFusionMessage` API.
+
+To send a message to **everyone** subscribed to a particular topic, use the call below:
+
+```javascript
+await client.publishFusionMessage(token, [{
+    eventTypeId: "abc123",
+    variablesJson: {
+        message: "Hello from Notifi!",
+        items: [
+            1,
+            2,
+            3    
+        ]
+    }
+}]);
+```
+
+- `eventTypeId`: The "Event Type ID" associated with the topic you're publishing to.
+- `variablesJson`: A bundle of JSON-serializable variables to be used during rendering
+  of your message templates. This variable presents itself in your templates as `eventData` -
+  e.g. the expression `{{eventData.fromAddress}}` in your template will expand as "0x123"
+  in the example above.
+
+To send a message to **only specific users**, also add the `specificWallets` parameter,
+which is an array of wallet public key and blockchain name pairs - the message will be sent
+to all of these:
 
 ```javascript
 await client.publishFusionMessage(token, [{
@@ -80,14 +108,4 @@ await client.publishFusionMessage(token, [{
     ]
 }]);
 ```
-
-- `eventTypeId`: The "Event Type ID" associated with the topic you're publishing to.
-- `variablesJson`: A bundle of JSON-serializable variables to be used during rendering
-  of your message templates. This variable presents itself in your templates as `eventData` -
-  e.g. the expression `{{eventData.fromAddress}}` in your template will expand as "0x123"
-  in the example above.
-- `specificWallets`: An optional array of specific wallets to send the message to - both the
-  wallet and the blockchain name are specified. If you omit this value, the message will be
-  sent to everyone who is subscribed to this topic.
-
 
