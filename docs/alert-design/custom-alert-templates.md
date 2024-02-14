@@ -26,7 +26,7 @@ Example comparisonValue: 1234
 ```tsx
 const fusionMessage = {
     eventTypeId: 'abcd1234',
-    variables: {
+    variablesJson: {
         Email: {
             subject: 'demo test',
             someData: 'foo bar',
