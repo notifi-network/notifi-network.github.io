@@ -8,7 +8,7 @@ Fetch APIs will be injected upon startup of your Notifi Hosted routine. You will
 
 Example as shown below:
 
-````
+```
  const dataBody = {
       query: yourQuery,
       variables: {},
@@ -30,5 +30,7 @@ Example as shown below:
     }
 
     const responseJson = JSON.parse(response.response);
-    ```
-````
+
+```
+
+> _Note: For Authentication Secrets, utilize the [Persistant Storage API's](http://localhost:3000/docs/next/notifi-hosted-development/storage-providers) to store and retrieve secrets_
