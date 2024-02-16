@@ -16,7 +16,7 @@ In order to use the Node SDK to publish notifications, you first need to set up 
 - A Dapp account (an account created on Admin Portal, NOT the Notifi Hub)
 - A ["Sent from my server" topic](../../create-topics/api-triggered.md), created in Alert Manager
 - One or more subscriptions for users on that topic
-- A [set of templates on that topic](../../category/styling-your-notifications) for each messaging platform you want to support
+- A [set of templates on that topic](../../create-topics/templates.md) for each messaging platform you want to support
 
 When you have these things, you will be able to copy the SID and SECRET for your Dapp account
 under Account Settings, and the Event Type ID from your topic.
