@@ -10,7 +10,7 @@ Once a topic is created, templates need to be created and uploaded. Currently, w
 Notifi templates use mustache templates to render all notifications. Check out the [mustache documentation](https://mustache.github.io/mustache.5.html) to learn more about how to construct mustache templates.
 
 ## Template Variables
-When constructing your mustache templates, you have access to template variables provided by your topic payload. The template variables differs based on the topic payload, and these variables can be accessed in mustache templates via the ``{{eventDetails}}`` object.
+When constructing your mustache templates, you have access to template variables provided by your topic payload. The template variables differs based on the topic payload, and these variables can be accessed in mustache templates via the ``{{eventData}}`` object.
 
 ### Alert Triggered by API Topics
 In the case of an Alert Triggered by an API, the template variables will contain the payload sent by the sender (your tenant service). Here's an example:
@@ -30,9 +30,9 @@ The following is an example payload for alert triggered by an API:
 ```
 Here's an example template using the variables from the payload:
 ```
-{{eventDetails.testVar1}}
+{{eventData.testVar1}}
 This is a mustache template. 
-{{eventDetails.testVar2.testVar3}}
+{{eventData.testVar2.testVar3}}
 ```
 Given the above payload and template renders this:
 ```
