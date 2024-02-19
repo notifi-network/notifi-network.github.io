@@ -93,19 +93,22 @@ to all of these:
 await client.publishFusionMessage(token, [{
     eventTypeId: "abc123",
     variablesJson: {
-        fromAddress: "0x123",
+        fromAddress: "0x123abc",
         amount: 250
     },
     specificWallets: [
         {
-            walletPublicKey: "0x123",
+            walletPublicKey: "0x123abc",
             walletBlockchain: "ETHEREUM"
         },
         {
-            walletPublicKey: "c12",
+            walletPublicKey: "c123ABC",
             walletBlockchain: "SOLANA"
         }
     ]
 }]);
 ```
+
+Note that wallet addresses should be converted to lowercase when submitting them
+here, except for Solana addresses, which are case-sensitive.
 
