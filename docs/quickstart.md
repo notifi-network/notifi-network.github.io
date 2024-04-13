@@ -4,6 +4,8 @@ sidebar_position: 20
 
 # Quickstart (outdated)
 
+(TODO: Delete this document)
+
 In this quickstart guide, you will set up a basic user interface and verify
 your contact information. Then, you will set up the backend configuration on
 the Admin console and Notifi will send a Broadcast message to all relevant channels.
