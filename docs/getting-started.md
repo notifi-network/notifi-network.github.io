@@ -30,8 +30,8 @@ Notifi has three types of notifications:
 
 For this Getting Started guide, we will be creating a Community Manager topic.
 Check our our 
-[self-hosted]()
-and [Notifi-hosted]()
+[self-hosted](https://www.example.com)
+and [Notifi-hosted](https://www.example.com)
 guides for writing for the other two types.
 
 To create a Community Manager topic, go to the Alert Manager, click **Create Topic**,
@@ -78,13 +78,6 @@ you add the card to your website.
 (TODO: Screenshots for setting up your card)
 
 ### Setting Up a React Application With Your Card
-
-(TODO: Fix)
-
-- Create a new React website or open an existing one. (Link to modern resources
-  for creating a React app)
-- Consult the instructions for adding your card: https://github.com/notifi-network/notifi-sdk-ts/tree/main/packages/notifi-react-card
-- Note Dapp ID from Admin Portal and Card ID - copy them into the appropriate fields
 
 First, either open your existing JSX React project, or create a new one.
 (TODO: Resources for creating a React app)
@@ -189,11 +182,47 @@ export const NotifiCard: React.FC = () => {
 };
 ```
 
-(TODO: Screenshots for running the Notifi React example)
+(TODO: Screenshots for setting up the Notifi React card)
+
+Once you have this set up, run it and navigate to the card.
+Connect your wallet to the site and follow the wallet prompts
+in order to sign into the card.
+
+Once you've done that, you'll see prompts to enter your email
+address to sign up for notifications. Enter the email address you
+want to receive notifications on (anything you can verify will do),
+and then simply check off the Community Manager topic you created
+before! Notifi will send you a verification email - once you click
+the link to verify your email, you'll be all set to receive
+notifications!
+
+(TODO: Screenshots of using the Notifi React card)
 
 ## Sending Your First Message
 
-(TODO: Instructions for going to Community Manager and sending a message)
+Finally, now that we have a topic and a user signed up to it,
+it's time to send a message!
+
+1. Navigate to the **Community Manager** page in Admin Portal.
+2. Under **Audience/Notification Topic**, select the Community Manager
+   topic you've created.
+3. Enter some text in the **Campaign Name** field. Your audience won't
+   see this name - it's just used to uniquely identify the message for
+   reporting.
+4. Choose the destinations you want to send the message to. **Alert History**
+   is always selected, and in this example, we will add **Email**.
+5. In the Alert History section, type the subject and message you
+   want to send.
+6. Copy the subject and message fields in the Alert History section to
+   the Email section. Here you can also add some extra details and formatting
+   to your email, such as lists or images.
+7. Click the **Publish** button at the bottom.
+
+Within a few moments, you should receive an email at the email address
+you provided to your Notifi card, and should also be able to see the message
+in the Notifi card's Alert History!
+
+(TODO: Screenshots for going to Community Manager and sending a message)
 
 ## Next Steps
 
@@ -205,31 +234,31 @@ self-hosted services through the Notifi SDK, and notifications from custom code 
 on Notifi's servers that follow on-chain events. Check out the quickstart guides
 for these:
 
-- [Getting Started With Self-Hosted API Notifications](./getting-started-with-self-hosted.md)
-- [Getting Started With Notifi-Hosted Development](./getting-started-with-notifi-hosted.md)
+- [Getting Started With Self-Hosted API Notifications](./getting-started-with-self-hosted)
+- [Getting Started With Notifi-Hosted Development](./getting-started-with-notifi-hosted)
 
-### Adding Additional Platforms
+### Adding Additional Destination Platforms
 
 Notifi notifications can be delivered through email, Telegram, Discord, Slack,
 and more. A few of these platforms require you to supply a bot for Notifi to use.
 It is also possible to send email via your own custom domain:
 
-- [Set up a Telegram bot](./alert-design/tg-bot.md)
-- [Set up a Discord bot](./alert-design/discord-bot.md)
-- [Set up a Slack integration](./alert-design/slack-integration.md)
-- [Set up a custom email domain](./alert-design/email-domain.md)
+- [Set up a Telegram bot](./alert-design/tg-bot)
+- [Set up a Discord bot](./alert-design/discord-bot)
+- [Set up a Slack integration](./alert-design/slack-integration)
+- [Set up a custom email domain](./alert-design/email-domain)
 
 ### Style Your Notifications
 
 Notifications can also be templated and styled, both for Community Manager
 notifications and automatic notifications. Check out our
-[template guide](./alert-design/custom-alert-templates.md)!
+[template guide](./alert-design/custom-alert-templates)!
 
 ### Set Up Custom Notification UI
 
 The React Card is the simplest way to set up UI for signing up for notifications,
 but a more comprehensive frontend client is also available. Check out
-[our guide for integrating it]()! (TODO: link).
+[our guide for integrating it](https://www.example.com)! (TODO: link).
 
 ### Additional resources
 
