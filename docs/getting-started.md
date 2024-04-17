@@ -30,16 +30,16 @@ Notifi has three types of notifications:
 
 For this Getting Started guide, we will be creating a Community Manager topic.
 Check our our 
-[self-hosted](https://www.example.com)
-and [Notifi-hosted](https://www.example.com)
+[self-hosted](./getting-started-with-self-hosted)
+and [Notifi-hosted](./getting-started-with-notifi-hosted)
 guides for writing for the other two types.
 
 To create a Community Manager topic, go to the Alert Manager, click **Create Topic**,
-then "Send announcements from Community Manager".
+then **Send announcements from Community Manager**.
 
 (TODO: Screenshots)
 
-In the dialog box that appears, set the name of your topic and click Create.
+In the dialog box that appears, set the name of your topic and click **Create**.
 
 ## Setting Up Your Signup UI
 
@@ -88,8 +88,6 @@ paste these imports to the top of the file:
 ```
 import {
   NotifiContext,
-  NotifiInputFieldsText,
-  NotifiInputSeparators,
   NotifiSubscriptionCard,
 } from '@notifi-network/notifi-react-card';
 import '@notifi-network/notifi-react-card/dist/index.css';
@@ -136,8 +134,6 @@ Here is a complete example for a card using Ethereum:
 import { arrayify } from '@ethersproject/bytes';
 import {
   NotifiContext,
-  NotifiInputFieldsText,
-  NotifiInputSeparators,
   NotifiSubscriptionCard,
 } from '@notifi-network/notifi-react-card';
 import '@notifi-network/notifi-react-card/dist/index.css';
