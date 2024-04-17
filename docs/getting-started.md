@@ -254,7 +254,7 @@ notifications and automatic notifications. Check out our
 
 The React Card is the simplest way to set up UI for signing up for notifications,
 but a more comprehensive frontend client is also available. Check out
-[our guide for integrating it](https://www.example.com)! (TODO: link).
+[our guide for integrating it](./alert-subscribe/frontend-client)!
 
 ### Additional resources
 

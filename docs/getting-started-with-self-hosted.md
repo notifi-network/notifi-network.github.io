@@ -94,8 +94,8 @@ credentials is being run in a secure environment, and that these credentials
 
 Finally, we will create our server that will actually send our messages! Notifi provides a Node.js
 SDK for accessing Notifi's APIs and sending messages, which we will use for our server. (If you want to
-use a different server technology, consult the documentation for our [GraphQL API](https://docs.notifi.network)
-and our [Dataplane REST API](https://www.example.com).)
+use a different server technology, consult the documentation for our [GraphQL API](./alert-subscribe/graphql-api)
+and our [Dataplane REST API](./alert-trigger/dataplane-api/).)
 
 1. Install [Node.js](https://nodejs.org/en) version 18 or later.
 2. Run `$ npm init` in an empty directory to create your project

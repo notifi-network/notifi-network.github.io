@@ -8,8 +8,8 @@ sidebar_position: 4
 
 This feature is currently in beta, and is not available to new users
 by default. If you would like to use this feature, please
-[reach out to Notifi](https://www.example.com) and ask for it to be enabled for your
-Dapp account.
+[reach out to Notifi](https://notifi.atlassian.net/servicedesk/customer/portals) 
+and ask for it to be enabled for your Dapp account.
 
 :::
 
@@ -42,7 +42,8 @@ In the **Alert Manager** page on Admin Portal, click **Create Topic**
 :::note
 
 If this button says "Coming soon" instead of "Continue", then Notifi-hosted development
-is not enabled for your account. Please [reach out to Notifi](https://www.example.com).
+is not enabled for your account. Please 
+[reach out to Notifi](https://notifi.atlassian.net/servicedesk/customer/portals).
 
 :::
 
@@ -86,7 +87,7 @@ Now that you have your templates, it's time to create the parser!
 2. In the dialog box that appears, copy the command shown. It should look something like this:
 
 ```bash
- FUSION_SOURCE_ID="024ea..." NOTIFI_AUTH_TOKEN="eyJhb..." /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/notifi-network/notifi-parser-sdk/main/start.sh)"
+FUSION_SOURCE_ID="024ea..." NOTIFI_AUTH_TOKEN="eyJhb..." /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/notifi-network/notifi-parser-sdk/main/start.sh)"
 ```
 
 3. Paste this command into your terminal (if on Windows, use your WSL terminal).
