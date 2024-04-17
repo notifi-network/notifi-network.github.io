@@ -14,7 +14,7 @@ To sign up your Dapp for Notifi,
 [create an account](https://admin.notifi.network/signup) on the 
 [Notifi Admin Portal](https://admin.notifi.network).
 
-(TODO: Add a screenshot)
+<!-- TODO: Screenshots -->
 
 Once you've set your email address, password, and company name, expect
 a verification email for that email address. Once you verify your email,
@@ -29,7 +29,7 @@ Notifi has three types of notifications:
 3. Messages triggered by Notifi-hosted code, usually in response to on-chain events
 
 For this Getting Started guide, we will be creating a Community Manager topic.
-Check our our 
+Check out our 
 [self-hosted](./getting-started-with-self-hosted)
 and [Notifi-hosted](./getting-started-with-notifi-hosted)
 guides for writing for the other two types.
@@ -37,7 +37,7 @@ guides for writing for the other two types.
 To create a Community Manager topic, go to the Alert Manager, click **Create Topic**,
 then **Send announcements from Community Manager**.
 
-(TODO: Screenshots)
+<!-- TODO: Screenshots -->
 
 In the dialog box that appears, set the name of your topic and click **Create**.
 
@@ -52,7 +52,7 @@ creating the UI Card config in Admin Portal, and adding the card to your applica
 To create your UI card configuration, go to the **UI Config** tab in Alert Manager,
 then click **Create UI Card**.
 
-(TODO: Add screenshot)
+<!-- TODO: Screenshots -->
 
 You'll be presented with the Edit UI Card screen, which will let you edit your card
 and show you a preview.
@@ -75,60 +75,27 @@ and show you a preview.
 You're all done! Leave this page open so that you can reference the Card ID when
 you add the card to your website.
 
-(TODO: Screenshots for setting up your card)
+<!-- TODO: Screenshots -->
 
 ### Setting Up a React Application With Your Card
 
-First, either open your existing JSX React project, or create a new one.
-(TODO: Resources for creating a React app)
+Now that we have a card config, we'll go through the process of adding it to a
+React application.
 
-Once you've decided on the JSX page where you want to put the card, 
-paste these imports to the top of the file:
+:::note
 
-```
-import {
-  NotifiContext,
-  NotifiSubscriptionCard,
-} from '@notifi-network/notifi-react-card';
-import '@notifi-network/notifi-react-card/dist/index.css';
-```
+This example will be using Ethereum. Setting up the React card for a different EVM
+chain only requires changing the chain name, but setting up the React card for different chains
+requires different boilerplate for each. Check out the 
+[Notifi React card SDK](https://github.com/notifi-network/notifi-sdk-ts/tree/main/packages/notifi-react-card)
+for examples of how to use the React card with other chains.
 
-and paste this code at the exact spot where you want your card to be:
-```
-<NotifiContext
-    dappAddress="<YOUR OWN DAPP ADDRESS HERE>"
-    env="Production"
-    walletBlockchain="<YOUR CHAIN NAME>"
-    walletPublicKey={<THE USER'S WALLET PUBLIC KEY>}
-    accountAddress={<THE USER'S WALLET ACCOUNT ADDRESS>}
-    signMessage={<SIGN MESSAGE FUNCTION>}
->
-    <NotifiSubscriptionCard
-        cardId="<YOUR OWN CARD ID HERE>"
-        darkMode //optional
-    />
-</NotifiContext>
-```
+:::
 
-Finally, fill in the parameters:
+First, either open your existing JSX React project, or 
+[create a new one](https://react.dev/learn/start-a-new-react-project).
 
-- `cardId` is the ID of the UI card configuration from the **Edit UI Card** page.
-- `dappAddress` is the Dapp ID for your Notifi account, which can be found under
-  **Account Settings** in Admin Portal (TODO: Screenshot below)
-- `walletBlockchain` is the name of your blockchain in all-caps
-  (e.g. `ETHEREUM`, `SOLANA`, etc.).
-- `walletPublicKey` is the public key of the user's wallet, obtained from the web3 API
-  you use to connect to the wallet (e.g. Ethers for Web3 wallets)
-- `accountAddress` is the account address of the user's wallet, used for chains
-  such as Injective and Sui. (If your chain doesn't have this concept, remove
-  this line).
-- `signMessage` is a message signing function obtained from the web3 API you use to
-  connect to the wallet, which takes a `Uint8Array` containing the message
-  and returns a `Promise<Uint8Array>` containing the signature.
-  Some wallet providers, such as Solana and EVM, can provide this function directly,
-  while others will require you to write an adapter.
-
-Here is a complete example for a card using Ethereum:
+Add a file that defines the React card component for your Dapp:
 
 ```
 import { arrayify } from '@ethersproject/bytes';
@@ -164,11 +131,7 @@ export const NotifiCard: React.FC = () => {
         return arrayify(result);
       }}
       walletPublicKey={account}
-      walletBlockchain="ETHEREUM" // NOTE - Please update to the correct chain name.
-      //If Polygon, use "POLYGON"
-      //If Arbitrum, use "ARBITRUM"
-      //If Binance, use "BINANCE"
-      //If Optimism, use OPTIMISM
+      walletBlockchain="ETHEREUM"
     >
       <NotifiSubscriptionCard
         cardId="<YOUR OWN CARD ID HERE>"
@@ -178,10 +141,15 @@ export const NotifiCard: React.FC = () => {
 };
 ```
 
-(TODO: Screenshots for setting up the Notifi React card)
+where `dappAddress` is the Dapp ID for your Notifi account
+(found under **Account Settings** in Admin Portal),
+and `cardId` is the ID of the UI card configuration in the
+**Edit UI Card** page.
 
-Once you have this set up, run it and navigate to the card.
-Connect your wallet to the site and follow the wallet prompts
+Finally, use the resulting `NotifiCard` component somewhere in your project.
+
+Once you have this set up, run your app and navigate to the card.
+Connect your wallet to the app and follow the wallet prompts
 in order to sign into the card.
 
 Once you've done that, you'll see prompts to enter your email
@@ -192,7 +160,7 @@ before! Notifi will send you a verification email - once you click
 the link to verify your email, you'll be all set to receive
 notifications!
 
-(TODO: Screenshots of using the Notifi React card)
+<!-- TODO: Screenshots of using the React card -->
 
 ## Sending Your First Message
 
@@ -203,8 +171,8 @@ it's time to send a message!
 2. Under **Audience/Notification Topic**, select the Community Manager
    topic you've created.
 3. Enter some text in the **Campaign Name** field. Your audience won't
-   see this name - it's just used to uniquely identify the message for
-   reporting.
+   see this name - it's just used to uniquely identify the message 
+   for [reporting](./reporting).
 4. Choose the destinations you want to send the message to. **Alert History**
    is always selected, and in this example, we will add **Email**.
 5. In the Alert History section, type the subject and message you
@@ -218,13 +186,27 @@ Within a few moments, you should receive an email at the email address
 you provided to your Notifi card, and should also be able to see the message
 in the Notifi card's Alert History!
 
-(TODO: Screenshots for going to Community Manager and sending a message)
+<!-- TODO: Screenshots -->
 
 ## Next Steps
 
+### Learn More About Community Manager
+
+For more details on how to use Community Manager to send messages and manage
+campaigns, view [our guide](./alert-trigger/admin-portal) here.
+
+### Learn More About Our React Frontends
+
+To learn more about using the React card, including how to fully utilize each
+of the available parameters, check out [this guide](./alert-subscribe/react-card).
+
+To learn more about using the Frontend client, which allows deeper integration
+of Notifi functionality, check out [this guide](./alert-subscribe/frontend-client).
+
 ### Send Automatic Notifications
 
-Notifications can also be sent automatically, both generally and to specific
+In addition to sending messages manually using Community Manager,
+notifications can also be sent automatically, both to your general audience and to specific
 destinations. Notifi offers two separate avenues for this - notifications from
 self-hosted services through the Notifi SDK, and notifications from custom code hosted
 on Notifi's servers that follow on-chain events. Check out the quickstart guides

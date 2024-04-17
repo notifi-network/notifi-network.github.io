@@ -1,1 +1,7 @@
-# This page is under construction!
+# Slack Integration
+
+:::note
+
+This page is under construction!
+
+:::
