@@ -50,7 +50,7 @@ will create relatively simple templates.
    - Click **Save**. You'll get a dialog box saying that the template has been uploaded.
 4. Click the circular X button on the top right to return to Alert Manager.
 
-(TODO: Screenshots)
+<!--TODO: Screenshots-->
 
 ## Subscribing To Your Topic
 
@@ -69,7 +69,7 @@ Once you've done that, you can then go to your React app where you have added yo
 log in with your wallet, and subscribe to your new topic! The email address or other information
 you used to sign up for the Community Manager topic will also be used here.
 
-(TODO: Screenshots)
+<!--TODO: Screenshots-->
 
 ## Getting Your Server Credentials
 

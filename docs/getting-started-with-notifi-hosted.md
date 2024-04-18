@@ -146,8 +146,8 @@ a number in the dialog box that appears (this is normally the block number
 you want to start from, but since we're writing an off-chain parser, this
 can be any number).
 
-(TODO: figure out why activating from the CLI doesn't work, or why
-the radio button stays at Inactive)
+<!--TODO: figure out why activating from the CLI doesn't work, or why
+the radio button stays at Inactive-->
 
 Wait a few minutes, and you should start seeing emails come in telling you what
 time it is!
