@@ -221,16 +221,15 @@ Notifi notifications can be delivered through email, Telegram, Discord, Slack,
 and more. A few of these platforms require you to supply a bot for Notifi to use.
 It is also possible to send email via your own custom domain:
 
-- [Set up a Telegram bot](./alert-design/tg-bot)
-- [Set up a Discord bot](./alert-design/discord-bot)
-- [Set up a Slack integration](./alert-design/slack-integration)
-- [Set up a custom email domain](./alert-design/email-domain)
+- [Set up a Telegram bot](./target-setup/tg-bot)
+- [Set up a Discord bot](./target-setup/discord-bot)
+- [Set up a Slack integration](./target-setup/slack-integration)
+- [Set up a custom email domain](./target-setup/email-domain)
 
 ### Style Your Notifications
 
-Notifications can also be templated and styled, both for Community Manager
-notifications and automatic notifications. Check out our
-[template guide](./alert-design/custom-alert-templates)!
+Notifications can also be templated and styled. Check out our
+[template guide](./styling-your-notifications/)!
 
 ### Set Up Custom Notification UI
 

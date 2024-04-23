@@ -23,11 +23,11 @@ Please contact us at integrations@notifi.network.
 
 ### How do I set up a Telegram bot to send Telegram messages? {#tg-bot-setup}
 
-Follow the steps [here](alert-design/tg-bot).
+Follow the steps [here](target-setup/tg-bot).
 
 ### How do I set up a Discord bot to send messages on Discord? {#discord-bot-setup}
 
-Follow the steps [here](alert-design/discord-bot).
+Follow the steps [here](target-setup/discord-bot).
 
 <!-- In order to send Discord messages, we simply need a Discord Bot set up. Each
 individual dapp then controls the bot’s profile picture, description and other

@@ -154,7 +154,7 @@ You should also find the same message in your Alert History under your React car
 
 We created very basic templates for our messages, but Notifi's template system is
 also capable of more advanced templates with additional and nested variables. Check
-out our [template guide](./alert-design/custom-alert-templates) for more information!
+out our [template guide](./styling-your-notifications/) for more information!
 
 ### Adding Additional Destination Platforms
 
@@ -162,10 +162,10 @@ Notifi notifications can be delivered through email, Telegram, Discord, Slack,
 and more. A few of these platforms require you to supply a bot for Notifi to use.
 It is also possible to send email via your own custom domain:
 
-- [Set up a Telegram bot](./alert-design/tg-bot)
-- [Set up a Discord bot](./alert-design/discord-bot)
-- [Set up a Slack integration](./alert-design/slack-integration)
-- [Set up a custom email domain](./alert-design/email-domain)
+- [Set up a Telegram bot](./target-setup/tg-bot)
+- [Set up a Discord bot](./target-setup/discord-bot)
+- [Set up a Slack integration](./target-setup/slack-integration)
+- [Set up a custom email domain](./target-setup/email-domain)
 
 ### Sending On-Chain Notifications
 
