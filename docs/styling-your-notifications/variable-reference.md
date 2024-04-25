@@ -8,8 +8,22 @@ This object contains the variables passed in through `variablesJson` in `publish
 for self-hosted topics, and the variables passed in through `metadata` in events
 returned by Fusion parsers.
 
-<!-- TODO: Figure out the expected format of the `alertData` property.
-     This appears to be the results of alert filtration. -->
+## `alertData`
+
+This object contains some extra information related to the alert, including
+the results from running filters.
+
+### `alertData.threshold`
+
+If you created a threshold filter when creating the notification topic
+(e.g. only notify me when my C-Ratio is below 50%), this property contains
+that threshold.
+
+### `alertData.thresholdDirection`
+
+If you created a threshold filter when creating the notification topic
+(e.g. only notify me when my C-Ratio is below 50%), this property contains
+the direction of that threshold, either `"above"` or `"below"`.
 
 ## `notifiData`
 
