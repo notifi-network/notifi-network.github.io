@@ -9,7 +9,7 @@ The card config serves as configuration of the React Card and enables multiple f
 
 #### Step 1
 
-Log in to the [Admin Portal](https://admin.dev.notifi.network) (create an account if you haven't done so already) and head to the _Alert Manager_ page.
+Log in to the [Admin Portal](https://admin.notifi.network) (create an account if you haven't done so already) and head to the _Alert Manager_ page.
 Select the _UI Config_ tab and click on "Configure Card" or "+ UI Card". 
 
 ![UI Config tab](/img/create-card-id-2.0/1.png)
@@ -44,7 +44,14 @@ Optional: Add tooltips to the topics that help users understand what alert they 
 Select which destinations you want to allow for this card config. Destinations are equivalent to [targets](../../integration-overview/alerts-in-depth.md#target). 
 
 :::note
-Check out [this](../../category/styling-your-notifications) section to set up your custom email domain, TG bot, or Discord bot.
+
+Check out these sections to set up custom targets:
+
+- [Set up a Telegram bot](../../target-setup/tg-bot)
+- [Set up a Discord bot](../../target-setup/discord-bot)
+- [Set up a Slack integration](../../target-setup/slack-integration)
+- [Set up a custom email domain](../../target-setup/email-domain)
+
 :::
 
 ![configuring destinations](/img/create-card-id-2.0/5.png)
