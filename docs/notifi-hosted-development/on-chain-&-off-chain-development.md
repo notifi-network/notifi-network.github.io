@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # On-Chain & Off-Chain Development
 
-The Blockchain Development tool is intended to speed up the development process of creating [_topic_](https://notifi-network.github.io/docs/next/integration-overview/alerts-in-depth#topic) parsers for users.
+The Blockchain Development tool is intended to speed up the development process of creating [_topic_](../integration-overview/alerts-in-depth#topics-topic) parsers for users.
 
 **Requirements**:
 
@@ -28,7 +28,7 @@ The Blockchain Development tool is intended to speed up the development process 
 ##### Important parameters:
 
 - `NOTIFI_AUTH_TOKEN`: This token refers to a unique identity for your DAPP and JWT authentication to interact with Notifi Services
-- `FUSION_SOURCE_ID`: This ID relates to the [_topic's_](https://notifi-network.github.io/docs/next/integration-overview/alerts-in-depth#topic) respective parser ID. This is particularly useful in CLI commands.
+- `FUSION_SOURCE_ID`: This ID relates to the [_topic's_](../integration-overview/alerts-in-depth#topics-topic) respective parser ID. This is particularly useful in CLI commands.
 
 ### Paste Command Into Terminal
 
@@ -50,7 +50,7 @@ _Expected Result_
 
 ###### Creating Authentication
 
-`$fusion auth` (Creating Authentication for a user to run any [Parser Commands](https://notifi-network.github.io/docs/next/notifi-hosted-development/on-chain-&-off-chain-development#parser-commands))
+`$fusion auth` (Creating Authentication for a user to run any [Parser Commands](#parser-commands))
 
 #### Parser Commands
 
@@ -156,5 +156,5 @@ Here, parsers can be activated and deactivated outside of the CLI.
 2. Run The CLI Command
 3. Run `npm i`
 4. Modify Your Parser Code
-5. [Upload Your Parser](https://notifi-network.github.io/docs/next/notifi-hosted-development/on-chain-&-off-chain-development#uploading-a-fusion-source)
-6. [Activate Your Parser](https://notifi-network.github.io/docs/next/notifi-hosted-development/on-chain-&-off-chain-development#activating-a-fusion-source)
+5. [Upload Your Parser](#uploading-a-fusion-source)
+6. [Activate Your Parser](#activating-a-fusion-source)

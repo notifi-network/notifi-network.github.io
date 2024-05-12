@@ -1,5 +1,7 @@
 # [https://notifi-network.github.io/](https://notifi-network.github.io/)
 
+(Also hosted at [https://docs.notifi.network/](https://docs.notifi.network).)
+
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
 ### Installation
