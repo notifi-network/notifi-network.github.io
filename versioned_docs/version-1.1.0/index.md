@@ -18,7 +18,7 @@ wallet-to-wallet direct messages on different chains using
 There are two ways to get started with Notifi:
 
 - If you want to use Notifi as a developer, you can follow the
-  [quickstart guide](./quickstart.md) to integrate notifications and messaging
+  [quickstart guide](quickstart.md) to integrate notifications and messaging
   into your dapp with the Notifi SDK.
 - If you want to use Notifi as a user, you can explore the
   [Notifi Hub](./for-users/index.md) by directly connecting your
