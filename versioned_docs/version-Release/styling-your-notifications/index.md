@@ -4,8 +4,8 @@ sidebar_position: 85
 
 # Styling Your Notifications
 
-Once you create a [Sent From My Server](../getting-started-with-self-hosted.md) or [Notifi Hosted](../getting-started-with-notifi-hosted.md)
-topic, you will need to create _templates_ for it. A template defines the overall form of a message, including any styling and formatting,
+Once you create an [automated topic](../getting-started-with-self-hosted.md), 
+you will need to create _templates_ for it. A template defines the overall form of a message, including any styling and formatting,
 so that messages can be both formatted individually per target platform and so that messages can be sent without having to include the styling
 boilerplate every time.
 

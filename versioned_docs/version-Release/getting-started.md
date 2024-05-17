@@ -26,13 +26,13 @@ Notifi has three types of notifications:
 
 1. Messages written in Community Manager in Admin Portal
 2. Messages triggered by your server through the Notifi SDK
-3. Messages triggered by Notifi-hosted code, usually in response to on-chain events
+3. (Coming soon) Messages triggered by Notifi-hosted code, usually in response to on-chain events
 
 For this Getting Started guide, we will be creating a Community Manager topic.
 Check out our 
 [self-hosted](./getting-started-with-self-hosted)
-and [Notifi-hosted](./getting-started-with-notifi-hosted)
-guides for writing for the other two types.
+guide for instructions on how to implement a notification topic
+triggered through the Notifi SDK.
 
 To create a Community Manager topic, go to the Alert Manager, click **Create Topic**,
 then **Send announcements from Community Manager**.
@@ -207,13 +207,19 @@ of Notifi functionality, check out [this guide](./alert-subscribe/frontend-clien
 
 In addition to sending messages manually using Community Manager,
 notifications can also be sent automatically, both to your general audience and to specific
-destinations. Notifi offers two separate avenues for this - notifications from
-self-hosted services through the Notifi SDK, and notifications from custom code hosted
-on Notifi's servers that follow on-chain events. Check out the quickstart guides
-for these:
+destinations. For instance, if you run an exchange, you can watch for price changes
+and send alerts to users who subscribe to them.
 
-- [Getting Started With Self-Hosted API Notifications](./getting-started-with-self-hosted)
-- [Getting Started With Notifi-Hosted Development](./getting-started-with-notifi-hosted)
+To learn how to set up an automatic topic that you can then send to from your own
+server, check out [this guide](./getting-started-with-self-hosted).
+
+Notifi also has its own blockchain monitoring infrastructure for sending automatic
+notifications, sending several of these on its own (such as balance changes through
+[Notifi Hub](https://notifi.network/dashboard)) and several others on behalf of partner
+Dapps, such as liquidation warnings for DeFi protocols. In the future, Notifi will open
+up this infrastructure to external Dapps, allowing them to write Dapp integration code
+that is connected to reliable blockchain infrastructure and that can run in response
+to specific blockchain events.
 
 ### Adding Additional Destination Platforms
 

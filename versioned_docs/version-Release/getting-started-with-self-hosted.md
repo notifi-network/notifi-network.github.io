@@ -167,13 +167,6 @@ It is also possible to send email via your own custom domain:
 - [Set up a Slack integration](./target-setup/slack-integration)
 - [Set up a custom email domain](./target-setup/email-domain)
 
-### Sending On-Chain Notifications
-
-This guide covered how to send notifications from your own server. Notifi also offers
-a service that allows you to host code that is run automatically on new on-chain events.
-Check out our [Notifi-Hosted development](./getting-started-with-notifi-hosted) for more
-information!
-
 ### Additional resources
 
 - Notifi [Blog](https://notifi.network/blog)
