@@ -19,7 +19,7 @@ create pull requests with additions, and Notifi will manage the hosting.
 ### Can I send notifications from my on-chain program?
 
 Coming soon! We're in the process of allowing this, but would love to hear from you about your scenario.
-Please contact us at integrations@notifi.network.
+Please contact us at [sales@notifi.network](mailto:sales@notifi.network).
 
 ### How do I set up a Telegram bot to send Telegram messages? {#tg-bot-setup}
 
@@ -33,7 +33,7 @@ Follow the steps [here](target-setup/discord-bot).
 
 When a Dapp first signs up for Notifi through Notifi Admin, they are given
 an evaluation tier where they can freely send up to 10 messages per month.
-Please reach out to us at [integrations@notifi.network](mailto:integrations@notifi.network)
+Please reach out to us at [sales@notifi.network](mailto:sales@notifi.network)
 or file a [support ticket](https://notifi.atlassian.net/servicedesk/customer/portals)
 to set up a contract with us!
 
