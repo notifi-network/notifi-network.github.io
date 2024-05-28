@@ -7,5 +7,5 @@ but if it does not cover your use case, the GraphQL API is located at
 https://api.notifi.network/gql, and includes both an introspection schema
 and a UI that you can use to submit GraphQL queries and mutations.
 
-If you need any assistance with the GraphQL API, please reach out
-to integrations@notifi.network!
+If you need any assistance with the GraphQL API, you can contact us through our
+[JIRA service desk](https://notifi.atlassian.net/servicedesk/customer/portals).

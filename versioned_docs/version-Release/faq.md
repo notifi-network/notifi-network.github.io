@@ -19,7 +19,7 @@ create pull requests with additions, and Notifi will manage the hosting.
 ### Can I send notifications from my on-chain program?
 
 Coming soon! We're in the process of allowing this, but would love to hear from you about your scenario.
-Please contact us at integrations@notifi.network.
+Please contact us at [sales@notifi.network](mailto:sales@notifi.network).
 
 ### How do I set up a Telegram bot to send Telegram messages? {#tg-bot-setup}
 
@@ -29,41 +29,13 @@ Follow the steps [here](target-setup/tg-bot).
 
 Follow the steps [here](target-setup/discord-bot).
 
-<!-- In order to send Discord messages, we simply need a Discord Bot set up. Each
-individual dapp then controls the bot’s profile picture, description and other
-customizations.
+### I've been able to send a few messages, but I just got an email saying, "You're at your monthly notification limit." What does that mean?
 
-  1. Set up your Discord server with the desired configuration.
-  2. Create a Discord application at https://discord.com/developers/applications.
-  3. [Create a bot](https://discord.com/developers/docs/getting-started#configuring-a-bot) in the Discord application
-  4. Send us the bot's token and the Discord server's permanent invite URL to integrations@notifi.network.
-
-After the setup is complete, the user interaction is simple:
-
-<details>
-  <summary> click to expand </summary>
-
-  1. On the Notifi React Card, click **Enable Bot**.
-
-![Enable bot](/img/create-card-id/9.png)
-
-  2. Accept the Discord OAuth flow prompt so Notifi is aware of your account.
-
-<img
-  src={require('/img/create-card-id/10.png').default}
-  alt="OAuth Flow"
-  width="60%" height="30%"
-/>
-
-  3. Join the Notifi Discord so you're up to date on upcoming features and releases.
-
-<img
-  src={require('/img/create-card-id/11.png').default}
-  alt="Notifi Discord"
-  width="60%" height="30%"
-/>
-
-</details> -->
+When a Dapp first signs up for Notifi through Notifi Admin, they are given
+an evaluation tier where they can freely send up to 10 messages per month.
+Please reach out to us at [sales@notifi.network](mailto:sales@notifi.network)
+or file a [support ticket](https://notifi.atlassian.net/servicedesk/customer/portals)
+to set up a contract with us!
 
 ## Privacy
 
