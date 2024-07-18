@@ -70,6 +70,7 @@ You can also define optional [filters](../integration-overview/alerts-in-depth.m
 
 ##### Without Additional Filters
 This is the simplest usecase where users will be presented with a simple toggle to register for [alerts](../integration-overview/alerts-in-depth.md) on this [topic](../integration-overview/alerts-in-depth.md#topic). When you'd like to send notifications from your server, you can use our SDK to send to either everyone who has subscribed, or subsets of users based on the wallet address they registered with.
+
 ![Alt text](image-1.png)
 
 ##### With Additional Filters
@@ -81,6 +82,7 @@ This allows your users to fully customize alerts even further. An example of thi
 ## Step 3
 
 Upon creation of a new [topic](../integration-overview/alerts-in-depth.md#topic), you'll be presented with quick start guides and links to our SDK.
+
 ![Alt text](image-4.png)
 
 Once you click Done, you'll be taken back to the Alert Management page.
