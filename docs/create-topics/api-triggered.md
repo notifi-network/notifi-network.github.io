@@ -56,6 +56,14 @@ If you want to limit how often a user gets a message, regardless of how often yo
 option. This allows you to limit alerts anywhere from once per minute to once per week, with an additional option to only
 ever send the alert to a user one time.
 
+:::note
+
+If you select the "User Selects From List" data above, this frequency will be tracked separately for each list item.
+For instance, if an alert sends updates once per day and a user signs up for both item A and item B, they can receive one
+notification for both items each day.
+
+:::
+
 ### Optional Filters
 
 You can also define optional [filters](../integration-overview/alerts-in-depth.md#filter):
@@ -68,6 +76,7 @@ This is the simplest usecase where users will be presented with a simple toggle 
 This allows your users to fully customize alerts even further. An example of this would be a liquidity pool price update, where your users subscribe to this topic, but would only want to receive updates if a particular value is above a certain threshold (even if you're publishing to the topic for a subset of users). For this experience, you will need to provide additional variables in the message you're publishing to the [topic](../integration-overview/alerts-in-depth.md#topic) with. This will be covered in more detail in subsequent steps.
 
 ![Alt text](image-2.png)
+
 
 ## Step 3
 
@@ -90,12 +99,10 @@ Ensure this application is running in a secure location that can access sensitiv
 
 Decide where to store your initialization credentials. This is app specific. We highly recommend not storing in anything that's committed to source control such as git. Here are some ideas of how to store secrets for a NodeJS app. 
 
+## Step 4
 
+Once you've created your topic, make note of the topic identifier to use in a publishFusionMessage. To get started you may also copy/paste the sample code that's provided after you've created a topic. This must be copy/pasted in the same NodeJS app you did step (1) in.
 
-#### Step 4
-
-Third step, make note of the topic identifier to use in a publishFusionMessage. To get started you may also copy/paste the sample code that's provided after you've created a topic. This must be copy/pasted in the same NodeJS app you did step (1) in.
-
-Fourth step, you should modify the sample to only call the initialization routine once daily, and then customize the publishFusionMessage with your specific topic data. You may pass whatever JSON object you'd like. This JSON object is what will be used to help render notifications later. If you have defined any optional filters for the user to be able to specify when registering for an alert on this topic, then you must also make sure to pass in the required filter parameter variables in your call.
+Finally, you should modify the sample to only call the initialization routine once daily, and then customize the publishFusionMessage with your specific topic data. You may pass whatever JSON object you'd like. This JSON object is what will be used to help render notifications later. If you have defined any optional filters for the user to be able to specify when registering for an alert on this topic, then you must also make sure to pass in the required filter parameter variables in your call.
 
 Now that you're triggering the notifications with your custom JSON object, you can configure your templates so that the notifications are rendered appropriated per destination.
