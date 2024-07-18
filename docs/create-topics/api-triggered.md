@@ -6,24 +6,71 @@ sidebar_position: 2
 
 Triggering notifications via API calls from your server can be done by creating a topic, and then using Notifi NodeJS SDK package [here](https://www.github.com/notifi-network/notifi-sdk-ts/packages/node-client) to trigger from your server
 
-#### Step 1
+## Step 1
 
 Log in to the [Admin Portal](https://admin.notifi.network) (create an account if you haven't done so already) and head to the _Alert Manager_ page.
 
-#### Step 2
+## Step 2
 
 Create your [topic](../integration-overview/alerts-in-depth.md#topic) by selecting the _Topics_ tab (default) and click on "+ Topic" in the top right, then select the "Send an alert triggered by an API call from my server". 
 
 ![create announcement](/img/create-topics/1.png)
 
+<!-- TODO: Update screenies in this file -->
 
 **For the steps below, we will provide examples as if you were creating a topic to let users know about liquidity pool price updates.**
 ![topic creation page](image.png)
 
-You can define this [topic](../integration-overview/alerts-in-depth.md#topic) with or without any [filters](../integration-overview/alerts-in-depth.md#filter).
+### Topic Name
+
+To start off, provide a name and display names for the topic:
+
+- **Name this topic**: The name of the topic that will appear in Alert Manager (e.g. "Liquidity Pool Price Updates")
+- **Topic display name**: The name of the topic that will appear in the subscriber card shown to users. Defaults to the topic name.
+- **Topic display title in alert**: The display name of the topic that will appear in [Alert History](../for-users/index.md) (e.g. "Liquidity Pool Price Update")
+
+### Topic Data
+
+When a user subscribes to a [topic](../integration-overview/alerts-in-depth.md#topic), they can be asked for some information to help address the notifications
+they are interested in:
+
+#### Wallet Address (default)
+
+The user is asked for their wallet address when they subscribe (the Notifi React Card will handle this automatically).
+Use this if you are sending alerts that only concern a specific wallet address (such as a liquidation warning for a specific
+user).
+
+#### No Input From User
+
+The user is not asked for any additional information. This is used for topics that broadcast to everyone, such as price pool updates.
+
+#### User Selects From List
+
+The user is asked to specify one or more custom values from a list when they subscribe. This is used in more complex UI scenarios
+where a user might be interested in one of several categories of update, such as getting updates on a price pair for an exchange.
+For more info on how to set up this feature, view [this page](./subscription-parameters.md).
+
+### Maximum Frequency
+
+If you want to limit how often a user gets a message, regardless of how often you send alerts, set the **Alert Frequency**
+option. This allows you to limit alerts anywhere from once per minute to once per week, with an additional option to only
+ever send the alert to a user one time.
+
+:::note
+
+If you select the "User Selects From List" data above, this frequency will be tracked separately for each list item.
+For instance, if an alert sends updates once per day and a user signs up for both item A and item B, they can receive one
+notification for both items each day.
+
+:::
+
+### Optional Filters
+
+You can also define optional [filters](../integration-overview/alerts-in-depth.md#filter):
 
 ##### Without Additional Filters
 This is the simplest usecase where users will be presented with a simple toggle to register for [alerts](../integration-overview/alerts-in-depth.md) on this [topic](../integration-overview/alerts-in-depth.md#topic). When you'd like to send notifications from your server, you can use our SDK to send to either everyone who has subscribed, or subsets of users based on the wallet address they registered with.
+
 ![Alt text](image-1.png)
 
 ##### With Additional Filters
@@ -31,9 +78,11 @@ This allows your users to fully customize alerts even further. An example of thi
 
 ![Alt text](image-2.png)
 
-#### Step 3
+
+## Step 3
 
 Upon creation of a new [topic](../integration-overview/alerts-in-depth.md#topic), you'll be presented with quick start guides and links to our SDK.
+
 ![Alt text](image-4.png)
 
 Once you click Done, you'll be taken back to the Alert Management page.
@@ -52,12 +101,10 @@ Ensure this application is running in a secure location that can access sensitiv
 
 Decide where to store your initialization credentials. This is app specific. We highly recommend not storing in anything that's committed to source control such as git. Here are some ideas of how to store secrets for a NodeJS app. 
 
+## Step 4
 
+Once you've created your topic, make note of the topic identifier to use in a publishFusionMessage. To get started you may also copy/paste the sample code that's provided after you've created a topic. This must be copy/pasted in the same NodeJS app you did step (1) in.
 
-#### Step 4
-
-Third step, make note of the topic identifier to use in a publishFusionMessage. To get started you may also copy/paste the sample code that's provided after you've created a topic. This must be copy/pasted in the same NodeJS app you did step (1) in.
-
-Fourth step, you should modify the sample to only call the initialization routine once daily, and then customize the publishFusionMessage with your specific topic data. You may pass whatever JSON object you'd like. This JSON object is what will be used to help render notifications later. If you have defined any optional filters for the user to be able to specify when registering for an alert on this topic, then you must also make sure to pass in the required filter parameter variables in your call.
+Finally, you should modify the sample to only call the initialization routine once daily, and then customize the publishFusionMessage with your specific topic data. You may pass whatever JSON object you'd like. This JSON object is what will be used to help render notifications later. If you have defined any optional filters for the user to be able to specify when registering for an alert on this topic, then you must also make sure to pass in the required filter parameter variables in your call.
 
 Now that you're triggering the notifications with your custom JSON object, you can configure your templates so that the notifications are rendered appropriated per destination.
