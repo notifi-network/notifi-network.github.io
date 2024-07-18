@@ -81,7 +81,7 @@ name as `pricePairs`, you might do something like this:
 
 ## Sending Alerts with Subscription Parameters
 
-Finally, when creating your [parser code](../notifi-hosted-development/index.md), you can supply
+Finally, when creating your [parser code](./notifi-monitored.md), you can supply
 your alerts with one of these selected values in order to filter messages. This is done through the `comparisonValue`
 on the alert:
 
