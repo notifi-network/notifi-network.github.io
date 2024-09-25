@@ -31,7 +31,7 @@ Notifi has three types of notifications:
 For this Getting Started guide, we will be creating a Community Manager topic.
 Check out our 
 [self-hosted](./getting-started-with-self-hosted)
-and [Notifi-hosted](./getting-started-with-notifi-hosted)
+and Notifi-hosted (Coming Soon!)
 guides for writing for the other two types.
 
 To create a Community Manager topic, go to the Alert Manager, click **Create Topic**,
