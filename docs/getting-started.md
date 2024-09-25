@@ -5,8 +5,8 @@ sidebar_position: 2
 # Getting Started
 
 In this Getting Started guide, we will walk through the steps of creating
-a Dapp account with Notifi, setting up a notification topic, allowing users
-to subscribe on that topic, and sending your first message!
+a Dapp account with Notifi, setting up a notification topic, and allowing users
+to subscribe to that topic. By the end of this guide, you will be able to send your first message!
 
 ## Signing Up For Notifi
 
@@ -30,8 +30,8 @@ Notifi has three types of notifications:
 
 For this Getting Started guide, we will be creating a Community Manager topic.
 Check out our 
-[self-hosted](./getting-started-with-self-hosted)
-and [Notifi-hosted](./getting-started-with-notifi-hosted)
+[self-hosted](https://docs.notifi.network/docs/getting-started-with-self-hosted)
+and [Notifi-hosted](https://docs.notifi.network/docs/next/getting-started-with-notifi-hosted)
 guides for writing for the other two types.
 
 To create a Community Manager topic, go to the Alert Manager, click **Create Topic**,
@@ -77,10 +77,14 @@ you add the card to your website.
 
 <!-- TODO: Screenshots -->
 
-### Setting Up a React Application With Your Card
+## Setting Up a React Application With Your Card 
+
 
 Now that we have a card config, we'll go through the process of adding it to a
 React application.
+
+>Looking for more in-depth knowledge on our [React Card](https://github.com/notifi-network/notifi-sdk-ts/blob/main/packages/notifi-react/README.md)?
+
 
 :::note
 
@@ -95,20 +99,33 @@ for examples of how to use the React card with other chains.
 First, either open your existing JSX React project, or 
 [create a new one](https://react.dev/learn/start-a-new-react-project).
 
-Add a file that defines the React card component for your Dapp:
+#### Installing the Correct Packages:
 
-```
-import { arrayify } from '@ethersproject/bytes';
-import {
-  NotifiContext,
-  NotifiSubscriptionCard,
-} from '@notifi-network/notifi-react-card';
-import '@notifi-network/notifi-react-card/dist/index.css';
+
+*Environment*
+
+-    Node version >= 18 (with corresponding npm version)
+-    React version >= 17"
+
+*Packages*   
+[NPM](https://www.npmjs.com/package/@notifi-network/notifi-react)
+-     @notifi-network/notifi-react": "^1.1.1"
+
+
+
+#### Implement The Card:
+
+##### Mount the `NotifiCardModal` to your dApp
+> **IMPORTANT** to use `NotifiCardModal`, you need to wrap your component with `NotifiContextProvider` first.
+> 
+*Example Quick Start for Ethereum*
+```tsx
+import { NotifiContextProvider, NotifiCardModal } from '@notifi-network/notifi-react';
 import { useEthers } from '@usedapp/core';
 import { providers } from 'ethers';
-import React, { useMemo } from 'react';
 
-export const NotifiCard: React.FC = () => {
+const NotifiCard = () => {
+
   const { account, library } = useEthers();
   const signer = useMemo(() => {
     if (library instanceof providers.JsonRpcProvider) {
@@ -123,42 +140,32 @@ export const NotifiCard: React.FC = () => {
   }
 
   return (
-    <NotifiContext
-      dappAddress="<YOUR OWN DAPP ADDRESS HERE>"
-      env="Production"
-      signMessage={async (message: Uint8Array) => {
-        const result = await signer.signMessage(message);
-        return arrayify(result);
-      }}
-      walletPublicKey={account}
-      walletBlockchain="ETHEREUM"
-    >
-      <NotifiSubscriptionCard
-        cardId="<YOUR OWN CARD ID HERE>"
-      />
-    </NotifiContext>
+//tenantId/dAppId and cardId are found on the Notifi Tenant Portal. Please see Docs below.
+ <NotifiContextProvider
+    tenantId="YOUR_TENANT_ID // dApp ID"
+    env="Production"
+    cardId="YOUR_CARD_ID"
+    signMessage={signMessage}
+    walletBlockchain="ETHEREUM"
+    walletPublicKey={account}
+    >   
+        <NotifiCardModal darkMode={true} />
+  </NotifiContextProvider>
   );
 };
 ```
+> [Docs](https://docs.notifi.network/docs/getting-started)
 
-where `dappAddress` is the Dapp ID for your Notifi account
-(found under **Account Settings** in Admin Portal),
-and `cardId` is the ID of the UI card configuration in the
-**Edit UI Card** page.
+<br/><br/>
 
-Finally, use the resulting `NotifiCard` component somewhere in your project.
 
-Once you have this set up, run your app and navigate to the card.
-Connect your wallet to the app and follow the wallet prompts
-in order to sign into the card.
 
-Once you've done that, you'll see prompts to enter your email
-address to sign up for notifications. Enter the email address you
-want to receive notifications on (anything you can verify will do),
-and then simply check off the Community Manager topic you created
-before! Notifi will send you a verification email - once you click
-the link to verify your email, you'll be all set to receive
-notifications!
+## Subscribe to your card
+
+Now, run your dAPP locally and subscribe to the card in the respective render!
+
+
+
 
 <!-- TODO: Screenshots of using the React card -->
 
@@ -212,8 +219,8 @@ self-hosted services through the Notifi SDK, and notifications from custom code 
 on Notifi's servers that follow on-chain events. Check out the quickstart guides
 for these:
 
-- [Getting Started With Self-Hosted API Notifications](./getting-started-with-self-hosted)
-- [Getting Started With Notifi-Hosted Development](./getting-started-with-notifi-hosted)
+- [Getting Started With Self-Hosted API Notifications](https://docs.notifi.network/docs/getting-started-with-self-hosted)
+- [Getting Started With Notifi-Hosted Development](https://docs.notifi.network/docs/next/getting-started-with-notifi-hosted)
 
 ### Adding Additional Destination Platforms
 
