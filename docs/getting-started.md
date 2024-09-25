@@ -219,8 +219,8 @@ self-hosted services through the Notifi SDK, and notifications from custom code 
 on Notifi's servers that follow on-chain events. Check out the quickstart guides
 for these:
 
-- [Getting Started With Self-Hosted API Notifications](./getting-started-with-self-hosted)
-- [Getting Started With Notifi-Hosted Development](./getting-started-with-notifi-hosted)
+- [Getting Started With Self-Hosted API Notifications](https://docs.notifi.network/docs/getting-started-with-self-hosted)
+- [Getting Started With Notifi-Hosted Development](https://docs.notifi.network/docs/next/getting-started-with-notifi-hosted)
 
 ### Adding Additional Destination Platforms
 
