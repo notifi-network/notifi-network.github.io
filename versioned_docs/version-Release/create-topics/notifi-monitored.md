@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Notifi monitored alerts (coming soon!)
+# Notifi monitored alerts
 
 Notifi Monitored Alerts allow dapp developers to write custom logic in Javascript to do any of the following to publish to a *topic*
 1. Based on on-chain activity occuring in realtime.
