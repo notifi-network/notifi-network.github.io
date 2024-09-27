@@ -91,7 +91,7 @@ React application.
 This example will be using Ethereum. Setting up the React card for a different EVM
 chain only requires changing the chain name, but setting up the React card for different chains
 requires different boilerplate for each. Check out the 
-[Notifi React card SDK](https://github.com/notifi-network/notifi-sdk-ts/tree/main/packages/notifi-react-card)
+[Notifi React card SDK](https://github.com/notifi-network/notifi-sdk-ts/tree/main/packages/notifi-react)
 for examples of how to use the React card with other chains.
 
 :::
