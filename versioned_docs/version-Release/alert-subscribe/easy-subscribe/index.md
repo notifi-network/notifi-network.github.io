@@ -57,9 +57,33 @@ Refer to the attached screenshot for guidance.
 ![Upload templates](/img/easy-subscribe/4.png)
 
 
+### Step 7: Adding Alerts to Telegram Groups
+With our latest feature, admins can now integrate their Telegram bot directly into existing Telegram groups. This integration ensures that any alert sent through the Admin dashboard for community manager topics will also be received in these selected groups.
+
+Follow the steps below to add the bot to your Telegram groups:
+1. #### Click on "Add Alerts to Telegram Groups" to initiate the setup. (Refer to the image below for guidance)
+
+![Upload templates](/img/easy-subscribe/7.png)
+![Upload templates](/img/easy-subscribe/9.png)
+
+2. #### You have two methods to add your bot to Telegram groups:
+
+   **2.1** Direct Access via Telegram App
+   
+       - **2.1.1** Click on **OPEN TELEGRAM** to be redirected to your Telegram application.
+       - **2.1.2** Once in Telegram, select the desired groups where you want to receive alerts.
+
+   **2.2** Copy and Share the Telegram Bot Link
+   
+       - **2.2.1** Copy the provided URL and paste it into a browser/device where you are logged into Telegram.
+       - **2.2.2** Alternatively, you may share this URL with other admins to add the bot from their sessions.
+    
+    Refer to the attached screenshot for guidance.
+
+    ![Upload templates](/img/easy-subscribe/8.png)
 
 
-### Step 7: Integrate Endpoints into Your App
+### Step 8: Integrate Endpoints into Your App
 
 1. #### Email: Use the email endpoint to send users' email addresses via a POST request. Add success/error handling to manage the response effectively.
 2. #### Telegram: Redirect users to the provided Telegram URL, allowing them to directly subscribe to your Telegram bot.
