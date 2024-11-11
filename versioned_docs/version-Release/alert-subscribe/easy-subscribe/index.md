@@ -58,7 +58,7 @@ Refer to the attached screenshot for guidance.
 
 
 ### Step 7: Adding Alerts to Telegram Groups
-With our latest feature, admins can now integrate their Telegram bot directly into existing Telegram groups. This integration ensures that any alert sent through the Admin dashboard for community manager topics will also be received in these selected groups.
+With our latest feature, Notifi Admins can now integrate their Telegram bot directly into existing Telegram groups. This integration ensures that any alert sent through the Admin dashboard for community manager topics will also be received in these selected groups.
 
 Follow the steps below to add the bot to your Telegram groups:
 1. #### Click on "Add Alerts to Telegram Groups" to initiate the setup. (Refer to the image below for guidance)
