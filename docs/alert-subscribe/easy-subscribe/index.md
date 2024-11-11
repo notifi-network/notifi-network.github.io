@@ -30,7 +30,7 @@ The same topic can be used on multiple card configs.
 ![Naming card config](/img/easy-subscribe/2.png)
 
 
-### Step 5 Save and Copy Endpoints
+### Step 4: Save and Copy Endpoints
 
 1. #### Save your card configuration.
 2. #### Copy the Email and Telegram endpoints (if the Telegram bot is already added) from the bottom of the card.
@@ -47,7 +47,7 @@ Check out these sections to set up your Telegram bot and Email domain:
 
 :::
 
-### Step 6: Add Templates
+### Step 5: Add Templates
 These templates will be sent to users who subscribe to topics using the **Easy Subscribe** config. They can be in the form of a greeting or confirmation Email/Telegram message, which the users will receive on their respective platforms upon subscribing to topics.
 
 To upload the templates for each destination, click on **Templates** within the Easy Subscribe config card.
@@ -57,7 +57,7 @@ Refer to the attached screenshot for guidance.
 ![Upload templates](/img/easy-subscribe/4.png)
 
 
-### Step 7: Adding Alerts to Telegram Groups
+### Step 6: Adding Alerts to Telegram Groups
 With our latest feature, Notifi Admins can now integrate their Telegram bot directly into existing Telegram groups. This integration ensures that any alert sent through the Admin dashboard for community manager topics will also be received in these selected groups.
 
 Follow the steps below to add the bot to your Telegram groups:
@@ -83,7 +83,7 @@ Follow the steps below to add the bot to your Telegram groups:
     ![Upload templates](/img/easy-subscribe/8.png)
 
 
-### Step 8: Integrate Endpoints into Your App
+### Step 7: Integrate Endpoints into Your App
 
 1. #### Email: Use the email endpoint to send users' email addresses via a POST request. Add success/error handling to manage the response effectively.
 2. #### Telegram: Redirect users to the provided Telegram URL, allowing them to directly subscribe to your Telegram bot.
