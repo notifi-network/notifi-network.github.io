@@ -55,7 +55,7 @@ Example
 This filter type will only allow the alert to trigger if the alert has not executed within the time threshold (up to 24 hours)
 This is the only filter where there are no required variables, but only optional.
 
-The developer has a choice to configure in one of two ways:<br>
+The developer has a choice to configure in one of two ways:<br />
 1. No variables are provided. The behavior of the alert will be to drops future alert attempts until the set time has elapsed. Useful in cases where you want to provide account status updates but don't want to spam the user.
 2. A debounce key is provided. This key will act as a unique key for this specific user alert for the duration of the configured period. This is useful in the case where a user has created an alert for 'top market movers', and don't want to get spammed by the same market mover repeatedly, but also want to know what the other market moves are. **This key can be up to 16 ASCII characters long.**
 

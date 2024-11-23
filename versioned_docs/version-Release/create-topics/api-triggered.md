@@ -31,18 +31,18 @@ To start off, provide a name and display names for the topic:
 
 When a user subscribes to a [topic](../integration-overview/alerts-in-depth.md#topic), they can be asked for some information to help address the notifications
 they are interested in:
-<br>![subscription data](image-5.png)
+<br />![subscription data](image-5.png)
 
 #### Wallet Address (default)
 
 The user is asked for their wallet address when they subscribe (the Notifi React Card will handle this automatically by providing the connected wallet).
 Use this if you are sending alerts that only concern a specific wallet address (such as a liquidation warning for a specific
-user).<br>**NOTE: Anyone can provide any value here to subscribe. This is useful for general information that's public anyway and not sensitive to the owning user of the wallet, such as watching a whale's transaction activity. To guarantee only the owner of a wallet receives a message, see [Publishing securely to wallet owner](../alert-trigger/node-client/index.md#publish-secure).**
+user).<br />**NOTE: Anyone can provide any value here to subscribe. This is useful for general information that's public anyway and not sensitive to the owning user of the wallet, such as watching a whale's transaction activity. To guarantee only the owner of a wallet receives a message, see [Publishing securely to wallet owner](../alert-trigger/node-client/index.md#publish-secure).**
 
 #### No Input From User
 
 The user is not asked for any additional information. This is used for topics that broadcast to everyone, such as price pool updates, or if the server is going to always specify which wallet ***owner*** should receive a message.
-<br>**NOTE: This is recommended if your server will always be leveraging: [Publishing securely to wallet owner](../alert-trigger/node-client/index.md#publish-secure) as the Alert is triggered by your server specifying which wallet owner should receive the notification.**
+<br />**NOTE: This is recommended if your server will always be leveraging: [Publishing securely to wallet owner](../alert-trigger/node-client/index.md#publish-secure) as the Alert is triggered by your server specifying which wallet owner should receive the notification.**
 
 #### User Selects From List
 

@@ -119,9 +119,9 @@ When creating a new topic, the developer can specify which filters apply, and wh
 
 #### Topic that emits ETH balance changes
 
-Topic Id: **abcdef123456**<br>
-Subscription data: (default) Wallet address collected from connected wallet or input field for [subscription value](../../create-topics/api-triggered.md#topic-data)<br>
-Additional filters: **[aboveThreshold](../alert-filters/index.md#abovethreshold)**<br>
+Topic Id: **abcdef123456**<br />
+Subscription data: (default) Wallet address collected from connected wallet or input field for [subscription value](../../create-topics/api-triggered.md#topic-data)<br />
+Additional filters: **[aboveThreshold](../alert-filters/index.md#abovethreshold)**<br />
 
 If using the Notifi React module on your site, user subscriptions to this topic will create an alert that contain the wallet address that the alert should be triggered on, along with the threshold that it should trigger on. For this example, let's say that's wallet 0xa4d2c123 and the threshold is a decimal value of 1.3
 
@@ -153,9 +153,9 @@ await client.publishFusionMessage(token, [{
 #### Topic that emits sensitive account updates 
 For cases where you'd like to send secure messages where only the wallet owner can receive the message, but still apply filters, we recommend setting the [subscription value](../../create-topics/api-triggered.md#topic-data) to "No input". In these cases, you will always provide specific wallet owners that notifications are intended for. If there are additional alert filters configured, values must still be provided for them.
 
-Topic Id: **123456abcdef**<br>
-Subscription data: **[No Input](../../create-topics/api-triggered.md#topic-data)**<br>
-Additional filters: **[aboveThreshold](../alert-filters/index.md#abovethreshold)**<br>
+Topic Id: **123456abcdef**<br />
+Subscription data: **[No Input](../../create-topics/api-triggered.md#topic-data)**<br />
+Additional filters: **[aboveThreshold](../alert-filters/index.md#abovethreshold)**<br />
 
 ##### This shows a case where this user's alert would get triggered by your backend publishing a message. An alert matching the eventTypeId that you provided was found for the user owning wallet 0xA4d2C123. Finally, the threshold value is above what the alert was configured for, so the alert will trigger. If multiple 'specificWallets' were to be provided, all of those users would have alerts searched for matching the criteria.
 ```javascript
