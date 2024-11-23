@@ -4,8 +4,8 @@
   <ShortName>Notifi integration guide</ShortName>
   <Description>Search Notifi integration guide</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/x-icon">https://notifi-network.github.io/img/favicon.svg</Image>
-  <Url type="text/html" method="get" template="https://notifi-network.github.io/search?q={searchTerms}"/>
-  <Url type="application/opensearchdescription+xml" rel="self" template="https://notifi-network.github.io/opensearch.xml" />
-  <moz:SearchForm>https://notifi-network.github.io/</moz:SearchForm>
+  <Image width="16" height="16" type="image/x-icon">https://docs.notifi.network/img/favicon.svg</Image>
+  <Url type="text/html" method="get" template="https://docs.notifi.network/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://docs.notifi.network/opensearch.xml" />
+  <moz:SearchForm>https://docs.notifi.network/</moz:SearchForm>
 </OpenSearchDescription>
