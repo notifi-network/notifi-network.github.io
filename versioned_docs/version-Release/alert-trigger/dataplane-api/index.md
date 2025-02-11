@@ -1,6 +1,6 @@
 # Dataplane API
 
-The Dataplane API is a very low-level REST API located at https://dpapi.notifi.network/,
+The Dataplane API is a very low-level REST API located at https://dpapi.prd.notifi.network/,
 and handles some functions that don't make sense to integrate into the 
 [GraphQL API](../../alert-subscribe/graphql-api/index.md).
 
@@ -11,7 +11,7 @@ which is used for sending direct messages:
 
 ### Request
 
-**URL**: https://dpapi.notifi.network/FusionIngest/
+**URL**: https://dpapi.prd.notifi.network/FusionIngest/
 
 **Method**: POST
 
