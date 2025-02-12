@@ -21,7 +21,7 @@ which is used for sending direct messages:
   from the `logIn` or `logInWithService` APIs in the [GraphQL API](../../alert-subscribe/graphql-api/index.md).
 - `Content-Type`: `application/json`
 
-**Body**: An array of JSON objects with the following properties:
+**Body**: A JSON object, with a 'data' field on the root set to an array of JSON objects with the following properties:
 
 - `eventTypeId`: The Event Type ID of the topic you want to send the message on
 - `variablesJson`: An object containing variables to apply to the message. This will
@@ -32,23 +32,25 @@ which is used for sending direct messages:
 
 An example:
 ```json
-[
-    {
-        "eventTypeId": "<YOUR EVENT TYPE ID>",
-        "variablesJson": {
-            "subject": "Test subject",
-            "message": "Test message",
-            "param1": 12345,
-            "param2": [1, 2, 3, "4", "5"]
-        },
-        "specificWallets": [
-            {
-                "walletPublicKey": "0xAb5801a7D398351b8bE11C439e05C5B3259aeC9B",
-                "walletBlockchain": "ETHEREUM"
-            }
-        ]
-    }
-]
+{
+  "data": [
+      {
+          "eventTypeId": "<YOUR EVENT TYPE ID>",
+          "variablesJson": {
+              "subject": "Test subject",
+              "message": "Test message",
+              "param1": 12345,
+              "param2": [1, 2, 3, "4", "5"]
+          },
+          "specificWallets": [
+              {
+                  "walletPublicKey": "0xAb5801a7D398351b8bE11C439e05C5B3259aeC9B",
+                  "walletBlockchain": "ETHEREUM"
+              }
+          ]
+      }
+  ]
+}
 ```
 
 ### Response
