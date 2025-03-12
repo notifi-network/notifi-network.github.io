@@ -1,22 +1,48 @@
 # Custom Discord bot
 
-In order to use your own Discord bot, you will need to set up your own Discord bot and Discord application client. 
+To use Discord, you will need to set up your own Discord bot and application on Discord's developer portal, and then update your Notifi admin portal with the relevant Discord information.
 
-We also recommend setting up your own verification page, although it is possible to use a Notifi branded verification page. Please reach out to us if that is what you prefer. 
-The verification page is necessary as part of OAuth2 to ensure that the user owns the Discord account and will look something like the screenshots below.
+## How to set up Discord bot
+1. Navigate to https://discord.com/developers/applications and create a new application
 
-![telegram-bot](/img/discord-bot/1.png)
+2. Once your application is created, go to your newly created application and navigate to the OAuth2 tab.
 
-## Verificaton page
+3. Copy the Client ID and Client secret for later use. You will need this information when setting up your Notifi admin portal.
 
-For a verification page set up a web page that is able take the url query params and send them to Notifi’s backend.
+4. Add the redirect url for OAuth2. You can add the redirect url in the OAuth2 tab under Redirects. The redirect url is a web page that authenticates the user’s Discord account with Notifi’s backend. You can use 'https://notifi.network/verify_discord/' or create your own web page. See [Verification page](#verification-page) for more information on how to create your own web page for the OAuth2 verification page. Make sure to save your changes when adding the redirect url.
 
-In this example, we will be using Notifi’s landing page for Discord verification: 
-https://notifi.network/verify_discord/?code=8CHr7zrAnMCl0RjjdimsApop3M2SUT&state=cac809feb82147a9838ea49dddd9d6dd
+5. Navigate to the Bot section on the left side to get the bot token. You will need to click "Reset Token” to get the bot token. Copy the bot token for later use. You will need this information when setting up in Notifi admin portal.
 
-The code and state will be taken out of the query parameter from the url. In this case, the code is `8CHr7zrAnMCl0RjjdimsApop3M2SUT` and the state is `cac809feb82147a9838ea49dddd9d6dd`. 
+6. Now you need to add your Discord bot to the Discord server
+    1. Navigate back to OAuth2 tab => OAuth2 URL Generator
+    2. Click “bot“ under scopes
+    3. Go to the url generated at the bottom of the page
+    3. The url will take you to a page that will prompt you to add your Discord bot to the desired Discord server
 
-The page will then construct the following GraphQL post request using the above information and send it to https://api.dev.notifi.network/gql. Note: the state in the url parameters map to discordTargetId in the request.
+7. Add the Discord bot to the Notifi admin portal. Navigate to https://admin.notifi.network/.
+    1. Navigate to the Account Settings tab => Add Bot button
+    2. Select Discord Type
+    3. Fill out the form with the information that you saved from the Discord developer portal.
+        1. Name: Name of the discord bot. This can be anything
+        2. Discord Guild ID / Servier ID: The ID of the Discord server that you added the bot to. You can find this ID by right clicking on the server in Discord and selecting "Copy Server ID".
+        3. Discord Client ID: The Client ID that you saved from the Discord developer portal.
+        4. Discord Client Secret: The Client Secret that you saved from the Discord developer portal.
+        5. Discord Server Invite Link: The invite link to the Discord server that you added the bot to. You can find this link by right clicking on the server and selecting "Invite People".
+        6. Redirect URL: The redirect url that you saved from the Discord developer portal. For most, it will be 'https://notifi.network/verify_discord/' unless you created your own OAuth2 verification page.
+        7. Bot Tokens: The bot token that you saved from the Discord developer portal. You need to specify an identifier for the bot token. We support multiple bot tokens in case you hit rate limits.
+    4. Click Create
+8. Optional: Update the application name, description, and icon. Also update the bot username and icon. Note that the application and bot are two separate things in Discord.
+
+## OAuth2 Verification Page {#verification-page}
+
+Although not mandatory, you can create your own OAuth2 verification page. Tenants might want to do this for branding purposes. If you want to create your own OAuth2 verification page, use the following information to set it up.
+
+The OAuth2 redirect flow will specify two parameters in the query parameter of the url: code and state. Here's an example of the url: https://notifi.network/verify_discord/?code=8CHr7zrAnMCl0RjjdimsApop3M2SUT&state=cac809feb82147a9838ea49dddd9d6dd
+
+You must then construct a GraphQL post request to verify the Discord account with the following information:
+
+url: https://api.notifi.network/gql
+
 
 ```graphql
 mutation verifyDiscordTarget($input: VerifyDiscordTargetInput!){
@@ -27,75 +53,14 @@ mutation verifyDiscordTarget($input: VerifyDiscordTargetInput!){
     discordAccountId,
   }
 }
-
+```
+The request object will look something like below given the example url above. The DiscordTargetId in the request is the state parameter in the url parameter. The redirectUri is the url that this page will be hosted on. This should be the same as the redirect url specified in the Discord developer portal. 
+```
 {
   "input": {
     "discordTargetId": "cac809feb82147a9838ea49dddd9d6dd",
     "code": "8CHr7zrAnMCl0RjjdimsApop3M2SUT",
-    "redirectUri": ""
+    "redirectUri": "https://notifi.network/verify_discord/"
   }
 }
-
 ```
-
-## Discord Bot Configuration
-
-There are five pieces of information we will need in order to set up your custom Discord bot: 
-
-- Discord guild id (the server id that your Discord bot will reside in. Internally, Discord calls servers guilds)
-- Discord client id
-- Discord client secret
-- Bot token
-- Redirect URL
-
-### How to set up Discord bot
-
-1. Go to https://discord.com/developers/applications
-2. At the top right click “New Application”
-
-  ![telegram-bot](/img/discord-bot/3.png)
-
-3. Create your Discord client app
-
-  ![telegram-bot](/img/discord-bot/4.png)
-
-4. Once created, navigate to OAuth2 section on the left side
-
-  ![telegram-bot](/img/discord-bot/5.png)
-
-5. Copy the Client ID and Client Secret to send to Notifi Network later. Don’t reset it after sending it to Notifi
-  
-  ![telegram-bot](/img/discord-bot/6.png)
-
-6. Add the redirect url during OAuth2. This will be the url to the web page that authenticates the user’s Discord account with Notifi’s backend
-  
-  ![telegram-bot](/img/discord-bot/7.png)
-
-7. Save changes after adding the redirect url
-  
-  ![telegram-bot](/img/discord-bot/8.png)
-
-8. Navigate to the Bot section on the left side
-
-  ![telegram-bot](/img/discord-bot/9.png)
-
-9. Copy the bot token after resetting it. This token will be used to send messages on the bot’s behalf. Don’t reset the token after sending it to Notifi.
-
-  ![telegram-bot](/img/discord-bot/10.png)
-
-10. Now you need to add your bot to the Discord server
-    1. Navigate to OAuth2 => URL Generator on the left side
-       
-      ![telegram-bot](/img/discord-bot/11.png)
-
-    2. Click “bot“ under scopes. Then go to the url that was created
-       
-      ![telegram-bot](/img/discord-bot/12.png)
-
-    3. The url will take you to a page like this. Then you can select the server to add your bot
-      
-      ![telegram-bot](/img/discord-bot/13.png)
-
-    4. Now that your bot is in the server, feel free to customize your Discord bot’s profile and client app picture on the Discord Developer app
-    5. Send any relevant information to Notifi
-
