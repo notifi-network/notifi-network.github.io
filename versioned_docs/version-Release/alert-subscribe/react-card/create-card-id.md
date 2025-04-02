@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Creating a card config
 
-In order to use the **Notifi React Card** a card config needs to be created accordingly.
+In order to use the [Notifi React Card](https://www.npmjs.com/package/@notifi-network/notifi-react) a card config needs to be created accordingly.
 The card config serves as configuration of the React Card and enables multiple flexible uses of the React Card.
 
 #### Step 1
@@ -13,6 +13,7 @@ Log in to the [Admin Portal](https://admin.notifi.network) (create an account if
 Select the _UI Config_ tab and click on "Configure Card" or "+ UI Card". 
 
 ![UI Config tab](/img/create-card-id-2.0/1.png)
+![UI Config tab](/img/create-card-id-2.0/7.png)
 
 #### Step 2
 
@@ -57,21 +58,26 @@ Check out these sections to set up custom targets:
 ![configuring destinations](/img/create-card-id-2.0/5.png)
 
 
-#### Step 5 (optional)
-
-Change the title and subtitles of the card, you can see a preview of the card titles on the right hand side. 
-
-![custom titles](/img/create-card-id-2.0/6.png)
-
-#### Step 6
+#### Step 5
 
 Save your card config and copy the **Card ID** in the top. This is the `cardId` param you will need in the react component here: 
 
 ```tsx
-<NotifiSubscriptionCard
-  darkMode
-  inputLabels={inputLabels}
-  inputSeparators={inputSeparators}
-  cardId="<YOUR OWN CARD ID HERE>"
-/>
+import {
+  NotifiContextProvider,
+  NotifiCardModal,
+} from '@notifi-network/notifi-react';
+
+return (
+    <NotifiContextProvider
+      tenantId="YOUR_TENANT_ID" // dApp ID
+      cardId="YOUR_CARD_ID" // Card ID
+      env="Production"
+      signMessage={signMessage}
+      walletBlockchain="ETHEREUM"
+      walletPublicKey={account}
+    >
+      <NotifiCardModal darkMode={true} />
+    </NotifiContextProvider>
+  );
 ```

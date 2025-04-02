@@ -5,13 +5,13 @@ sidebar_position: 2
 # Getting Started
 
 In this Getting Started guide, we will walk through the steps of creating
-a Dapp account with Notifi, setting up a notification topic, and allowing users
+a Dapp account with Notifi, setting up a notification topic, signup card, and allowing users
 to subscribe to that topic. By the end of this guide, you will be able to send your first message!
 
 ## Signing Up For Notifi
 
-To sign up your Dapp for Notifi, 
-[create an account](https://admin.notifi.network/signup) on the 
+To sign up your Dapp for Notifi,
+[create an account](https://admin.notifi.network/signup) on the
 [Notifi Admin Portal](https://admin.notifi.network).
 
 <!-- TODO: Screenshots -->
@@ -22,28 +22,31 @@ you can then log into Admin Portal and begin setting up notifications!
 
 ## Setting Up A Notification Topic
 
+The first step is to define notification topics that users can subscribe to. A topic is a category of alerts tailored for a specific use case or user group, ensuring relevant and meaningful notifications.
+
 Notifi has three types of notifications:
 
 1. Messages written in Community Manager in Admin Portal
 2. Messages triggered by your server through the Notifi SDK
 3. Messages triggered by Notifi-hosted code, usually in response to on-chain events
 
+📌 For a more in-depth understanding of different topic types and their use cases, please refer to the following resources:
+🔗 [Topics in Detail](https://docs.notifi.network/docs/integration-overview/alerts-in-depth)
+
 For this Getting Started guide, we will be creating a Community Manager topic.
-Check out our 
+Check out our
 [self-hosted](https://docs.notifi.network/docs/getting-started-with-self-hosted)
 and [Notifi-hosted](https://docs.notifi.network/docs/next/getting-started-with-notifi-hosted)
 guides for writing for the other two types.
 
 To create a Community Manager topic, go to the Alert Manager, click **Create Topic**,
 then **Send announcements from Community Manager**.
-
-<!-- TODO: Screenshots -->
-
-In the dialog box that appears, set the name of your topic and click **Create**.
+In the dialog box that appears, set the name of your topic and click Create. 
+[Example here](https://docs.notifi.network/docs/create-topics/announcements)
 
 ## Setting Up Your Signup UI
 
-The easiest way to set up signup UI for your users is the Notifi React Card, a
+The easiest way to set up signup UI for your users is the [Notifi React Card](https://www.npmjs.com/package/@notifi-network/notifi-react), a
 React component that you can integrate with your application. This has two steps:
 creating the UI Card config in Admin Portal, and adding the card to your application.
 
@@ -72,60 +75,71 @@ and show you a preview.
    requires the least setup.
 6. Click **Save Card** in the top right corner of the screen.
 
-You're all done! Leave this page open so that you can reference the Card ID when
-you add the card to your website.
+You're all done! Leave this page open so that you can reference the **Card ID** when
+you add the card to your application.
+
+🔗 Check out the [Card Configuration Guide Example](https://docs.notifi.network/docs/alert-subscribe/react-card/create-card-id) for a detailed walkthrough with screenshots.
+
+Additionally, to enable notification destinations like Telegram and Discord, and to add your own custom email domain for sending notifications to your user base, refer to this guide:
+🔗 [Notification Destinations Setup](https://docs.notifi.network/docs/category/setting-up-targets)
+
+
 
 <!-- TODO: Screenshots -->
 
-## Setting Up a React Application With Your Card 
-
+## Setting Up a React Application With Your Card
 
 Now that we have a card config, we'll go through the process of adding it to a
 React application.
 
->Looking for more in-depth knowledge on our [React Card](https://github.com/notifi-network/notifi-sdk-ts/blob/main/packages/notifi-react/README.md)?
-
+> Looking for more in-depth knowledge on our [React Card](https://github.com/notifi-network/notifi-sdk-ts/blob/main/packages/notifi-react/README.md)?
 
 :::note
 
 This example will be using Ethereum. Setting up the React card for a different EVM
 chain only requires changing the chain name, but setting up the React card for different chains
-requires different boilerplate for each. Check out the 
+requires different boilerplate for each. Check out the
 [Notifi React card SDK](https://github.com/notifi-network/notifi-sdk-ts/tree/main/packages/notifi-react)
 for examples of how to use the React card with other chains.
 
 :::
 
-First, either open your existing JSX React project, or 
+First, either open your existing React or Next.js project, or
 [create a new one](https://react.dev/learn/start-a-new-react-project).
 
 #### Installing the Correct Packages:
 
+_Environment_
 
-*Environment*
+- Node version >= 18 (with corresponding npm version)
+- React version >= 17"
 
--    Node version >= 18 (with corresponding npm version)
--    React version >= 17"
-
-*Packages*   
+_Packages_  
 [NPM](https://www.npmjs.com/package/@notifi-network/notifi-react)
+
 -     @notifi-network/notifi-react": "^1.1.1"
 
-
-
 #### Implement The Card:
+With the card configuration set up, the next step is to integrate the [Notifi React Card]((https://www.npmjs.com/package/@notifi-network/notifi-react)) into your React application
+
+📌 Design Guidance: We provide design recommendations in our [Figma Guide](https://www.figma.com/design/GotqBWyzrRKbZpSmMeouer/Notification-Card---External-File?node-id=1795-3876&p=f&t=V2qGuMvlIXJeK41Q-0) to help you effectively present the UI within your dApp. However, the visual implementation remains fully flexible, allowing you to customize it to match your design preferences.
+
 
 ##### Mount the `NotifiCardModal` to your dApp
+
 > **IMPORTANT** to use `NotifiCardModal`, you need to wrap your component with `NotifiContextProvider` first.
-> 
-*Example Quick Start for Ethereum*
+>
+> _Example Quick Start for Ethereum_
+
 ```tsx
-import { NotifiContextProvider, NotifiCardModal } from '@notifi-network/notifi-react';
+import {
+  NotifiContextProvider,
+  NotifiCardModal,
+} from '@notifi-network/notifi-react';
 import { useEthers } from '@usedapp/core';
 import { providers } from 'ethers';
 
 const NotifiCard = () => {
-
   const { account, library } = useEthers();
   const signer = useMemo(() => {
     if (library instanceof providers.JsonRpcProvider) {
@@ -140,32 +154,26 @@ const NotifiCard = () => {
   }
 
   return (
-//tenantId/dAppId and cardId are found on the Notifi Tenant Portal. Please see Docs below.
- <NotifiContextProvider
-    tenantId="YOUR_TENANT_ID // dApp ID"
-    env="Production"
-    cardId="YOUR_CARD_ID"
-    signMessage={signMessage}
-    walletBlockchain="ETHEREUM"
-    walletPublicKey={account}
-    >   
-        <NotifiCardModal darkMode={true} />
-  </NotifiContextProvider>
+    //tenantId/dAppId and cardId are found on the Notifi Admin Portal.
+    <NotifiContextProvider
+      tenantId="YOUR_TENANT_ID // dApp ID"
+      env="Production"
+      cardId="YOUR_CARD_ID"
+      signMessage={signMessage}
+      walletBlockchain="ETHEREUM"
+      walletPublicKey={account}
+    >
+      <NotifiCardModal darkMode={true} />
+    </NotifiContextProvider>
   );
 };
 ```
-> [Docs](https://docs.notifi.network/docs/getting-started)
 
 <br/><br/>
-
-
 
 ## Subscribe to your card
 
 Now, run your dAPP locally and subscribe to the card in the respective render!
-
-
-
 
 <!-- TODO: Screenshots of using the React card -->
 
@@ -178,7 +186,7 @@ it's time to send a message!
 2. Under **Audience/Notification Topic**, select the Community Manager
    topic you've created.
 3. Enter some text in the **Campaign Name** field. Your audience won't
-   see this name - it's just used to uniquely identify the message 
+   see this name - it's just used to uniquely identify the message
    for [reporting](./reporting).
 4. Choose the destinations you want to send the message to. **Alert History**
    is always selected, and in this example, we will add **Email**.
