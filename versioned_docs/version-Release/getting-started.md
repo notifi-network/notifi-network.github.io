@@ -41,7 +41,7 @@ guides for writing for the other two types.
 
 To create a Community Manager topic, go to the Alert Manager, click **Create Topic**,
 then **Send announcements from Community Manager**.
-In the dialog box that appears, set the name of your topic and click Create. 
+In the dialog box that appears, set the name of your topic and click Create.
 [Example here](https://docs.notifi.network/docs/create-topics/announcements)
 
 ## Setting Up Your Signup UI
@@ -83,10 +83,6 @@ you add the card to your application.
 Additionally, to enable notification destinations like Telegram and Discord, and to add your own custom email domain for sending notifications to your user base, refer to this guide:
 🔗 [Notification Destinations Setup](https://docs.notifi.network/docs/category/setting-up-targets)
 
-
-
-<!-- TODO: Screenshots -->
-
 ## Setting Up a React Application With Your Card
 
 Now that we have a card config, we'll go through the process of adding it to a
@@ -115,19 +111,18 @@ _Environment_
 - React version >= 17"
 
 _Packages_  
-[NPM](https://www.npmjs.com/package/@notifi-network/notifi-react)
 
--     @notifi-network/notifi-react": "^1.1.1"
+ - [NPM](https://www.npmjs.com/package/@notifi-network/notifi-react) - [@notifi-network/notifi-react]((https://www.npmjs.com/package/@notifi-network/notifi-react))
 
 #### Implement The Card:
-With the card configuration set up, the next step is to integrate the [Notifi React Card]((https://www.npmjs.com/package/@notifi-network/notifi-react)) into your React application
+
+With the card configuration set up, the next step is to integrate the [Notifi React Card](https://www.npmjs.com/package/@notifi-network/notifi-react) into your React application
 
 📌 Design Guidance: We provide design recommendations in our [Figma Guide](https://www.figma.com/design/GotqBWyzrRKbZpSmMeouer/Notification-Card---External-File?node-id=1795-3876&p=f&t=V2qGuMvlIXJeK41Q-0) to help you effectively present the UI within your dApp. However, the visual implementation remains fully flexible, allowing you to customize it to match your design preferences.
 
-
 ##### Mount the `NotifiCardModal` to your dApp
 
-> **IMPORTANT** to use `NotifiCardModal`, you need to wrap your component with `NotifiContextProvider` first.
+> **IMPORTANT:** To use `NotifiCardModal`, you need to wrap your component with `NotifiContextProvider` first.
 >
 > _Example Quick Start for Ethereum_
 
@@ -138,6 +133,9 @@ import {
 } from '@notifi-network/notifi-react';
 import { useEthers } from '@usedapp/core';
 import { providers } from 'ethers';
+
+// Import the default Notifi styles for proper UI rendering
+import '@notifi-network/notifi-react/dist/index.css';
 
 const NotifiCard = () => {
   const { account, library } = useEthers();
@@ -154,11 +152,11 @@ const NotifiCard = () => {
   }
 
   return (
-    //tenantId/dAppId and cardId are found on the Notifi Admin Portal.
+    // tenantId and cardId are found on the Notifi Admin Portal.
     <NotifiContextProvider
-      tenantId="YOUR_TENANT_ID // dApp ID"
+      tenantId="YOUR_TENANT_ID" // dApp ID
+      cardId="YOUR_CARD_ID" // Card ID
       env="Production"
-      cardId="YOUR_CARD_ID"
       signMessage={signMessage}
       walletBlockchain="ETHEREUM"
       walletPublicKey={account}
@@ -169,59 +167,68 @@ const NotifiCard = () => {
 };
 ```
 
-<br/><br/>
-
 ## Subscribe to your card
 
 Now, run your dAPP locally and subscribe to the card in the respective render!
 
-<!-- TODO: Screenshots of using the React card -->
+🔗 For a complete working example and best practices, check out our [Example Integration Repository.](https://github.com/notifi-network/notifi-sdk-ts/tree/main/packages/notifi-react-example-v2)
+
+Below are screenshots demonstrating how your card UI will look during the subscription process. You can sign up, subscribe to topics, and check notifications inside the card’s inbox section.
+
+<div style={{ display: "flex", justifyContent: "space-around", flexWrap: "wrap", gap: "5px", marginBottom:"10px" }}>
+  <img src="/img/card-signup/1.png" width="24%" />
+  <img src="/img/card-signup/2.png" width="24%" />
+  <img src="/img/card-signup/3.png" width="24%" />
+  <img src="/img/card-signup/4.png" width="24%" />
+</div>
+
 
 ## Sending Your First Message
 
 Finally, now that we have a topic and a user signed up to it,
 it's time to send a message!
 
-1. Navigate to the **Community Manager** page in Admin Portal.
-2. Under **Audience/Notification Topic**, select the Community Manager
-   topic you've created.
-3. Enter some text in the **Campaign Name** field. Your audience won't
+1. Navigate to the [**Community Manager**](https://admin.notifi.network/community) page in Admin Portal.
+2. Click the "**+ Compose**" button.
+3. Under **Audience/Notification Topic**, select the Community Manager
+   topic you created.
+4. Enter a name in the **Campaign Name** field. Your audience won't
    see this name - it's just used to uniquely identify the message
    for [reporting](./reporting).
-4. Choose the destinations you want to send the message to. **Alert History**
-   is always selected, and in this example, we will add **Email**.
-5. In the Alert History section, type the subject and message you
-   want to send.
-6. Copy the subject and message fields in the Alert History section to
-   the Email section. Here you can also add some extra details and formatting
-   to your email, such as lists or images.
-7. Click the **Publish** button at the bottom.
+5. Choose the destinations for your message.
+   - **Alert History** is always selected.
+   - In this example, we'll also add **Email**.
+6. In the Alert History section, enter the subject and message you want to send.
+7. Copy the subject and message into the Email section. (Here, you can add extra details and formatting, such as lists or images.)
+8. Click the **Publish** button at the bottom.
+   - Within a few moments, you should receive an email at the address you provided to your Notifi card.
+   - You should also see the message in the Notifi card's Inbox screen!
 
-Within a few moments, you should receive an email at the email address
-you provided to your Notifi card, and should also be able to see the message
-in the Notifi card's Alert History!
-
-<!-- TODO: Screenshots -->
+<div style={{ display: "flex", justifyContent: "space-around", marginBottom:"30px" }}>
+  <img src="/img/card-signup/5.png" width="30%" />
+  <img src="/img/card-signup/6.png" width="30%" />
+</div>
 
 ## Next Steps
 
 ### Learn More About Community Manager
 
 For more details on how to use Community Manager to send messages and manage
-campaigns, view [our guide](./alert-trigger/admin-portal) here.
+campaigns, view [our Figma walkthrough](https://www.figma.com/proto/EDRHnzmXsLRrmM1VBc57Hw/Notifi-Slides?page-id=3859%3A1161&type=design&node-id=10175-1378&viewport=633%2C494%2C0.12&scaling=min-zoom&starting-point-node-id=3859%3A1287) here.
 
-### Learn More About Our React Frontends
+
+<!-- ### Learn More About Our React Frontends
 
 To learn more about using the React card, including how to fully utilize each
 of the available parameters, check out [this guide](./alert-subscribe/react-card).
 
 To learn more about using the Frontend client, which allows deeper integration
-of Notifi functionality, check out [this guide](./alert-subscribe/frontend-client).
+of Notifi functionality, check out [this guide](./alert-subscribe/frontend-client). -->
 
-### Send Automatic Notifications
+### Event-Triggered Notifications
 
 In addition to sending messages manually using Community Manager,
-notifications can also be sent automatically, both to your general audience and to specific
+notifications can also be triggered based on events, both to your general audience and to specific
 destinations. Notifi offers two separate avenues for this - notifications from
 self-hosted services through the Notifi SDK, and notifications from custom code hosted
 on Notifi's servers that follow on-chain events. Check out the quickstart guides
@@ -259,6 +266,5 @@ but a more comprehensive frontend client is also available. Check out
 - [How To Guide](https://www.figma.com/proto/EDRHnzmXsLRrmM1VBc57Hw/Notifi-Slides?page-id=3859%3A1161&node-id=3859-1287&viewport=643%2C485%2C0.09&scaling=min-zoom&starting-point-node-id=3859%3A1287) of our Community Manager and Admin Portal
 
 ### Get Help
-
-- We use Jira as a ticketing platform to track issues, questions, and requests at Notifi. If you have anything that you need from us, please create a **support ticket** using the link [here](https://notifi.atlassian.net/servicedesk/customer/portals)
+<!-- - We use Jira as a ticketing platform to track issues, questions, and requests at Notifi. If you have anything that you need from us, please create a **support ticket** using the link [here](https://notifi.atlassian.net/servicedesk/customer/portals) -->
 - Reach out to the key [Notifi contacts](https://docs.google.com/document/d/1zVu-8iXdz1mOGievDutJX4Fs_7RXqe19LdyK4LqNmTA)

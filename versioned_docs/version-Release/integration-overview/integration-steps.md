@@ -14,9 +14,9 @@ Depending on the depth of integration and use case, some of these are optional o
 2. ### Integrate UI components in your dapp for users to configure and subscribe to alerts
 
   The easiest and most common UI will be a form where users can enter their preferred targets (email, phone number, Telegram, and/or Discord) and subscribe to it.
-  We provide design recommendations in our [Figma](https://www.figma.com/file/ieF0Ynuc3WI608RCt7wKSf/Notifi-Template?node-id=0%3A1&t=v8zeo6UovJAOb9vR-0), but there are no limitations on visual or interaction design.
+  We provide design recommendations in our [Figma](https://www.figma.com/design/GotqBWyzrRKbZpSmMeouer/Notification-Card---External-File?node-id=1795-3876&p=f&t=V2qGuMvlIXJeK41Q-0), but there are no limitations on visual or interaction design.
 
-  We provide a ready-to-use [React Card](../alert-subscribe/react-card) component for easy integration that covers most basic use cases, including standard forms.
+  We provide a ready-to-use [React Card](../getting-started.md) component for easy integration that covers most basic use cases, including standard forms.
   For additional customization and other frontend stacks, you can build your own UI component and connect it to the Notifi SDK with the [Frontend Client](../alert-subscribe/frontend-client). This includes custom elements like buttons or sliders to set thresholds, as long as the inputs can be passed in as parameters.
 
   :::note

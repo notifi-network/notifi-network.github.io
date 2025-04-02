@@ -11,7 +11,7 @@ This guide is out of date!
 
 This guide covers the Notifi Frontend Client, a toolset that allows integrating Notifi tooling
 into a custom React UX. If you want to integrate Notifi using a self-contained widget
-instead, view [our guide on how to use the Notifi React Card](../react-card/index.md).
+instead, view [our guide on how to use the Notifi React Card](../../getting-started.md).
 
 :::
 
