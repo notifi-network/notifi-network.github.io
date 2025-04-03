@@ -112,7 +112,7 @@ _Environment_
 
 _Packages_  
 
- - [NPM](https://www.npmjs.com/package/@notifi-network/notifi-react) - [@notifi-network/notifi-react]((https://www.npmjs.com/package/@notifi-network/notifi-react))
+ - [NPM](https://www.npmjs.com/package/@notifi-network/notifi-react) - [@notifi-network/notifi-react](https://www.npmjs.com/package/@notifi-network/notifi-react)
 
 #### Implement The Card:
 
