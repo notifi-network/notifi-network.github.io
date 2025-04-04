@@ -4,7 +4,7 @@ To see the source code, look at the [Notifi SDK](https://github.com/notifi-netwo
 
 :::note
 
-You will need a **card config** to use the Notifi React Card, which can be created in the [Admin Portal](https://admin.dev.notifi.network). Follow the guide [here](create-card-id.md) to create a **card config**.
+You will need a **topic** and **card config** to use the Notifi React Card, which can be created in the [Admin Portal](https://admin.notifi.network). Follow the guide [here](create-card-id.md) to create a **card config**.
 
 :::
 
@@ -32,18 +32,17 @@ import '@notifi-network/notifi-react/dist/index.css';
 
 ## Design Guidelines
 
-We have design recommendations on how to best present the UI to your dapp users. Check them out here: [Figma](https://www.figma.com/file/ieF0Ynuc3WI608RCt7wKSf/Notifi-Template?node-id=0%3A1&t=v8zeo6UovJAOb9vR-0).
+We provide design recommendations to help you present the UI effectively to your dApp users. Check them out here: [Figma](https://www.figma.com/design/GotqBWyzrRKbZpSmMeouer/Notification-Card---External-File?node-id=1795-3876&p=f&t=V2qGuMvlIXJeK41Q-0)
 
 #### Tips
 
-- Embed the bell icon by the wallet login section:
+- Embed the bell icon near the wallet login section for better visibility and user experience:
   ![here](https://i.imgur.com/f2rnrpk.png)
 
   &nbsp;
 
 - There should be a state for the bell icon when connected/not connected:
   ![example of not connected state](https://i.imgur.com/V9yEeCj.png)
-  If not connected, the bell icon should be hidden.
 
 - Make sure that there is enough contrast between color selections.
 
@@ -52,4 +51,4 @@ We have design recommendations on how to best present the UI to your dapp users.
 &nbsp;
 
 ## Notifi React Implementation Examples
-[Notifi Example Implementation](https://github.com/notifi-network/notifi-sdk-ts/tree/main/packages/notifi-react-example-v2)
+🔗 For a complete working example and best practices, check out our [Example Integration Repository](https://github.com/notifi-network/notifi-sdk-ts/tree/main/packages/notifi-react-example-v2).
