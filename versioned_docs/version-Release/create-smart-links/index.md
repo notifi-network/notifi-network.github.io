@@ -21,7 +21,7 @@ In this example, we will be creating a smart link that allows users to tip your 
 Configure your smart link UI components based on your use case. Notifi's Admin Portal makes it simple to compose your components.
 
 <video width="620" height="340" controls>
-  <source src="https://www.youtube.com/watch?v=MOgaZWN1hRw" type="video/mp4"/>
+  <source src="https://www.youtube.com/watch?v=NCs8LsmgEOE" type="video/mp4"/>
 </video>
 
 #### Step 1
