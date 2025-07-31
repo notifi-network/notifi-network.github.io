@@ -78,8 +78,8 @@ our server credentials. Notifi refers to these as your SID and Secret, which the
 provide in order to log in and send messages.
 
 To view your SID and Secret, go to the **Account Settings** page in Admin Portal, then click
-**Show Sid/Secret** in the top-right corner. In the dialog box that appears, copy the contents
-of the Sid and Secret boxes somewhere safe - you will use these later when you create your server.
+**Security** tab. In the section **Account Keys** you can generate a new SID/Secret pair. In the dialog box that appears, copy the contents
+of the Sid and Secret boxes somewhere safe as the secret won't be viewable again after - you will use these later when you create your server.
 
 :::warning
 
