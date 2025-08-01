@@ -29,8 +29,9 @@ for a target type, click **Save**.
 
 Notifi templates use the [Mustache](https://mustache.github.io/mustache.5.html) engine to
 template messages. The variables you pass into the fusion message/event (such as through the
-`publishFusionMessage()` call) are available through the `{{eventData}}` object and can be
-navigated through dot syntax (e.g. a `balance` variable can be accessed through 
+`publishFusionMessage()` call in our nodejs sdk from your own hosted servers) or emitted from 
+`Notifi Hosted Parsers` via the `metadata` field are available through the `{{eventData}}` object 
+and can be navigated through dot syntax (e.g. a `balance` variable can be accessed through 
 `{{eventData.balance}}`). For a full reference of all the other variables that are available,
 view the [Notifi template variable reference](./variable-reference.md).
 
