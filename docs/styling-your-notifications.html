@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.3.2">
 <title data-rh="true">Styling Your Notifications | Notifi integration guide</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.notifi.network/img/notifi-logo-mark-dark.svg"><meta data-rh="true" name="twitter:image" content="https://docs.notifi.network/img/notifi-logo-mark-dark.svg"><meta data-rh="true" property="og:url" content="https://docs.notifi.network/docs/styling-your-notifications"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="Release"><meta data-rh="true" name="docusaurus_tag" content="docs-default-Release"><meta data-rh="true" name="docsearch:version" content="Release"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-Release"><meta data-rh="true" property="og:title" content="Styling Your Notifications | Notifi integration guide"><meta data-rh="true" name="description" content="Once you create an automated topic,"><meta data-rh="true" property="og:description" content="Once you create an automated topic,"><link data-rh="true" rel="icon" href="/img/favicon.svg"><link data-rh="true" rel="canonical" href="https://docs.notifi.network/docs/styling-your-notifications"><link data-rh="true" rel="alternate" href="https://docs.notifi.network/docs/styling-your-notifications" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.notifi.network/docs/styling-your-notifications" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://JIB7PCXE2V-dsn.algolia.net" crossorigin="anonymous"><link rel="search" type="application/opensearchdescription+xml" title="Notifi integration guide" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.bff283d5.css">
-<script src="/assets/js/runtime~main.54dd3161.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.5603287f.js" defer="defer"></script>
 <script src="/assets/js/main.14546b54.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -25,8 +25,9 @@ lines for the Alert History and Email templates. Once you have updated your temp
 for a target type, click <strong>Save</strong>.</p>
 <p>Notifi templates use the <a href="https://mustache.github.io/mustache.5.html" target="_blank" rel="noopener noreferrer">Mustache</a> engine to
 template messages. The variables you pass into the fusion message/event (such as through the
-<code>publishFusionMessage()</code> call) are available through the <code>{{eventData}}</code> object and can be
-navigated through dot syntax (e.g. a <code>balance</code> variable can be accessed through
+<code>publishFusionMessage()</code> call in our nodejs sdk from your own hosted servers) or emitted from
+<code>Notifi Hosted Parsers</code> via the <code>metadata</code> field are available through the <code>{{eventData}}</code> object
+and can be navigated through dot syntax (e.g. a <code>balance</code> variable can be accessed through
 <code>{{eventData.balance}}</code>). For a full reference of all the other variables that are available,
 view the <a href="/docs/styling-your-notifications/variable-reference">Notifi template variable reference</a>.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="templated-message-limits">Templated Message Limits<a href="#templated-message-limits" class="hash-link" aria-label="Direct link to Templated Message Limits" title="Direct link to Templated Message Limits">​</a></h2>
