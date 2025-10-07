@@ -85,7 +85,7 @@ If we have this email template:
 </html>
 ```
 
-and we make this call from the Notifi SDK:
+and we make this call from the Notifi NodeJS SDK (note: no subscription value was provided, so it's assumed to be '*' which means all. Without specifying the specificWallets below, this message would be sent to everyone who is subscribed to this topic:
 
 ```javascript
 await client.publishFusionMessage(token, [{
@@ -104,6 +104,87 @@ await client.publishFusionMessage(token, [{
         walletBlockchain: "POLYGON",
     }]
 }]);
+```
+
+let's show an example of the same data above, but without the specificWallets, and sending to anyone who wants to receive notifications for a specific subscription value (note: isCaseSensitive is false because we're comparing against an EVM address. Values and config are completely up to the developer! Just make sure to match against what your users are subscribing with to what is being sent from your server):
+
+```javascript
+await client.publishFusionMessage(token, [{
+    eventTypeId: "abc123", // whatever the actual eventTypeId is
+    variablesJson: {
+        txHash: "0xe307bd8253f8cd78992b2ebcc6169f1af3e59cb7341f5ae1154809a2d9a4e15f",
+        walletAddress: "0xDa7C1116b53e13D74F4fAb3356A2032dFd12915B",
+        sourceAddress: "0xDa7C1116b53e13D74F4fAb3356A2032dFd12915B",
+        destinationAddress: "0x004fD37b5797158495c07D062D82969dCF3482c6",
+        tokenType: "MATIC",
+        txAmount: 0,
+        txFee: 0.002618999617286668,
+        variablesJson: {
+            subscription: {
+                value: "0xDa7C1116b53e13D74F4fAb3356A2032dFd12915B",
+                isCaseSensitive: false
+            }
+        }
+    }
+}]);
+```
+
+In case you're developing a Notifi Hosted parser, for the approach that doesn't ensure verified users with specificWallets you'd return one or many events formatted like:
+
+```javascript
+const singleEvent = {
+    // Replace with actual event type ID. You can use GFT.getEvents().* to get the ID for a specific event type.
+    // Following the example above, the id property here would actually contain the value abc123
+    eventTypeId: GFT.validResponseEvents.SOME_TOPIC_THAT_YOU_CONFIGURED_FOR_THIS_PARSER_TO_EMIT.id,
+    // This should be a value that aligns to what you configured the event to be. * if nothing, or the wallet address of the user or account being alerted on
+    comparisonValue: "0xDa7C1116b53e13D74F4fAb3356A2032dFd12915B",
+    blockchain: GFT.ParserBlockchainType,
+    // Signature of the block, or your own custom signature that is unique for this invocation.
+    changeSignature: BLOCK_ID_OR_HASH,
+    // Metadata to pass through to the templates used for creating the actual notifications being sent out to users. This is also what contains filterVariables used in more advanced alert configs where users can enter thresholds
+    metadata: {
+        txHash: "0xe307bd8253f8cd78992b2ebcc6169f1af3e59cb7341f5ae1154809a2d9a4e15f",
+        walletAddress: "0xDa7C1116b53e13D74F4fAb3356A2032dFd12915B",
+        sourceAddress: "0xDa7C1116b53e13D74F4fAb3356A2032dFd12915B",
+        destinationAddress: "0x004fD37b5797158495c07D062D82969dCF3482c6",
+        tokenType: "MATIC",
+        txAmount: 0,
+        txFee: 0.002618999617286668,
+    },
+    // True for comparisonValues that are case sensitive such as Solana addresses, false for those that are not such as EVM addresses.
+    isComparisonValueCaseSensitive: false,
+  };
+```
+
+In case you're developing a Notifi Hosted parser, for the approach that *DOES* ensure verified users with specificWallets you'd return one or many events formatted like (comparisonValue can be * here, unless you require further filtering). Note the double underscore prefix here when used in the parser:
+
+```javascript
+const singleEvent = {
+    // Replace with actual event type ID. You can use GFT.getEvents().* to get the ID for a specific event type.
+    // Following the example above, the id property here would actually contain the value abc123
+    eventTypeId: GFT.validResponseEvents.SOME_TOPIC_THAT_YOU_CONFIGURED_FOR_THIS_PARSER_TO_EMIT.id,
+    // This should be a value that aligns to what you configured the event to be. * if nothing, or the wallet address of the user or account being alerted on
+    comparisonValue: "*",
+    blockchain: GFT.ParserBlockchainType,
+    // Signature of the block, or your own custom signature that is unique for this invocation.
+    changeSignature: BLOCK_ID_OR_HASH,
+    // Metadata to pass through to the templates used for creating the actual notifications being sent out to users. This is also what contains filterVariables used in more advanced alert configs where users can enter thresholds
+    metadata: {
+        txHash: "0xe307bd8253f8cd78992b2ebcc6169f1af3e59cb7341f5ae1154809a2d9a4e15f",
+        walletAddress: "0xDa7C1116b53e13D74F4fAb3356A2032dFd12915B",
+        sourceAddress: "0xDa7C1116b53e13D74F4fAb3356A2032dFd12915B",
+        destinationAddress: "0x004fD37b5797158495c07D062D82969dCF3482c6",
+        tokenType: "MATIC",
+        txAmount: 0,
+        txFee: 0.002618999617286668,
+        __specificWallets: [{
+            walletPublicKey: "0xDa7C1116b53e13D74F4fAb3356A2032dFd12915B",
+            walletBlockchain: "POLYGON",
+        }]
+    },
+    // True for comparisonValues that are case sensitive such as Solana addresses, false for those that are not such as EVM addresses.
+    isComparisonValueCaseSensitive: false,
+  };
 ```
 
 Notifi will send the following email:
