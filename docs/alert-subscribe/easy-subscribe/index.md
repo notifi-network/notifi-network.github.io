@@ -33,7 +33,7 @@ The same topic can be used on multiple card configs.
 ### Step 4: Save and Copy Endpoints
 
 1. #### Save your card configuration.
-2. #### Copy the Email and Telegram endpoints (if the Telegram bot is already added) from the bottom of the card.
+2. #### Copy the Email, Telegram and Discord endpoints (if the Telegram bot is already added) from the bottom of the card.
 
 
 ![Naming card config](/img/easy-subscribe/3.png)
@@ -44,6 +44,7 @@ Check out these sections to set up your Telegram bot and Email domain:
 
 - [Set up a Telegram bot](../target-setup/tg-bot)
 - [Set up a custom email domain](../target-setup/email-domain)
+- [Set up a Discord Bot](../target-setup/discord-bot)
 
 :::
 
@@ -83,10 +84,69 @@ Follow the steps below to add the bot to your Telegram groups:
     ![Upload templates](/img/easy-subscribe/8.png)
 
 
-### Step 7: Integrate Endpoints into Your App
+### Step 7: Adding Alerts to Discord Channels
+With our latest feature, Notifi Admins can now integrate their Discord Bots bot directly into existing Discord channels. This integration ensures that any alert sent through the Admin dashboard for community manager topics will also be received in these selected groups.
+
+Follow the steps below to add the bot to your Discord channels:
+#### Click on "Discord Endpoint" to initiate the setup. (Refer to the image below for guidance)
+
+![Upload templates](/img/easy-subscribe/discord-endpoint.png)
+
+Add and authorize the Bot to your Discord Channel. Note you require Admin Access to your Discord Server in order to complete this. Copy and paste the url into your browser.
+
+![Upload templates](/img/easy-subscribe/discord-add-link.png)
+
+![Upload templates](/img/easy-subscribe/add-bot-modal.png)
+
+
+**1.1 Configure Bot Role Interactions**
+
+We would like for Notifi Admins to control enabling and disabling of their Discord Campaigns. Before starting a Bot, ensure relevant roles are assigned to control Bot Commands. 
+
+![Upload templates](/img/easy-subscribe/server-integration.png)
+
+Below are the registered commands when you've created your bot.
+
+![Upload templates](/img/easy-subscribe/commands.png)
+
+Click on both commands, and ensure you've selecting the appopriate roles for server users who choose to interact with your Bot (Pertaining to your pre-existing roles: Admins, Mods, Etc.)
+
+![Upload templates](/img/easy-subscribe/roles.png)
+
+Once selected for start, follow 1.1 to configure /stop commands. 
+
+
+![Upload templates](/img/easy-subscribe/select-roles.png)
+
+
+#### 2. Starting the Bot
+    Refer to the attached screenshot for guidance.
+
+   **2.1** **Start Command**
+   
+       - **2.1.1** Click on your respective Discord Channel and copy the *Start Discord Bot Command*
+       
+      ![Upload templates](/img/easy-subscribe/start-button.png)
+      ![Upload templates](/img/easy-subscribe/start-command.png) 
+
+    Once successfully created, the following message will be displayed.
+    ![Upload templates](/img/easy-subscribe/start-success.png) 
+
+   **2.2** **Stop Command**
+   
+        - **2.2.1** Click on your respective Discord Channel and copy the *Stop Discord Bot Command*
+    
+      ![Upload templates](/img/easy-subscribe/stop-button.png)
+      ![Upload templates](/img/easy-subscribe/stop-command.png)
+
+  Once successfully stopped, the following message will be displayed.
+  ![Upload templates](/img/easy-subscribe/stop-success.png) 
+
+### Step 8: Integrate Endpoints into Your App
 
 1. #### Email: Use the email endpoint to send users' email addresses via a POST request. Add success/error handling to manage the response effectively.
 2. #### Telegram: Redirect users to the provided Telegram URL, allowing them to directly subscribe to your Telegram bot.
+3. #### Discord: Integrate Discord channels notifications provided by the Bot Start and Stop commands to directly allow your Discord Bot to emit Notifications to channels.
 
 Below is an example of how to use these endpoints:
 
